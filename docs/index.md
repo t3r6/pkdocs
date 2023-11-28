@@ -1,17 +1,19 @@
-# Welcome to MkDocs
+# This site contains information regading PC games based on PainEngine/NecroEngine
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+The first game that used PainEngine was Painkiller 2004.<br>
+Apparently this engine used some modified pieces of Quake code and included some proprietory tools like:
+Havok (for physics), Miles Engine (for sound), Xtreme Toolkit (for exe).<br>
+NecroEngine is a continuation of PainEngine that was significantly improved.<br>
+The engine seems to have been deprecated after 2010.
 
-## Commands
+## PainEngine based games
+* Painkiller 2004
+* Painkiller Black Edition (Painkiller with BooH expansion)
+* Painkiller: Overdose 2007
+* Painkiller: Resurrection 2009
+* Painkiller: Redemption 2011
+* Painkiller: Recurring Evil 2012
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## NecroEngine based games
+* NecroVisioN 2009
+* NecroVisioN: Lost Company 2010
