@@ -24,15 +24,16 @@ All the docs are configured with a YAML configuration file.
 
 There are two options for working with MkDocs:
 
-* MkDocs via Podman
+* MkDocs via Podman/Docker
 * MkDocs via Python PIP
 
-## MkDocs via Podman
+## MkDocs via Podman/Docker
 
 ### Prerequisites
 
-* [Podman](https://podman.io/)
+* [Podman](https://podman.io/) or [Docker](https://www.docker.com/get-started/)
 * [Make](https://man7.org/linux/man-pages/man1/make.1.html)
+* [mkdocs cli](https://www.mkdocs.org/)
 
 ### Workflow
 
@@ -40,15 +41,21 @@ There are two options for working with MkDocs:
 
 2. Run the following command:
 
-    ``
+    ```
     make docs
-    ``
+    ```
+
+    For Docker
+
+    ```
+    make docs ENGINE=docker
+    ```
 
 3. Enter the [http://localhost:8000](/) address in the browser and check that documentation pages are available.
 
 4. Open the editor, navigate to the docs/ directory and make necessary changes. All the changes will be updated dynamically at [http://localhost:8000](/).
 
-5. Create a merge request with changes or deploy to GitHub pages:
+5. Create a merge request with changes or deploy to GitHub pages manually:
 
     ```
     mkdocs gh-deploy --force
@@ -60,6 +67,7 @@ There are two options for working with MkDocs:
 
 * [Python](https://www.python.org/)
 * [Python PIP](https://pypi.org/project/pip/)
+* [mkdocs cli](https://www.mkdocs.org/)
 
 ### Workflow
 
@@ -71,7 +79,7 @@ There are two options for working with MkDocs:
 
 3. Run a local development server:
 
-    ```bash
+    ```
     mkdocs serve --dev-addr 0.0.0.0:8000
     ```
 
@@ -79,7 +87,7 @@ There are two options for working with MkDocs:
 
           For Windows:
 
-          ```
+          ```psh
           python -m mkdocs serve --dev-addr 0.0.0.0:8000
           ```
 
@@ -87,7 +95,7 @@ There are two options for working with MkDocs:
 
 5. Open the editor, navigate to the docs/ directory and make necessary changes. All the changes will be updated dynamically at [http://localhost:8000](/).
 
-6. Create a merge request with changes or deploy to GitHub pages:
+6. Create a merge request with changes or deploy to GitHub pages manually:
 
     ```
     mkdocs gh-deploy --force

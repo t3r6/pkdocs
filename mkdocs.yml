@@ -31,6 +31,7 @@ theme:
 # Extensions
 markdown_extensions:
   - admonition
+  - fancyboxmd
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -39,6 +40,15 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.details
+
+# Css
+extra_css:
+  - https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css
+
+# Extra javascript
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js
+  - https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js
 
 nav:
   - Home: index.md
