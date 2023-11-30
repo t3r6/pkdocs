@@ -1,6 +1,6 @@
 # This site contains information regading PC games based on PainEngine/NecroEngine
 
-!![Painkiller](../img/index/pk02.jpg "Heaven's Got a Hitman")
+!![Painkiller](../pkdocs/img/index/pk02.jpg "Heaven's Got a Hitman")
 
 Painkiller is a first-person shooter video game developed by Polish game studio People Can Fly and published by DreamCatcher Interactive in April 2004.
 
