@@ -6,6 +6,11 @@ These are basically the same types of archives with the difference that **.pkm**
 
 Custom multiplayer maps are usually packed with the **.pkm** extension.
 
+!!! Notes
+    Don't confuse **.pkm** archive format with the **.mpk** geometry binary file. 
+
+    The geometry **.mpk** file can be opened in Autodesk 3ds Max using this unofficial [plugin](https://www.moddb.com/games/painkiller/downloads/painkiller-3ds-max-plugins-upd270522).
+
 #### Tools to unpack Painkiller/Necrovision game resources
 
 * Built-in game tools using **FS.ExtractPack** (the most recommended option)
@@ -69,12 +74,15 @@ PainEditor comes with the Painkiller game. It's located in **..\Painkiller\Bin\E
 
 ### Export all game data
 
-To export all game data resources, click **File** -> **Extract Game Data**.
-
 !!! Warning
     This method will hang your PainEditor for several minutes and extract all files from all **.pak** archives to the current folders in the ..\Data directory.
 
+To export all game data resources, click **File** -> **Extract Game Data**.
+
 ### Export a map
+
+!!! Warning
+    PainEditor does not extract some map resources and **..\Data\Levels\MapEntities** with this method. MapEntities usually include cubemaps for portals and water shaders. Moreover, PainEditor will not extract other map resources, like the geometry **.mpk** file, Textures, level scripts for Singleplayer maps, etc. So, generally, it is not recommended to extract maps and resources with PainEditor.
 
 To export a map with the editor, follow these steps:
 
@@ -84,9 +92,6 @@ To export a map with the editor, follow these steps:
 After that, the extracted map files will appear in the **..\Data\Levels** directory.
 
 !![PainEditor](../img/unpackers/unpacker-paineditor1.jpg "PainEditor")
-
-!!! Warning
-    PainEditor does not extract **..\Data\Levels\MapEntities** with this method. MapEntities usually include cubemaps for portals and water shaders. Moreover, PainEditor will not extract other map resources, like the geometry **.mpk** file, Textures, etc. So, generally, it is not recommended to extract maps and resources with PainEditor.
 
 ### Pack a map to .pkm
 
