@@ -82,7 +82,7 @@ To export all game data resources, click **File** -> **Extract Game Data**.
 ### Export a map
 
 !!! Warning
-    PainEditor does not extract some map resources and **..\Data\Levels\MapEntities** with this method. MapEntities usually include cubemaps for portals and water shaders. Moreover, PainEditor will not extract other map resources, like the geometry **.mpk** file, Textures, level scripts for Singleplayer maps, etc. So, generally, it is not recommended to extract maps and resources with PainEditor.
+    PainEditor does not extract some map resources and **..\Data\Levels\MapEntities** with this method. MapEntities usually include cubemaps for portals and water shaders. Moreover, PainEditor will not extract other map resources, like the geometry **.mpk** file, Textures, level scripts for Singleplayer maps, etc. It was a common mistake in the past that many mappers did not include portal textures on their maps because of that. Thus, be aware to copy those manually if needed or extract all map resources using a different method. So, generally, it is not recommended to extract maps and resources with PainEditor.
 
 To export a map with the editor, follow these steps:
 
