@@ -121,6 +121,10 @@ It is similar to the steps above but we'll run a server via a different program.
 
 5. `Stop` or close the server when you decide to close the multiplayer session.
 
+#### Dedicated console server
+
+The dedicated console server `OverdoseServer.exe` doesn't have any command line options and can only be run with the default options, thus it is not recommended.
+
 ## PROverdose server (optional)
 
 PROverdose is a competitive mod. Its server is compatible with the original Overdose and PROverdose so the client doesn't need to have this mod installed but the client still needs to have the OpenSpy fix.
