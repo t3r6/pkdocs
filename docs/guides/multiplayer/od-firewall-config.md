@@ -1,6 +1,6 @@
 # Firewall Configuration for Painkiller Overdose Multiplayer Server
 
-You may need to create the firewall inbound and outbound rules for the game via TCP and UDP protocols. Inbound rules are required so that the client can connect to your server while outbound rules are required for the Painkiller game to advertise its server to `openspy.net` master servers. From my experience, I did not have to configure the OS firewall at all.
+You may need to create the firewall inbound and outbound rules for the game via TCP and UDP protocols. Inbound rules are required so that the client can connect to your server while outbound rules are required for the Painkiller game to advertise its server to `openspy.net` master servers and send packets to the client properly. From my experience, I did not have to configure the OS firewall at all.
 
 Here is the scheme that shows where the firewall can filter the traffic.
 
@@ -10,11 +10,13 @@ flowchart BT
   B -->|192.168.0.104:3455| C[OS Firewall];
   C -->|TCP, UDP| D{{Server Internal IP}};
   D --> E[OS Firewall];
-  E -.->|TCP, UDP| F([openspy.net]);
-  F -.-> A
+  E -->|TCP, UDP| F[Router External IP];
+  F -.-> A;
+  F -.-> J([openspy.net]);
+  J -.-> A;
 ```
 
-The Painkiller Overdose game has 3 EXE files `Overdose.exe`, `OverdoseEditor.exe`, and `OverdoseServer.exe`. We will use `Overdose.exe` for the dedicated server but it is desirable to create rules for all 3 of them.
+The Painkiller Overdose game has 3 EXE files `Overdose.exe`, `OverdoseEditor.exe`, and `OverdoseServer.exe`. We will mostly use `Overdose.exe` for the dedicated server but it is desirable to create rules for all 3 of them since they all can be used to host a server.
 
 I'll describe the configuration of the Windows Defender Firewall only.
 

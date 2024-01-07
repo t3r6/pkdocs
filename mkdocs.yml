@@ -66,6 +66,7 @@ nav:
     - guides/multiplayer/od-mp-server-win.md
     - guides/multiplayer/router-config.md
     - guides/multiplayer/od-firewall-config.md
+    - guides/multiplayer/gamespy-openspy.md
   - Documentation:
     - mkdocs-dev.md
 

@@ -4,7 +4,9 @@ Routers vary in configuration so I'll describe the router configuration on my TP
 
 Basically, you need to allow the incoming connection from a client to your server on an indicated port. The default port for the original **Painkiller** is `3455` and for **Painkiller Overdose** it is `4974`. However, you can change a port in the game.
 
-Additionally, you may need to create the firewall inbound and outbound rules for the game via TCP and UPD protocols. Inbound rules are required so that the client can connect to your server while outbound rules are required for the Painkiller game to advertise its server to `openspy.net` master servers. From my experience, I did not have to configure the OS firewall at all.
+Home routers do not usually block any outgoing traffic but firewalls can so you may need to create the firewall inbound and outbound rules for the game via TCP and UPD protocols. Inbound rules are required so that the client can connect to your server while outbound rules are required for the Painkiller game to advertise its server to `openspy.net` master servers and send packets to the client properly. From my experience, I did not have to configure the OS firewall at all.
+
+The scheme shows how the traffic flows from a client to a server.
 
 ``` mermaid
 flowchart BT
@@ -12,11 +14,13 @@ flowchart BT
   B -->|192.168.0.104:3455| C[OS Firewall];
   C -->|TCP, UDP| D{{Server Internal IP}};
   D --> E[OS Firewall];
-  E -.->|TCP, UDP| F([openspy.net]);
-  F -.-> A
+  E -->|TCP, UDP| F[Router External IP];
+  F -.-> A;
+  F -.-> J([openspy.net]);
+  J -.-> A;
 ```
 
-*From the scheme above let's assume that `50.153.139.143` is your external IP address, `3455` is a default Painkiller port, `192.168.0.104` is the IP address of your local server*.
+*From the scheme above let's assume that `50.153.139.143` is your external IP address, `3455` is the default Painkiller port, `192.168.0.104` is the IP address of your local server*.
 
 ## Configuration
 
@@ -51,6 +55,8 @@ In the following instruction, we will reserve the internal IP address and forwar
     | 4  | 4974         | 4974          | 192.168.0.104 | UPD      | Enabled |
 
     !!! Note
+        Some routers have the `All` option under `Protocol` that includes both TCP and UDP.
+
         The default port for **Painkiller** is `3455` and for **Painkiller Overdose** it is `4974`.
 
 7. Check the connection. I will not go into the detail but the UDP connection can be checked with `nc` (change the IP address and the port accordingly):
