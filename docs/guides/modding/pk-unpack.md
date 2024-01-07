@@ -91,7 +91,7 @@ To export a map with the editor, follow these steps:
 
 After that, the extracted map files will appear in the **..\Data\Levels** directory.
 
-!![PainEditor](../img/unpackers/unpacker-paineditor1.jpg "PainEditor")
+!![PainEditor](../../../img/unpackers/unpacker-paineditor1.jpg "PainEditor")
 
 ### Pack a map to .pkm
 
@@ -101,11 +101,11 @@ After that, the extracted map files will appear in the **..\Data\Levels** direct
 
 It will create a **.pkm** file inside the <b>..\Painkiller\Data\</b> directory.
 
-!![PainEditor](../img/unpackers/unpacker-paineditor2.jpg "PainEditor")
+!![PainEditor](../../../img/unpackers/unpacker-paineditor2.jpg "PainEditor")
 
 ## PainFull Extractor
 
-!![PainFull Extractor](../img/unpackers/unpacker-painfull1.jpg "PainFull Extractor")
+!![PainFull Extractor](../../../img/unpackers/unpacker-painfull1.jpg "PainFull Extractor")
 
 PainFull Extractor was released in 2004 as a side project of MultiEx Commander by Mike Zuurman aka Mr.Mouse/XeNTaX. Latest Version 1.3.2.
 
@@ -151,7 +151,7 @@ The tool and the source code itself are located in this [repository](https://git
 
     You can simply drag and drop the **.pak** or **.pkm** archive to this application (drag the .pak archive with the mouse cursor to the .exe file) and it will unpack the resources automatically.
 
-    !![PainKillerExtractor](../img/unpackers/unpacker-pkextractor1.jpg "PainKillerExtractor")
+    !![PainKillerExtractor](../../../img/unpackers/unpacker-pkextractor1.jpg "PainKillerExtractor")
 
 * Unpacking via CLI
 
@@ -163,7 +163,7 @@ The tool and the source code itself are located in this [repository](https://git
 
 [Dragon UnPACKer](https://www.elberethzone.net/dragon-unpacker.html) is an open-source tool for unpacking game resources. Currently, it supports Painkiller **.pak** files but cannot unpack **.pkm** by default. To unpack **.pkm** files with Dragon UnPACKer you need to temporarily rename **.pkm** file to **.pak**. For example, rename `DM_Blink.pkm` to `DM_Blink.pak` and Dragon UnPACKer will allow you to extract `DM_Blink.pak` resource in this case. Sometimes this program can break files during extraction but it's a very good program to browse in-game packed resources.
 
-!![Dragon UnPACKer](../img/unpackers/unpacker-dragonunpacker1.jpg "Dragon UnPACKer")
+!![Dragon UnPACKer](../../../img/unpackers/unpacker-dragonunpacker1.jpg "Dragon UnPACKer")
 
 ## QuickBMS
 
@@ -175,7 +175,7 @@ The tool and the source code itself are located in this [repository](https://git
 * Extract the QuickBMS archive.
 * QuickBMS uses plugins to extract game resources and we'll need to download one. Go to [BMS Search](http://aluigi.altervista.org/quickbms.htm#search) on their website and search using Necrovision or Painkiller keywords. Download the `bms/necrovision.bms` script and put it in the QuickBMS folder.
 
-!![QuickBMS plugin](../img/unpackers/unpacker-quickbms1.jpg "QuickBMS plugin")
+!![QuickBMS plugin](../../../img/unpackers/unpacker-quickbms1.jpg "QuickBMS plugin")
 
 ### Unpack game archive
 
