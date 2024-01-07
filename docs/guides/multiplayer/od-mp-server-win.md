@@ -111,7 +111,7 @@ It is similar to the steps above but we'll run a server via a different program.
 
     !![OD OpenSpy List](../../../img/multiplayer/od-public-server03.jpg "OD OpenSpy List")
 
-4. Clients should see your server and will be able to join provided they also made modifications regarding OpenSpy on their side. However, you will not be able to see your server on the in-game list or you'll see it as a broken server and if you try to join it, you'll get an error that this IP does not respond. That's because OpenSpy filters the traffic and a server can only be seen from a different external IP.
+4. Clients should see your server and will be able to join provided they also made modifications regarding OpenSpy on their side. However, you will not be able to see your server on the in-game list or you'll see it as a broken server and if you try to join it, you'll get an error that this IP does not respond. It seems that the game was implemented in a way that a server can only be seen from a different external IP.
 
     So you need to type in manually in the game to join the server either via the internal IP address `192.168.0.104:4974`or via the external one `50.153.139.143:4974` and add to `Favourites` for your convenience.
 
@@ -119,7 +119,17 @@ It is similar to the steps above but we'll run a server via a different program.
 
     Then you will be able to find your server on the `Favourites` tab and join it from there.
 
-5. `Stop` or close the server when you decide to close the multiplayer session.
+5. As a server administrator, you can use all console commands via the `Painkiller Dedicated Server` GUI menu. Let's add a bot to the server session. Click the `Console` tab and type in the following command and hit `Enter`:
+
+    ```
+    /addbot
+    ```
+
+    !![OD Dedicated Server Console](../../../img/multiplayer/od-public-server05.jpg "OD Dedicated Server Console")
+
+    You will not be able to use all console commands if you join a server as a client and run commands via the in-game console.
+
+6. `Stop` or close the server when you decide to close the multiplayer session.
 
 #### Dedicated console server
 
