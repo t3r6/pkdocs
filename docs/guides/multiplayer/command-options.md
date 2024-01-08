@@ -20,3 +20,15 @@ The information was taken from [pkeuro](https://www.pkeuro.net/?p=249).
 The most interesting is probably the optional hardware class option (`+hwclass`).
 
 `+speed` is your connection speed, 0=modem, etc.
+
+Other commands:
+
+```
+-dedicated
+-config [config name; example, config.ini]
+-lscripts [pak with scripts; example, LScripts.pak]
+-profile [user]
+-game editorgame
+```
+
+`profile` is the Linux/Windows user profile
