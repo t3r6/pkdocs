@@ -4,7 +4,7 @@ Routers vary in configuration so I'll describe the router configuration on my TP
 
 Basically, you need to allow the incoming connection from a client to your server on an indicated port. The default port for the original **Painkiller** is `3455` and for **Painkiller Overdose** it is `4974`. However, you can change a port in the game.
 
-Home routers do not usually block any outgoing traffic but firewalls can so you may need to create the firewall inbound and outbound rules for the game via TCP and UPD protocols. Inbound rules are required so that the client can connect to your server while outbound rules are required for the Painkiller game to advertise its server to `openspy.net` master servers and send packets to the client properly. From my experience, I did not have to configure the OS firewall at all.
+Home routers do not usually block any outgoing traffic but firewalls can so you may need to create the firewall inbound and outbound rules for the game via TCP and UDP protocols. Inbound rules are required so that the client can connect to your server while outbound rules are required for the Painkiller game to advertise its server to `openspy.net` master servers and send packets to the client properly. From my experience, I did not have to configure the OS firewall at all.
 
 The scheme shows how the traffic flows from a client to a server.
 
@@ -45,14 +45,14 @@ In the following instruction, we will reserve the internal IP address and forwar
 
 5. Restart your router. Then if you go back to `DHCP` -> `DHCP Clients`, you'll see that the `Address lease time` is permanent for `192.168.0.104`.
 
-6. Now go to `Port Forwarding` -> `Virtual servers` -> `Add` and forward a port to the internal IP address of your PC server for TCP and UPD protocols:
+6. Now go to `Port Forwarding` -> `Virtual servers` -> `Add` and forward a port to the internal IP address of your PC server for TCP and UDP protocols:
 
     | ID | Service port | Internal port | IP address    | Protocol | Status  |
     |----|--------------|---------------|---------------|----------|---------|
     | 1  | 3455         | 3455          | 192.168.0.104 | TCP      | Enabled |
-    | 2  | 3455         | 3455          | 192.168.0.104 | UPD      | Enabled |
+    | 2  | 3455         | 3455          | 192.168.0.104 | UDP      | Enabled |
     | 3  | 4974         | 4974          | 192.168.0.104 | TCP      | Enabled |
-    | 4  | 4974         | 4974          | 192.168.0.104 | UPD      | Enabled |
+    | 4  | 4974         | 4974          | 192.168.0.104 | UDP      | Enabled |
 
     !!! Note
         Some routers have the `All` option under `Protocol` that includes both TCP and UDP.

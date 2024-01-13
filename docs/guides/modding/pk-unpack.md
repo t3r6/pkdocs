@@ -47,7 +47,7 @@ Unpack files from .pak or .pkm archive via CLI:
 **Windows cmd** (need to indicate full path to the output file):
 
 ```cmd
-.\painkiller.exe -script FS.ExtractPack('../Data/DM_Test.pkm','C:/Users/User/FullPath/Games/Painkiller/Test')
+.\painkiller.exe -script FS.ExtractPack('../Data/DM_Test.pkm','C:/Users/%USERNAME%/FullPath/Games/Painkiller/Test')
 ```
 
 ### Pack

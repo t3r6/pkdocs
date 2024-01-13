@@ -38,7 +38,7 @@ I'll take the local IP `192.168.0.104` in further examples.
 
 ### [Firewall configuration](od-firewall-config.md)
 
-This step is not always required. In my case, all worked without this configuration. However, you may need to create firewall inbound and outbound rules for the game via TCP and UPD protocols. Refer to this [**information**](od-firewall-config.md) for more details.
+This step is not always required. In my case, all worked without this configuration. However, you may need to create firewall inbound and outbound rules for the game via TCP and UDP protocols. Refer to this [**information**](od-firewall-config.md) for more details.
 
 ### [GameSpy to OpenSpy](gamespy-openspy.md)
 
@@ -72,7 +72,7 @@ In the previous examples, I ran a server on `192.168.0.104` thus I need to pass 
     Overdose +interface 192.168.0.104
     ```
 
-    Additionally, for your convenience, copy `C:\Users\User\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServer.ini`. Add the following parameters:
+    Additionally, for your convenience, copy `C:\Users\%USERNAME%\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServer.ini`. Add the following parameters:
 
     ```
     Overdose +interface 192.168.0.104 -config OverdoseServer.ini
@@ -88,12 +88,13 @@ In the previous examples, I ran a server on `192.168.0.104` thus I need to pass 
 
 It is similar to the steps above but we'll run a server via a different program.
 
-1. For your convenience, copy `C:\Users\User\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServer.ini`.
+1. For your convenience, copy `C:\Users\%USERNAME%\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServer.ini`.
 
-    Let's modify `OverdoseServer.ini` and change WarmUpTime and MaxFpsMP to:
+    Let's modify `OverdoseServer.ini` and change WarmUpTime and MaxFpsMP:
 
     ```
     Cfg.WarmUpTime = 0
+    Cfg.ServerFPS = 45
     Cfg.MaxFpsMP = 125
     ```
 
@@ -149,7 +150,7 @@ So you need to downgrade your game to play it.
 
 3. Extract the archive's content to your `..\Painkiller Overdose\Data` directory.
 
-4. For your convenience, copy `C:\Users\User\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServerPro.ini`.
+4. For your convenience, copy `C:\Users\%USERNAME%\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServerPro.ini`.
 
 5. Create a Windows shortcut or a BAT file in the `..\Overdose\Bin\` directory with this content `OverdoseDedicatedPro.bat`:
 
