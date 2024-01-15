@@ -24,8 +24,10 @@ The most interesting is probably the optional hardware class option (`+hwclass`)
 Other commands:
 
 ```
+-start
 -dedicated
 -config [config name; example, config.ini]
+-script [example, FS.ExtractPack('')]
 -lscripts [pak with scripts; example, LScripts.pak]
 -profile [user]
 -game editorgame
