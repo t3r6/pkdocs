@@ -8,6 +8,8 @@ Copy the file to `..\Painkiller\Data\LScripts\Hud\`. Create folders if required.
 
 It is recommended to enable `/speedmeter 1` via the in-game console.
 
-[Code](https://github.com/t3r6/pkdocs/blob/main/code/HUD.lua)
+[Version from David](https://github.com/t3r6/pkdocs/blob/main/code/david/HUD.lua)
+
+[Version from killua-chan](https://github.com/t3r6/pkdocs/blob/main/code/killua/HUD.lua)
 
 !![Example HUD](../../../img/hud/pk-pressed-buttons.jpg "Pressed Buttons")
