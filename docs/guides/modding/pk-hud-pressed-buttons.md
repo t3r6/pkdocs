@@ -12,4 +12,5 @@ It is recommended to enable `/speedmeter 1` via the in-game console.
 
 [Version from killua-chan](https://github.com/t3r6/pkdocs/blob/main/code/killua/HUD.lua)
 
-!![Example HUD](../../../img/hud/pk-pressed-buttons.jpg "Pressed Buttons")
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/votl4fPb0kU?si=t7S5SoCQBF8mvmOz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
