@@ -20,6 +20,11 @@ Custom multiplayer maps are usually packed with the **.pkm** extension.
 * [Dragon UnPACKer](https://www.elberethzone.net/dragon-unpacker.html) (open source)
 * [QuickBMS](http://aluigi.altervista.org/quickbms.htm) (open source)
 
+#### Tools to unpack Painkiller Retail Demo (Alpha) resources
+
+* [pak2zip](https://github.com/t3r6/painkiller-extractor) program
+* [QuickBMS](http://aluigi.altervista.org/quickbms.htm) (open source)
+
 #### Tools to pack Painkiller/Necrovision game resources back
 
 * Built-in game tools using **FS.CreatePack** (recommended option for **.pak** archives)
@@ -56,13 +61,13 @@ To pack files back to the .pak or .pkm archive via CLI:
 
 `true` is for compression.
 
-**Powershell** (can accept relative path to the output file):
+**Powershell** (can accept relative path to the input file):
 
 ```psh
 .\painkiller.exe -script FS.CreatePack"('../Data/DM_Test.pkm','../../Test',true)"
 ```
 
-**Windows cmd** (need to indicate full path to the output file):
+**Windows cmd** (need to indicate full path to the input file):
 
 ```cmd
 .\painkiller.exe -script FS.CreatePack('../data/MyPack.pkm','path/to/files/',true)
@@ -142,10 +147,12 @@ PainKillerExtractor was released in 2004 by Andrew Frolov aka FAL.
 
 The tool and the source code itself are located in this [repository](https://github.com/t3r6/painkiller-extractor). This unpacker sometimes fails to extract correctly from an archive but it should be OK for modifying multiplayer maps. The tool basically consists of the `PainKillerExtractor.exe` file and everything else is a source code.
 
-### PainKillerExtractor Guide
+### PainKillerExtractor and pak2zip Guide
 
 !!! Note
     Be sure to place `PainKillerExtractor.exe` with the file you want to extract in a separate folder so that the extraction will not mess the files in your current folder.
+
+    `pak2zip` is a similar tool but it's for Painkiller Exclusive Retail Demo `.pak` resources.
 
 * Unpacking by drag-and-drop
 
@@ -157,6 +164,10 @@ The tool and the source code itself are located in this [repository](https://git
 
     ```psh
     .\PainKillerExtractor.exe PKPlus.pak
+    ```
+
+    ```psh
+    .\pak2zip.exe Textures.pak
     ```
 
 ## Dragon UnPACKer
@@ -175,12 +186,15 @@ The tool and the source code itself are located in this [repository](https://git
 * Extract the QuickBMS archive.
 * QuickBMS uses plugins to extract game resources and we'll need to download one. Go to [BMS Search](http://aluigi.altervista.org/quickbms.htm#search) on their website and search using Necrovision or Painkiller keywords. Download the `bms/necrovision.bms` script and put it in the QuickBMS folder.
 
+!!! Note
+    If you are going to extract the Painkiller Exclusive Retail Demo resources, you need a QuickBMS plugin called `bms/zip2.bms`.
+
 !![QuickBMS plugin](../../../img/unpackers/unpacker-quickbms1.jpg "QuickBMS plugin")
 
 ### Unpack game archive
 
 * Run `quickbms.exe` as an administrator.
-* Select the `necrovision.bms` plugin.
+* Select the `necrovision.bms` plugin for Painkiller/Necrovision resources or `zip2.bms` for Painkiller Exclusive Retail Demo resources.
 * Choose **.pak** or **.pkm** file to extract. You can also select all the archives in the folder to be unpacked by indicating asterisk (`*`) as a **File name** or use regex.
 * Choose the folder where to extract
 
