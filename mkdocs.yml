@@ -64,6 +64,7 @@ nav:
     - guides/modding/mpk-specification.md
     - guides/modding/pk-hud-pressed-buttons.md
   - Multiplayer:
+    - guides/multiplayer/pk-mp-client.md
     - guides/multiplayer/od-mp-server-win.md
     - guides/multiplayer/router-config.md
     - guides/multiplayer/od-firewall-config.md
