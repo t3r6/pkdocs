@@ -52,7 +52,7 @@ This part of the guide describes the full game multiplayer configuration in case
     PKPlus1.3 -lscripts pkplus.pak
     ```
 
-    Run the game via the shortcut. You should see a black CPL menu picture if the `PK++ 1.3` mod was run successfully.
+    Run the game via the shortcut. You should see a black CPL menu logo if the `PK++ 1.3` mod was run successfully.
 
 4. Change the CD key. In the game menu, go to `Multiplayer` -> `Player Settings` and click on `CD key`. Remove the previous CD key and enter something random, like `3875-f802-f704-1d3e`. Mind the format `xxxx-xxxx-xxxx-xxxx`, where `x` is a number or a letter. While OpenSpy does not check the validity of your key, game servers may check its format and uniqueness. If you don't do this step, servers might kick you out when joining.
 5. Install a multiplayer map pack. Since Painkiller does not have a map auto-download feature, you need to have some custom maps installed beforehand. A lot of custom multiplayer maps for Painkiller can be found on ModDB. You can use this [**map package**](https://www.moddb.com/games/painkiller/addons/pk-mp-playground-server-maps-by-slavok) as a starter. PKM maps should be put into the game `Data` directory.
@@ -68,6 +68,7 @@ This part of the guide describes the full game multiplayer configuration in case
     ```
 
     Once you enter an IP address, click on the `Add to Favourites` button and these servers will appear on the `Favourites` tab.
+
     Alternatively, type `/connect IP:port` in the in-game console `~` to connect to a hidden server.
 
 8. Useful settings and console commands:
