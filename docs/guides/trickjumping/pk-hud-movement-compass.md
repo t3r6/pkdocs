@@ -1,12 +1,14 @@
-# Painkiller HUD pressed buttons
+# Painkiller HUD movement compass
 
 > This mod is made by XDavidXtreme.
 
-This mod allows you to track pressed buttons in the game (Quake 3 Defrag-style). It is very useful for trickjump movies.
+This mod allows you to track pressed buttons in the game (Quake 3 Defrag style). It is very useful for trickjump movies.
 
 Copy the file to `..\Painkiller\Data\LScripts\Hud\`. Create folders if required.
 
-It is recommended to enable `/speedmeter 1` via the in-game console.
+Type in `/setmaxfps 125` in the game console to play with the consistent physics.
+
+It is recommended to enable `/speedmeter 1` via the in-game console to track your speed.
 
 [Version from David](https://github.com/t3r6/pkdocs/blob/main/code/david/HUD.lua)
 
