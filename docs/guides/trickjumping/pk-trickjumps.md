@@ -4,7 +4,7 @@ This guide contains a description of movement tricks used in the Painkiller game
 
 Painkiller singleplayer movement mechanics are different from multiplayer mechanics but they both have air control.
 
-* Singleplayer movement is based on Havok 2.0 physics. It is much slower than multiplayer movement but it allows jump climbing. You can combine movement tricks with Taro Cards like Speed, Dexterity, Weapon Modifier, etc. Rocket jumps and any other explosive jumps are disabled in Painkiller singleplayer.
+* Singleplayer movement is based on Havok 2.0 physics. It is much slower than multiplayer movement but it allows jump climbing. You can combine movement tricks with Taro Cards like Speed, Dexterity, Weapon Modifier, etc. Rocket jumps and any other explosive jumps are disabled in Painkiller singleplayer, except on the Ruins (C3L4) map.
 * Multiplayer movement was based on Havok 2.0 physics up to Painkiller v1.3 yet it was still different from singleplayer mechanics. Starting from v1.5, it was replaced by the code partially based on QuakeWorld and independent of Havok. The multiplayer movement is much faster than in singleplayer but the ability to climb was heavily reduced. Rocket jumps and other explosive jumps are allowed.
 
 !!! Note
@@ -53,7 +53,18 @@ Quick turns are the tricks when you can change a movement directions key without
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/e8PDGBjxBWg?si=vmmIh4jhZqUaDELZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+### Wall Bumping
+
+You use your speed to push you off the wall without turning your mouse (quick turns). Only forward and backward keys are used, so when you are close to touching the wall, you quickly press the opposite key and get a small boost from the wall.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FRdt7Fa7fyE?si=xPm7VONY6I9PKTT7&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BF_FILscSFM?si=n227jUKfIE5XOEVr&amp;start=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Jump Climbing
+
+!!! Note
+    Jump climbing is FPS dependent. The minimum FPS should be 120, it can be done on lower like 60 - 120, but it is very hard and you are very likely to just fall off. Recommended would be 200+ even more if possible. Jump climbing with 30-60 FPS is almost impossible, you will fall off all the time. With 0 - 30, you can't do jump wall climbing at all.
 
 This technique is mostly used when you need to reach secret places in singleplayer or for speedruns. It sort of works in multiplayer too but it is very reduced there. You basically need to rapidly press the jump button when you face a steep or curved surface.
 
@@ -67,6 +78,20 @@ Singleplayer only.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WtqBllmSz5Y?si=tJuClNqeMdzE-v_L&amp;start=20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/leXbqBAN3zU?si=j5WDCiHgl1KmYnxV&amp;start=14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Squeezing
+
+This trick only works under 60 FPS.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZVveQkPIQmI?si=gVyXHN_FYUXMUBII&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Moving Object Speed Preservation
+
+Singleplayer only. When you leave a moving object without jumping off of it (walking off the edge or something), you preserve all the speed the object underneath you had.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6SWuDRf9V78?si=TPV1j1YbYA2HYaSs&amp;start=106" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Using Jumppads
 
 Jumppads will transfer all your input speed to the jump speed. The faster you be before landing on a jumppad, the longer distance it will push you out.
@@ -75,12 +100,6 @@ Jumppads will transfer all your input speed to the jump speed. The faster you be
     It is worth mentioning that there is air control in Painkiller if you are launched in the air with some horizontal speed. However, if you are launched with zero horizontal speed, air control does not work. This is the reason for a problem when you can be locked up jumping on a jumppad and can do nothing about it and, unlike in Quake, jumppads in Painkiller do not absorb the fall damage.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xRNX5zgOoPY?si=BfPHcsyaTgG1EYvR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-### PK Pull-Up
-
-The first Painkiller weapon can help a bit in reaching heights during jump climbing. Just use the primary fire (Pain) of a Painkiller weapon against a surface while jumping on it to pull you up a little bit.
-
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4JIGg8McPg0?si=E7A0AFWqpnmSoy63&amp;start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### PK Jump
 
@@ -195,6 +214,10 @@ This bug can only be reproduced on weak PC's with bad internet connection. When 
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6j6DmdisLXw?si=LWX3om-ZNVFg73qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+### Sticky Wall (Rebounce)
+
+This trick is somewhat similar to the one in Quake 3 Defrag rebounce bug. In Painkiller, you can get stuck inside some corners while rapidly pressing the "jump" key and you'll be able to accumulate speed this way and when you unstuck, the speed will be preserved. It should be noted that Painkiller has a very high fall damage so this trick may crush you on the ground when you are unstuck.
+
 ### Double Jump
 
 The code with double jumps was present in the alpha release of Painkiller and presumably should have worked similarly to double jumps on ramps and stairs in Quake 2. This feature was bugged and not polished. The developers removed it completely after the game's release.
@@ -219,11 +242,19 @@ It was either a multiplayer bug or a not-removed tested feature from the first r
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ea7qTUvs4Qs?si=6wbNL7A4ZPDKW5Js&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+## Additions
+
+You can see in some Painkiller videos that the first Painkiller weapon (the primary fire) is used in reaching heights during jump climbing. In reality, the primary Painkiller fire (Pain) in the default Painkiller Black Edition setup, does not give you any boost.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4JIGg8McPg0?si=E7A0AFWqpnmSoy63&amp;start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Recommended video channels
 
 [pkmorfofficial](https://www.youtube.com/@pkmorfofficial)
 
 [painkillerzone](https://www.youtube.com/@painkillerzone)
+
+[XDavidXtreme](https://www.youtube.com/@XDavidXtreme)
 
 [Sp1eler](https://www.youtube.com/@Sp1eler)
 
@@ -236,5 +267,7 @@ It was either a multiplayer bug or a not-removed tested feature from the first r
 [mudzah](https://www.youtube.com/@mudzah)
 
 [cyody](https://www.youtube.com/@cyody)
+
+[3dimon3](https://www.youtube.com/@3dimon3)
 
 [Pk Zone archive](https://archive.org/details/pkzone.org-files)
