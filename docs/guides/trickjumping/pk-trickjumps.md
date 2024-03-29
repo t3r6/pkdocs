@@ -76,7 +76,7 @@ A good example is the secrets on the `C9L1 Cathedral` level from Painkiller Resu
 
 ### Wall Sliding Bug
 
-Singleplayer only.
+Singleplayer only. You bunnyhop into surfaces that have a ramp shape and hold the forward key (`W`) while you keep your view at about 45 degrees from it. The bigger or smaller it is, the less speed you have.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WtqBllmSz5Y?si=tJuClNqeMdzE-v_L&amp;start=20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
