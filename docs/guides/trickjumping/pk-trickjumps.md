@@ -4,13 +4,15 @@ This guide contains a description of movement tricks used in the Painkiller game
 
 Painkiller singleplayer movement mechanics are different from multiplayer mechanics but they both have air control.
 
-* Singleplayer movement is based on Havok 2.0 physics. It is much slower than multiplayer movement but it allows jump climbing. You can combine movement tricks with Taro Cards like Speed, Dexterity, Weapon Modifier, etc. Rocket jumps and any other explosive jumps are disabled in Painkiller singleplayer, except on the Ruins (C3L4) map.
+* Singleplayer movement is based on Havok 2.0 physics. It is much slower than multiplayer movement but it allows jump climbing. You can combine movement tricks with Taro Cards like Speed, Dexterity, Weapon Modifier, etc. Rocket jumps and any other explosive jumps are disabled in Painkiller singleplayer, except for the Ruins (C3L4) map.
 * Multiplayer movement was based on Havok 2.0 physics up to Painkiller v1.3 yet it was still different from singleplayer mechanics. Starting from v1.5, it was replaced by the code partially based on QuakeWorld and independent of Havok. The multiplayer movement is much faster than in singleplayer but the ability to climb was heavily reduced. Rocket jumps and other explosive jumps are allowed.
 
 !!! Note
-    Painkiller movement is dependent on FPS. The standard MaxFPS in multiplayer is 125.
+    Painkiller movement is dependent on FPS. The recommended MaxFPS in multiplayer is 125.
 
-    Type in `/setmaxfps 125` in the game console to have consistent jumping on a local machine.
+    Speedrunners use somewhere between 60-125 FPS in singleplayer depending on tricks.
+
+    Type in `/setmaxfps 125` in the game console to set MaxFPS in the game.
 
 ## Jump mod for multiplayer
 
@@ -82,9 +84,13 @@ Singleplayer only.
 
 ### Squeezing
 
-This trick only works under 60 FPS.
+You can squeeze your hitbox between objects. This trick is FPS dependent and only works at 60 FPS and lower.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZVveQkPIQmI?si=gVyXHN_FYUXMUBII&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+If you have more than 120 FPS, you won't be able to get out of that secret in C6L2 Loony Park.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gaZ3ICRWWeY?si=F01TOIwcp-4SiieM&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Moving Object Speed Preservation
 
@@ -97,7 +103,7 @@ Singleplayer only. When you leave a moving object without jumping off of it (wal
 Jumppads will transfer all your input speed to the jump speed. The faster you be before landing on a jumppad, the longer distance it will push you out.
 
 !!! Note
-    It is worth mentioning that there is air control in Painkiller if you are launched in the air with some horizontal speed. However, if you are launched with zero horizontal speed, air control does not work. This is the reason for a problem when you can be locked up jumping on a jumppad and can do nothing about it and, unlike in Quake, jumppads in Painkiller do not absorb the fall damage.
+    It is worth mentioning that there is air control in Painkiller if you are launched in the air with some horizontal speed. However, if you are launched with zero horizontal speed, the air control does not work. This is the reason for a problem when you can be locked up jumping on a jumppad and can do nothing about it and, unlike in Quake, jumppads in Painkiller do not absorb the fall damage.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xRNX5zgOoPY?si=BfPHcsyaTgG1EYvR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -216,7 +222,7 @@ This bug can only be reproduced on weak PC's with bad internet connection. When 
 
 ### Sticky Wall (Rebounce)
 
-This trick is somewhat similar to the one in Quake 3 Defrag rebounce bug. In Painkiller, you can get stuck inside some corners while rapidly pressing the "jump" key and you'll be able to accumulate speed this way and when you unstuck, the speed will be preserved. It should be noted that Painkiller has a very high fall damage so this trick may crush you on the ground when you are unstuck.
+This trick is somewhat similar to the one in Quake 3 Defrag. In Painkiller, you can get stuck inside some corners while rapidly pressing the "jump" key and you'll be able to accumulate speed this way and when you unstuck, the speed will be preserved. It should be noted that Painkiller has a very high fall damage so this trick may crush you on the ground when you are unstuck.
 
 ### Double Jump
 
@@ -244,7 +250,7 @@ It was either a multiplayer bug or a not-removed tested feature from the first r
 
 ## Additions
 
-You can see in some Painkiller videos that the first Painkiller weapon (the primary fire) is used in reaching heights during jump climbing. In reality, the primary Painkiller fire (Pain) in the default Painkiller Black Edition setup, does not give you any boost.
+You can see in some Painkiller videos that the first Painkiller weapon (the primary fire) is used in reaching heights during jump climbing. In reality, the primary Painkiller fire (Pain) in the default Painkiller Black Edition setup does not give you any boost.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4JIGg8McPg0?si=E7A0AFWqpnmSoy63&amp;start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
