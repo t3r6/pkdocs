@@ -71,6 +71,7 @@ nav:
     - guides/multiplayer/command-options.md
   - Trickjumping:
     - guides/trickjumping/pk-hud-movement-compass.md
+    - guides/trickjumping/pk-autohop.md
     - guides/trickjumping/pk-trickjumps.md
   - Documentation:
     - mkdocs-dev.md

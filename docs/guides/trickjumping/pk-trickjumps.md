@@ -8,11 +8,11 @@ Painkiller singleplayer movement mechanics are different from multiplayer mechan
 * Multiplayer movement was based on Havok 2.0 physics up to Painkiller v1.3 yet it was still different from singleplayer mechanics. Starting from v1.5, it was replaced by the code partially based on QuakeWorld and independent of Havok. The multiplayer movement is much faster than in singleplayer but the ability to climb was heavily reduced. Rocket jumps and other explosive jumps are allowed.
 
 !!! Note
-    Painkiller movement is dependent on FPS. The recommended MaxFPS in multiplayer is 125.
+    Painkiller movement is dependent on FPS. The recommended MaxFPS in multiplayer is 125. This limit is set on all current multiplayer servers.
 
     Speedrunners use somewhere between 60-125 FPS in singleplayer depending on tricks.
 
-    Type in `/setmaxfps 125` in the game console to set MaxFPS in the game.
+    Type in `/setmaxfps 125` in the game console to set MaxFPS in the game for a local game.
 
 ## Jump mod for multiplayer
 
@@ -101,6 +101,8 @@ Singleplayer only. When you leave a moving object without jumping off of it (wal
 ### Using Jumppads
 
 Jumppads will transfer all your input speed to the jump speed. The faster you be before landing on a jumppad, the longer distance it will push you out.
+
+Jumppad physics is FPS-dependent. The more FPS you have, the smaller jump you get. If you create a multiplayer map, make sure to type in `/setmaxfps 125` in the game console to set MaxFPS to test the map locally with the recommended physics setting.
 
 !!! Note
     It is worth mentioning that there is air control in Painkiller if you are launched in the air with some horizontal speed. However, if you are launched with zero horizontal speed, the air control does not work. This is the reason for a problem when you can be locked up jumping on a jumppad and can do nothing about it and, unlike in Quake, jumppads in Painkiller do not absorb the fall damage.
