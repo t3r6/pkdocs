@@ -6,6 +6,6 @@ You can use this code to enable the autohop (auto bhop / auto bunny hop / auto j
 
 The default jump button is "Space". You can change it to another one in the code.
 
-Here is the [**code**](https://github.com/t3r6/pkdocs/blob/main/code/david/CPlayer.lua).
+Here is the [**code**](https://github.com/t3r6/pkdocs/blob/main/code/david/Classes/CPlayer.lua).
 
 Copy the file to `..\Painkiller\Data\LScripts\Classes\`. Create folders if required.
