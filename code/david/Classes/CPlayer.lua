@@ -543,7 +543,7 @@ function CPlayer:ClientTick(delta)
         self.RightVector:Set(CAM.GetRightVector())
     end
 	
-	if INP.Key(Keys.Space) == 2 then
+	if IsBitFlag(self.CurAction,Actions.Jump) then
 		if not self.autoJumped and PLAYER.FloorCheck(self._Entity) then
 			self.CurAction = AddBitFlag(self.CurAction,Actions.Jump)
 			self.autoJumped = true
