@@ -1,0 +1,649 @@
+
+===================================================================
+Painkiller Readme File v1.35
+===================================================================
+
+Contents
+
+1. Introduction
+
+2. System Requirements
+   2.1. Minimum
+   2.2. Recommended
+
+3. DirectX 9 and Drivers
+
+4. Performance and Configuring
+
+5. Additional Information
+
+6. Version 1.35 Update
+
+7. Uninstalling Painkiller
+
+8. Technical Support & Contact
+
+9. Related Web Sites
+
+10. Legal 
+   
+NOTE: The contents of Section 6 with updated information on the 1.35
+release can be found translated into other languages online at:
+http://www.painkillergame.com
+
+
+====================================================================
+1. Introduction 
+====================================================================
+
+Painkiller is an action-driven FPS (first person shooter) game set in a 
+dark and sinister world somewhere between heaven and hell.  You take on 
+the role of Daniel Garner, a seemingly regular guy, who has just been
+killed in a horrific car accident.  As you struggle to find the reasons
+why you've been denied entrance into heaven, you must fight against hordes
+of demonic soldiers in an attempt to stop an imminent holy war.
+
+To Play the Game:
+
+1) Launch the Painkiller shortcut.
+
+2) From the Main Menu select Sign the Pact.
+
+3) Select your difficulty level.
+
+4) Watch the intro video and then select Chapter 1, Level 1 in the
+map tool, by clicking on the crimson crystal.
+
+You can also adjust various settings like controls, video settings, and 
+game options of the Main Menu under the Options selection.
+
+
+====================================================================
+2. System Requirements 
+====================================================================
+
+2.1. Minimum:
+	OS: Windows 98SE/ME/2000/XP
+	CPU: 1.5 GHz Pentium III or AMD Athlon processor
+	RAM: 384 MB
+	CD-ROM/DVD-ROM: 8X speed 
+	Hard Drive Space: 1.2 GB available
+	Video: 64 MB DirectX 8.1 card with hardware 
+               Transform & Lighting support (NVIDIA GeForce2 GTS or better)
+	Sound: DirectX 8.1b or better compatible
+	Input: Keyboard and mouse
+	
+2.2. Recommended:
+	OS: Windows XP
+	CPU: 2.4 GHz Pentium 4 or AMD Athlon processor
+	RAM: 512 MB
+	CD-ROM/DVD-ROM: 8X speed 
+	Hard Drive Space: 1.2 GB available
+	Video: 128 MB DirectX 9 card, NVIDIA GeForce FX 5700 or better
+	Sound: DirectX 8.1b or better compatible
+	Input: Keyboard and mouse
+
+
+====================================================================
+3. DirectX 9 and Drivers
+====================================================================
+
+Painkiller has been tested with a variety of video and sound cards.
+Please ensure all drivers are up to date for the system hardware, 
+especially for video cards.
+
+
+The latest drivers for NVIDIA based cards can be found here:
+
+http://www.nvidia.com/content/drivers/drivers.asp
+
+
+The latest drivers for ATI based cards can be found here:
+
+http://www.ati.com/support/driver.html
+
+
+If you have a VIA chipset in your PC, please make sure you are using 
+the latest VIA drivers – found at: 
+
+http://www.viavpsd.com/download/index.jsp
+
+
+Painkiller also requires the installation of DirectX 9.0b. If you don't 
+have the latest version of DirectX, please download the installer 
+from:
+
+http://www.microsoft.com/windows/directx/downloads/default.asp  
+
+
+====================================================================
+4. Performance and Configuring
+====================================================================
+
+Painkiller requires both good CPU and Graphics processing power for an
+optimum playing experience.  If you find your framerate to be too low, 
+please adjust your video settings under the Options Menu.  Dropping texture 
+quality levels for the game architecture, sky, characters, and weapons to
+lower levels, as well as the overall graphics resolution will help achieve 
+improved game performance.
+
+For multiplayer gaming please make sure to set your Connection Speed
+accurately under Player Settings in the Multiplayer Menu.
+
+Also for multiplayer play on the Internet behind a firewall and/or proxy 
+server please make sure to have the required port open to connect.  
+Painkiller by default uses port 3455.  Painkiller will not connect without
+an open port.
+
+Note GameSpy Arcade utilizes additional ports.  A list of those ports and
+other support for GameSpy Arcade can be found here:
+
+http://www.gamespyarcade.com/support/firewalls.shtml
+  
+
+====================================================================
+5. Additional Information
+====================================================================
+
+Information on some of the following topics has not been included or has 
+changed since the printing of early versions of the manual:
+
+- Start-up CD: You must have CD 3 in your CD/DVD-ROM drive to start
+Painkiller.
+
+- Locked Difficulty Modes: Trauma mode is available after collecting 23 
+cards, not Nightmare mode.
+
+- Checkpoints: Save checkpoints on both Daydream and Insomnia modes 
+replenish your health fully.
+
+- Quicksaves:  Quicksaves are available in Painkiller.  They default to keys
+F5 (save) and F9 (load).
+
+- Headbob:  The option to control the amount of walking and head motion
+you see while playing has been included in the HUD settings under the
+Options Menu.  Lowering this setting will make less motion.
+
+- Clip Plane:  An option to control the far viewing distance in the game 
+world has been included under the Advanced Video tab in the Options Menu.
+By lowering this setting you may have improved performance but you will
+not be able to see as far into the game world.
+
+- Audio Settings:  On certain configurations it has been noted that 
+selecting the "Miles Fast 2D Positional Audio" driver as the Sound 
+setting under the Options Menu will prove to be more stable than other 
+hardware drivers.
+
+- Low-end cards:  While Painkiller supports most older video cards 
+(see System Requirements above), some of Painkiller's special effects 
+and advanced graphics features are not supported by these boards.  While 
+this will not affect game play in any way, some visual effects may be 
+reduced or disabled entirely on lower end video cards.
+
+- Dedicated Servers:    A short-cut to run a multiplayer dedicated server
+is provided in the Start Menu folder for Painkiller after installation.  
+Dedicated servers generally have better performance and are preferred for 
+Internet play.  The same system requirements apply for dedicated servers.
+
+
+====================================================================
+6. Version 1.35 Updated Information
+====================================================================
+
+1.15 Multiplayer improvements and fixes:
+- NEW: new map, DM_Cursed
+- NEW: full warmup mode for TDM and PCF modes, partial warmup for 
+       FFA/TLB/Voosh
+- NEW: demo recording and playback incl. time control (slow down/speed up)
+- NEW: spectator mode with 3 different views: FPS/TPP/Free
+- NEW: voting system, including map change, kickbans, etc.
+- NEW: experimental prediction code ("prediction"/"pushlatency")
+- NEW: server info incl. map/mode/fps/etc. info;
+- NEW: clearer info when getting "Gamespy Key in use or bad"
+- NEW: now when the player shoots at the enemy wearing Invincibility 
+       he will hear enemy's "shield" sound
+- NEW: Powerup Drop and Powerups options now added
+- NEW: players can commit suicide with "KILL" command 
+- NEW: remaining time info displayed now every minute
+- NEW: players can now switch between spec/play mode either via console 
+       command or by hitting Space when in Spec mode
+- NEW: players can switch the team during the game (stats will be reset)
+- NEW: info what MP map is being loaded
+- NEW: stats music added
+- NEW: "Disconnect" option in the menu
+- NEW: players can see their fps via "showfps" command
+- CHANGE: improved respawning logic
+- CHANGE: BrightSkins are On by default now
+- CHANGE: with BrightSkins On, player model in PLAYER SETUP now shows 
+          as non-BrightSkin
+- CHANGE: players can now play LAN sessions with no access to the Internet
+- CHANGE: private server with no Internet access is now visible in LAN
+- CHANGE: redesigned items/respawns on several maps
+- CHANGE: clients now get vertical speed boost when respawning in PCF mode
+- CHANGE: players cannot abuse ElectroDisc during Voosh and other
+          modes
+- CHANGE: ElectroDriver beams are more optimized
+- FIX: teamskins are now correctly displayed for the new players
+- FIX: exploding barrels now correctly remove frags from the dead player 
+       instead of adding them to the enemy
+- FIX: now Electro beam actually works when fired near the enemy and then 
+       moved onto him (previously in such situation the beam did 0 damage)
+- FIX: rockets do not appear like they bounce off the ground sometimes
+- FIX: numerous sound fixes (eg. PainKiller pain sounds, ElectroDisc 
+       sounds, chaingun loop etc.)
+- FIX: clients now see PainKiller's beam
+- FIX: SayTeam now works correctly
+- FIX: lava now does damage on when server is dedicated
+- FIX: taking Invincibility no longer crashes clients
+- FIX: loading wrong level issue fixed
+- FIX: clients using PainKiller on walls no longer can be heard on server
+- FIX: fake model exploit removed
+- FIX: ElectroDriver autoaim exploit removed
+- FIX: holding Forward during respawn now works correctly
+- FIX: players now can hear enemy's jump sounds
+- FIX: next/previous weapon keys now work properly
+- FIX: team score is now stored even if a player drops the game
+- FIX: Rage/WM bearer's sounds can be heard by the client now
+- FIX: spectator were not able to go through teleports
+- FIX: speccing quad no longer gives blue flickering
+- FIX: TAB during warmup stops the player now
+- FIX: dedicated server remembers map/mode configs
+- FIX: map/callvote map change displays the map name correctly
+- FIX: callvote kick no longer crashes the dedicated server
+- FIX: typing KILL in spectator mode crashed ded.server
+
+
+1.15 Singeplayer improvements and fixes:
+- NEW: benchmarking system for both graphic cards and processors
+- NEW: patching system with supporting .dat files
+- CHANGE: gamma correction/brightness/contrast setup now works via a slider
+- CHANGE: gamma correction is saved correctly now
+- CHANGE: Demon Morph frags now more spectacular
+- CHANGE: players can bind all keys now (like numpad Enter etc.)
+- CHANGE: amputee in the Town level now has his own sound fx
+- CHANGE: witch no longer "shakes" while flying
+- CHANGE: special red souls have now their own sound
+- CHANGE: music no longer plays during Demon Morph/Haste
+- CHANGE: CD start-up dialogues improved
+- FIX: starting new SP game after MP session no longer results in a
+       random blinking screen
+- FIX: savegames with Executioner firing beams
+- FIX: savegames with an objects thrown by the enemy
+- FIX: script error when the player kills PsychoElectro on the electric chair
+- FIX: Prison's PsychoElectro had no electric beams after load
+- FIX: players with Last Breath card now cannot survive when they jump into 
+       the water/jump out of the level
+- FIX: Babel's stones now always hurt the player
+- FIX: numerous smaller bugs
+
+
+1.2 Multiplayer and Singleplayer improvements and fixes:
+- NEW: redesigned and much improved prediction code (better prediction + 
+       less processor power required)
+- NEW: two new maps: DM_FALLEN1 (for 2x2 and FFA) and DM_FALLEN2 (for 1x1)
+- NEW: fully customizable weapon setup (each weapon module can have separate 
+       key)
+- NEW: added better mod support (e.g. for Chains.Mod), e.g. pak file format 
+       fixes, free key binding (commands/messages), etc.
+- NEW: option to switch the weapon along with primary/secondary fire switch
+- NEW: added info about specs not being able to vote
+- NEW: forced break added (e.g. when 1 player leaves during 1x1 fight)
+- NEW: added various server start-up and configuration options for easier 
+       server maintenance
+- NEW: added optional, variable weapon respawn timing ('Cfg.WeaponRespawnTime')
+- NEW: players list now includes special player id (useful for kicking 
+       players with weird names)
+- NEW: stats music added
+- CHANGE: Chaingun does slightly less damage/knockback and no longer shocks 
+          the enemy
+- CHANGE: Electro does more damage/knockback and shocks the enemy
+- CHANGE: Shotgun now has 24 pellets (previously 12), increased total damage
+- CHANGE: Driver now shoots shurikens two times faster
+- CHANGE: teleport now reduces the player's extra speed by 50%
+- FIX: clients should no longer crash at the end of the game
+- FIX: client no longer crashes in rare instances when dying of Electro shocks
+- FIX: exiting the game no longer alters reverb setting on SB Audigy
+- FIX: "Disconnect" during demo playback now works correctly
+- FIX: fx of electro-disk are now displayed correctly
+- FIX: telefrag during warm-up no longer gives the player max ammo
+- FIX: spectators now can see the score at the end of the game
+- FIX: quad fx in now properly precached
+- FIX: weapon pickup after respawn now works correctly
+- FIX: deleting saves from autosaves tab now works correctly
+- FIX: "Fire Best Custom" function now works correctly
+- FIX: changing player name while in a game no longer resets player's 
+       connected time on scoreboard
+- FIX: Callvote map change: voting no longer carries over after new map loads
+- FIX: game no longer binds to the first IP on multiple IP machines for 
+       listen servers (‘+interface’ in the command line now works properly)
+- FIX: player name no longer can exceed character limit
+- FIX: specs no longer count as players in the browser info
+- FIX: no more rare instances of map double-loading
+- FIX: sometimes a player could see an item already taken by someone else
+- FIX: dozens of smaller additions/bugfixes for both multi and singleplayer
+
+
+1.3 Multiplayer and Singleplayer improvements and fixes:
+- NEW: network code based on constant physics framerate - smoothing game play 
+       with high framerates being possible even on servers with low physics 
+       framerates
+- NEW: added 'Low Quality Multiplayer FX' checkbox in advanced graphics 
+       settings, removes ragdolls and some effects in favor of performance
+- NEW: added new benchmark based on Docks level (C5L2)
+- NEW: server settings changed by way of voting are reset to the 
+       default settings once players leave the server
+- NEW: now possible to set non-standard display resolution (i.e. LCD 
+       monitor resolutions) in the game menu without distortion
+- NEW: built-in support for All-Seeing Eye
+- NEW: ‘disconnect’ console command added
+- NEW: 'showfps 1' command now includes packet loss information
+- CHANGE: likeliness of telefrags are now reduced
+- CHANGE: Electro+Driver combo removed from MP
+- CHANGE: entering teleports no longer reduces speed
+- CHANGE: damage and firing range of Electro reduced
+- CHANGE: shotgun knockback reduced slightly
+- CHANGE: chaingun knockback now included
+- CHANGE: acid DM_FALLEN2 no longer kills instantly
+- CHANGE: it is now possible to get out of the lava on DM_FALLEN2
+- CHANGE: minor FPS improvements on some MP maps
+- CHANGE: chat messages are displayed red in console
+- CHANGE: when player on his own non-dedicated server stands where a weapon is
+          spawned in the map, other players can now pick up that weapon
+- CHANGE: ability to collect energy & ammo pack while fully healthed, for ammo
+- FIX: jumppads failing to work in rare circumstances has been fixed
+- FIX: audio effect when shooting shuriken gun repeatedly no longer cuts-out
+- FIX: server passwords now work when connecting from command line
+- FIX: scoreboard getting stuck open in rare instances as a spectator is fixed
+- FIX: benchmark scores below 29 FPS are now properly displayed
+- FIX: Windows 98 UI launching issues from 1.2 update resolved
+- FIX: minor corrections made to the geometry and textures of map DM_FALLEN2
+- FIX: a few smaller additions/bugfixes for both multi and singleplayer 
+
+
+1.35 Painkiller Update:
+- CHANGE: prediction = on
+- FIX: server security bug
+- FIX: a few smaller bugfixes and optimizations for both multi and singleplayer 
+
+
+DEMO RECORDING Usage:
+-----------------------------
+Only clients should record the demo. Server can also record, but the 
+recording starts only when any client connects.
+
+- Recording the demo:
+a) you need to schedule the recording *before* connecting to the server.
+b) in the game menu, type in: DEMORECORD [name], for example: DEMORECORD TEST
+
+- Finishing the recording:
+a) you can stop the recording either by disconnecting from the server, or 
+   by typing in: DEMOSTOP
+
+- Playing the demo:
+a) to play the demo type in: DEMOPLAY [name], eg. DEMOPLAY [test]
+b) you can use grey +/- keys to speed up/slow down the demo playback
+
+NOTE: Demos have .pkd extension. You don't need to add this extension when 
+      playing or recording the demo (eg. you should type in DEMORECORD TEST 
+      instead of DEMORECORD TEST.PKD)
+
+
+WARMUP SYSTEM Usage:
+-----------------------------
+
+There is a new warm-up system for Team Deathmatch and People Can Fly modes. In 
+warm-up the game doesn't start until all players are ready, but to kill the 
+boredom of waiting for this last one player everyone can move around/fire etc.
+
+To start the game you can either type in: READY (type NOTREADY to unready 
+yourself) or press TAB once. Normally pressing TAB (default) during the game 
+shows you the scoreboard as long as you keep TAB depressed. In warm-up, 
+pressing TAB shows the players list and you can ready/unready/switch teams. 
+Press TAB again to hide the scoreboard.
+
+Note that you can kickban the players who deliberately block you from starting 
+the game. You can also break the match at any time by typing in BREAK command. 
+
+Console commands are available below and online at painkillergame.com.
+
+
+SPECTATOR MODE Usage:
+-----------------------------
+
+You can spectate the games. To do that, click one on the server you want to 
+join and select SPECTATE instead of JOIN. Alternatively, you can use console 
+commands like SPECTATOR 1/0 and JOIN command. 
+
+Console commands are available below and online at painkillergame.com.
+
+When spectating, you can switch between 3 different views:
+a) FPS - where you can see the game from the eyes of a given player (note you 
+   don't see the player's weapon in this mode);
+b) TPP - Third Person Perspective, where you can see a given player from bird's 
+   eye view
+c) Free - where you can freely move anywhere on the level
+
+You can switch between players at any time.
+
+
+VOTING SYSTEM Usage:
+-----------------------------
+
+Now the players can change the map, game mode, and much more. For example:
+a) if you want to change the map to DM_SACRED, type in: CALLVOTE MAP DM_SACRED
+b) other players need to type in: VOTE YES if they agree to change the map
+c) if less than 50% of the players votes in favor (incl. you) in 30 sec time 
+   period, voting will finish with no success
+d) ...but if more than 50% of the players execute VOTE YES, the map will be 
+   changed to DM_SACRED
+
+Console commands are available below and online at painkillergame.com.
+
+
+BENCHMARKING TOOL Usage:
+------------------------------
+
+You can benchmark your system by running fly-by demo. When in the menu, type 
+in: BENCHMARK C5L1 or BENCHMARK C5L2. At the end of the test you will see the 
+average fps, final score etc.  Level C5L2 (Docks) is more representative of
+actual Painkiller game play (intensive explosions, Havok physics, lighting,
+Demon morphing FX, etc.) than C5L1.  On either benchmark be sure to run 
+multiple passes to obtain a valid average score.
+
+
+SERVER START and CONFIG FILE Usage:
+------------------------------------
+
+You can start Painkiller servers now with more options via the command line
+and configuration files.  The following start-up parameters can be used:
+
+To automatically start a dedicated server with settings from a given
+configuration file (in this example it is 'config.ini'):
+
+painkiller.exe -dedicated -start -cfg config.ini 
+
+To automatically start a dedicated server where all settings and changes 
+from a given configuration are written to a file (in this example it is 
+'newconfig.ini'):
+
+painkiller.exe -cfg newconfig.ini
+
+
+PREDICTION CODE:
+------------------------------
+
+In addition to general networking improvements, the Painkiller 1.3 update has
+reworked, improved forward-looking prediction code implemented.  This code 
+should be helpful to players with higher pings.  In addition a client's FPS
+is not limited by a dedicated server's FPS setting.  Prediction is also now 
+automatically on and no longer needs to use the checkbox and/or console
+commands introduced in older versions of the game.
+
+
+ADMIN SETTINGS:
+---------------
+
+When running dedicated server, admins have the option to disallow players
+to change some game settings. Click on VOTING tab to check/uncheck these game
+settings you want to allow/disallow for CALLVOTE change.
+
+
+CONSOLE COMMANDS:
+------------------------------
+
+Here is list of Painkiller console commands (additional console information 
+can be found online at painkillergame.com):
+
+STANDARD COMMANDS: 
+  showweapon <0/1> - disables/enables weapon rendering
+  benchmark c5l1 - starts benchmarking test
+  msensitivity <value> - sets mouse sensitivity
+  msmooth <0/1> - disables/enables mouse smoothing
+  fov <value> - sets camera's FOV
+  crosshair <value (1-32)> - changes crosshair
+  hudsize <value (0.1-3.0)> - sets HUD size
+  speedmeter <1/0> - shows speed meter
+  weaponspecular <1/0> - enables weapon specular
+  showfps <1/0> - enables FPS and other performance displays
+  exit
+  quit
+
+MULTIPLAYER COMMANDS:
+Server (commands available on server and for voting):
+  map <map_name> - changes current map
+  timelimit <value> - sets time limit
+  fraglimit <value> - sets frag limit
+  kick <name> - kicks player from the server
+  bankick <name> - kicks and bans player from the server
+  maxplayers <value> - sets max number of players on server
+  maxspectators <value> - sets max number of spectators on server
+  powerupdrop <0/1> - disable/enable powerup dropping (after map change)
+  powerups <0/1> - disable/enable powerups
+  weaponsstay <0/1>
+  teamdamage <0/1>
+  allowbunnyhopping <0/1>
+  allowbrightskins <0/1>
+  allowforwardrj <0/1>
+  gamemode <ffa/tdm/pcf/tlb/voosh> - changes game mode on server
+  reloadmap
+Client:
+  team <1/2> - changes player's team
+  spectator <0/1> - disable/enable spectator mode
+  ready - sets the player ready for match
+  notready - sets the player unready for match
+  break - callvote for stopping the match
+  callvote <command command_params> - starts voting - callvote maxplayers 2
+  vote <yes/no> - agree or not agree to callvote
+  demoplay <filename_to_play_from>
+  demorecord <filename_to_record_in>
+  demostop
+  name <new_name> - changes player name
+  kill - player commints suicide
+  camerainterpolation <0/1> - disables/enables camera interpolation
+  connect <ip[:port]>
+  disconnect
+
+MULTIPLAYER TUNING and TWEAKING COMMANDS:
+  storeframes - reduces the chances of netcode desynchronization but
+                increases CPU usage for users with wildly varying pings
+  netstats - shows info of what's going in the network over the last 5 secs.
+  netstats overall - shows info of what's going in the network from the start
+      of the connection
+  netstats help - shows help for the command
+
+NOTE: The contents of this section with updated information on the 1.3
+release can be found translated into other languages online at:
+http://www.painkillergame.com
+
+
+====================================================================
+7. Uninstalling Painkiller
+====================================================================
+
+To uninstall Painkiller:
+Browse to the Painkiller folder on your Start Menu, then select "Uninstall." 
+
+Alternatively, you can open your Control Panel, choose "Add/Remove Programs,"
+select Painkiller then click "Remove."
+
+
+====================================================================
+8. Technical Support & Contact
+====================================================================
+
+If you are experiencing technical problems with this software, and you have
+carefully followed the instructions in this readme, you may find further
+support in the following places:
+
+Please visit the Technical Support section of our Web site at:
+
+Online Support ­ http://www.dreamcatchergames.com/
+
+We have posted common problems and solutions that may help you. We also
+suggest that you complete the Technical Support form located at our Web site.
+Please provide a detailed description of the problem you are experiencing
+(i.e. error message, where in the game the problem occurs, etc.). This will
+help our Representatives find a solution much quicker.
+
+Phone Support - 416-638-6151*
+
+If you would like to speak with one of our Technical Support Representatives,
+our hours of operation are from 9am to 9pm EST, Monday through Friday.
+
+Please have the following ready:
+
+1)  Information about your computer's configuration (i.e. RAM, MHz, video
+    and sound cards). You may use the Technical Support form at our Web site
+    as a guide.
+
+2)  A detailed description of the problem (i.e. error message, where in the
+    game the problem occurs, etc.).
+
+3)  Immediate access to your computer so the Representative may walk you
+    through the steps.
+
+4)  Pen and paper to take any notes.
+
+* Phone support is located in Toronto, Canada.
+
+
+====================================================================
+9. Related Web Sites
+====================================================================
+
+Painkiller is brought to you by People Can Fly and DreamCatcher Games.  
+Please visit us online at:
+
+http://www.painkillergame.com
+The official Painkiller website and forums.
+
+http://www.dreamcatchergames.com/
+DreamCatcher's North American website.
+
+http://www.dcegames.com/
+DreamCatchers's European website.
+
+http://www.peoplecanfly.com
+The website of People Can Fly.
+
+
+===================================================================
+10. Legal 
+===================================================================
+
+=Painkiller Build v1.35=
+
+© 2004 DreamCatcher Interactive Inc. DreamCatcher design and mark are 
+registered trademarks of DreamCatcher Interactive Inc. GameSpy and 
+the "Powered by GameSpy" design are trademarks of GameSpy Industries, Inc. 
+Alienware is a registered trademark of Alienware Corporation. NVIDIA, the 
+NVIDIA Logo, and other NVIDIA Marks are registered trademarks or trademarks 
+of NVIDIA Corporation in the United States and other countries. All-Seeing
+Eye is a registered trademark of UDP Soft Lotd.  Microsoft® Windows®  are 
+registered trademarks of Microsoft Corporation. The ratings icon is a 
+trademark of the Interactive Digital Software Association. Software 
+platform logo (TM and ©) 2004 IEMA.  All other brands, product names and 
+logos are trademarks or registered trademarks of their respective owners. 
+
+All rights reserved.
+

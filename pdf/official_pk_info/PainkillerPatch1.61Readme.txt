@@ -1,0 +1,595 @@
+
+===================================================================
+Painkiller and Painkiller Battle Out of Hell Readme File v1.61
+===================================================================
+
+Contents
+
+1. Introduction
+
+2. System Requirements
+   2.1. Minimum
+   2.2. Recommended
+   2.3. Multiplayer
+
+3. DirectX 9 and Drivers
+
+4. Performance and Configuring
+
+5. Additional Information
+
+6. Version 1.61 Update
+
+7. Uninstalling Painkiller
+
+8. Technical Support & Contact
+
+9. Related Web Sites
+
+10. Legal 
+   
+NOTE: Additional information on the PAIN Engine v1.61 release can be found, 
+along with other language translations online at:
+
+http://www.painkillergame.com
+
+
+====================================================================
+1. Introduction 
+====================================================================
+
+Painkiller is an action-driven FPS (first person shooter) game set in a 
+dark and sinister world somewhere between heaven and hell.  You take on 
+the role of Daniel Garner, a seemingly regular guy, who has just been
+killed in a horrific car accident.  As you struggle to find the reasons
+why you've been denied entrance into heaven, you must fight against hordes
+of demonic soldiers in an attempt to stop an imminent holy war.
+
+Continuing with the Painkiller Expansion, Battle Out of Hell, Daniel 
+Garner is surrounded by dozens of hell's minions and the unconscious 
+Eve lying at his feet.  Alastor, once servant of the Dark Lord himself, 
+is vying to become ruler of all the netherworld and re-launch the 
+failed assault on Heaven.  You alone stand on the brink of two fates - 
+ultimate glory or total destruction.
+
+This update features the latest version of the PAIN Engine (1.61) along
+with a myriad of enhancements and fixes. 
+
+To Play the Game:
+
+1) Launch the Painkiller shortcut.
+
+2) From the Main Menu select Sign the Pact.
+
+3) Select Painkiller or Battle Out of Hell.
+
+4) Select your difficulty level.
+
+5) Watch the intro video and then select Chapter 1, Level 1 in the
+map tool, by clicking on the crimson crystal.
+
+You can also adjust various settings like controls, video settings, and 
+game options of the Main Menu under the Options selection.
+
+
+====================================================================
+2. System Requirements 
+====================================================================
+
+2.1. Minimum:
+	OS: Windows® 98/Me/2000/XP with DirectX 9.0c or greater
+	CPU: 1.5 GHz processor
+	RAM: 384 MB
+	CD-ROM/DVD-ROM: 8X speed 
+	Hard Drive Space: 2.6 GB available (for Painkiller + Expansion)
+	Video: 64 MB DirectX 8.1 card with hardware 
+               Transform & Lighting support (NVIDIA GeForce2 GTS or better)*
+	Sound: DirectX 8.1b or better compatible
+	Input: Keyboard and mouse
+	
+2.2. Recommended:
+	OS: Windows® XP with DirectX 9.0c or greater
+	CPU: 2.4 GHz processor
+	RAM: 512 MB
+	CD-ROM/DVD-ROM: 8X speed 
+	Hard Drive Space: 2.6 GB available (for Painkiller + Expansion)
+	Video: 128 MB DirectX 9 card (NVIDIA GeForce FX 5700 or better)*
+	Sound: DirectX 8.1b or better compatible
+	Input: Keyboard and mouse
+
+*256 MB of video RAM is strongly suggested for all graphics options being 
+turned on.
+
+2.3. Required for multiplayer:
+	1 Painkiller or Battle out of Hell disc per computer
+	Internet (2-16 players): 56Kbps or faster Internet connection 
+		with high-speed broadband strongly recommended.
+	Local Network (2-16 players): TCP/IP compliant LAN
+
+
+====================================================================
+3. DirectX 9 and Drivers
+====================================================================
+
+Painkiller and Battle Out of Hell have been tested with a variety of 
+video and sound cards.  Please ensure all drivers are up to date for 
+the system hardware, especially for video cards.
+
+
+The latest drivers for NVIDIA based cards can be found here:
+
+http://www.nvidia.com/content/drivers/drivers.asp
+
+
+The latest drivers for ATI based cards can be found here:
+
+http://www.ati.com/support/driver.html
+
+
+If you have a VIA chipset in your PC, please make sure you are using 
+the latest VIA drivers – found at: 
+
+http://www.viavpsd.com/download/index.jsp
+
+
+Painkiller also requires the installation of DirectX 9.0c. If you 
+don't have the latest version of DirectX, please download the 
+installer from:
+ 
+http://www.microsoft.com/windows/directx/downloads/default.asp
+
+
+====================================================================
+4. Performance and Configuring
+====================================================================
+
+Painkiller and Painkiller Battle Out of Hell requires both good CPU 
+and Graphics processing power for an optimum playing experience.  If 
+you find your framerate to be too low, please adjust your video settings 
+under the Options Menu.  Dropping texture quality levels for the game 
+architecture, sky, characters, and weapons to lower levels, as well 
+as the overall graphics resolution will help achieve improved game 
+performance.  Most importantly, make sure Dynamic Lights, Character 
+Shadows and Water FX settings are adjusted accordingly - set them to 
+normal or low to dramatically improve the game performance.  Dynamic 
+Lights and Character Shadows are primarily recommended for high end 
+DirectX 9 cards like the GeForce 6800 and Radeon X800.
+
+For multiplayer gaming please make sure to set your Connection Speed
+accurately under Player Settings in the Multiplayer Menu.  Please also
+see the multiplayer specific tuning suggestions contained in Section 5, 
+'Additional Information' below.
+
+Also for multiplayer play on the Internet behind a firewall and/or proxy 
+server please make sure to have the required port open to connect.  
+Painkiller by default uses port 3455 (UDP).  Painkiller will not connect 
+without an open port.
+
+Note GameSpy Arcade utilizes additional ports.  A list of those ports and
+other support for GameSpy Arcade can be found here:
+
+http://www.gamespyarcade.com/support/firewalls.shtml
+  
+
+====================================================================
+5. Additional Information
+====================================================================
+
+Information on some of the following topics has not been included or has 
+changed since the printing of early versions of the Painkiller manual:
+
+- Start-up CD: You must have CD 1 in your CD/DVD-ROM drive to start
+Painkiller.
+
+- Locked Difficulty Modes: Trauma mode is available after collecting 23 
+cards, not Nightmare mode.
+
+- Checkpoints: Save checkpoints on both Daydream and Insomnia modes 
+replenish your health fully.
+
+- Quicksaves:  Quicksaves are available in Painkiller.  They default to keys
+F5 (save) and F9 (load).
+
+- Headbob:  The option to control the amount of walking and head motion
+you see while playing has been included in the HUD settings under the
+Options Menu.  Lowering this setting will make less motion.
+
+- Clip Plane:  An option to control the far viewing distance in the game 
+world has been included under the Advanced Video tab in the Options Menu.
+By lowering this setting you may have improved performance but you will
+not be able to see as far into the game world.
+
+- Audio Settings:  On certain configurations it has been noted that 
+selecting the "Miles Fast 2D Positional Audio" driver as the Sound 
+setting under the Options Menu will prove to be more stable than other 
+hardware drivers.
+
+- Low-end cards:  While Painkiller supports most older video cards 
+(see System Requirements above), some of Painkiller's special effects 
+and advanced graphics features are not supported by these boards.  While 
+this will not affect game play in any way, some visual effects may be 
+reduced or disabled entirely on lower end video cards.
+
+- Dedicated Servers:    A short-cut to run a multiplayer dedicated server
+is provided in the Start Menu folder for Painkiller after installation.  
+Dedicated servers generally have better performance and are preferred for 
+Internet play.  The same system requirements apply for dedicated servers.
+
+
+Information on some of the following topics has not been included or has 
+changed since the printing of early versions of the Battle Out of Hell 
+manual:
+
+- Text clarifying the additional sniping, zoom mode for the Boltgun/Heater
+is missing in some versions of the manual.  It is as follows, "Be sure to 
+try-out the scoped, sniping mode (default control is the Middle Mouse 
+Button) for extreme distant shots."
+
+- There is a pagination fault on page 12.  The description of the Evil
+Girl continues on the following page.
+
+- On page 27, the term FPS near the top of the page should be 'FPP', as in
+First Person Perspective.
+
+- There is an error in the credits included in some printings of the 
+Battle Out of Hell manual.  The DreamCatcher credit for Assistant Engineer
+should read, "Joe Moeller."
+
+
+CONSOLE COMMANDS:
+------------------------------
+
+Here is list of Painkiller Battle Out of Hell console commands (additional 
+console information can be found online at painkillergame.com).  The console
+can be pulled up using the tilde (~) key:
+
+STANDARD COMMANDS: 
+
+  showweapon <0/1> - disables/enables weapon rendering
+  benchmark c5l1 - starts benchmarking test
+  msensitivity <value> - sets mouse sensitivity
+  msmooth <0/1> - disables/enables mouse smoothing
+  fov <value> - sets camera's FOV
+  crosshair <value (1-32)> - changes crosshair
+  hudsize <value (0.1-3.0)> - sets HUD size
+  speedmeter <1/0> - shows speed meter
+  weaponspecular <1/0> - enables weapon specular
+  showfps <1/0> - enables FPS and other performance displays
+  exit
+  quit
+
+MULTIPLAYER COMMANDS:
+
+Server (commands available on server and for voting):
+  map <map_name> - changes current map
+  timelimit <value> - sets time limit
+  fraglimit <value> - sets frag limit
+  kick <name> - kicks player from the server
+  bankick <name> - kicks and bans player from the server
+  maxplayers <value> - sets max number of players on server
+  maxspectators <value> - sets max number of spectators on server
+  powerupdrop <0/1> - disable/enable powerup dropping (after map change)
+  powerups <0/1> - disable/enable powerups
+  weaponsstay <0/1>
+  teamdamage <0/1>
+  allowbunnyhopping <0/1>
+  allowbrightskins <0/1>
+  allowforwardrj <0/1>
+  gamemode <ffa/tdm/pcf/tlb/voosh/ctf/lms> - changes game mode on server
+  reloadmap
+
+Client:
+  team <1/2> - changes player's team
+  spectator <0/1> - disable/enable spectator mode
+  ready - sets the player ready for match
+  notready - sets the player unready for match
+  break - callvote for stopping the match
+  callvote <command command_params> - starts voting - callvote maxplayers 2
+  vote <yes/no> - agree or not agree to callvote
+  demoplay <filename_to_play_from>
+  demorecord <filename_to_record_in>
+  demostop
+  name <new_name> - changes player name
+  kill - player commints suicide
+  camerainterpolation <0/1> - disables/enables camera interpolation
+  connect <ip[:port]>
+  disconnect
+
+MULTIPLAYER TUNING and TWEAKING COMMANDS:
+
+  clientbandwidth – limits the upstream bandwidth to a given value (Bps)
+  enemyinterpolation <0/1> - sets the smoothing of other players on or off
+  netstats <0/1> - toggles info of what's going in the network
+  netstatsavgfrom – number of results over which the displayed are averaged
+  netstatsupdatedelay – sets the netstats update period (in ms)
+  serverframerate - sets frames coming from a server per second
+  setmaxfps - controls the amount of upstream data (update rate)
+
+
+Although you will generally find that you can play just fine with the
+default out of the box settings for multiplayer (provided your connection
+type has been set correctly), several commands are available to tweak
+and improve your performance.  The key commands are:
+
+	1) setmaxfps
+	2) serverframerate
+	3) enemyinterpolation
+
+Values given below are suggested values only. You may find you need 
+different settings for varying number of players on the server (Duel or 
+Free For All game modes as an example).
+
+For MODEMs (56kbps minimum)
+--------------------------
+setmaxfps 60, 30 or less*.
+serverframerate 15 or less.
+enemyinterpolation 1
+
+*If the framerate becomes too low for you to play, it is recommended 
+that you pick a reasonable framerate, and limit your upstream 
+using the 'clientbandwidth' command. Try 'clientbandwidth 2000' 
+and 'setmaxfps 60'.
+
+For ISDN (64kbps or 128kbps)
+------------------------
+setmaxfps 60 or less.
+serverframerate 20 or less.
+enemyinterpolation 1
+
+For Low Bandwidth DSL/ADSL/CABLE (128/64, 256/128, etc)
+---------------------------------------------------
+setmaxfps 60 or less.
+serverframerate 20 or less.
+enemyinterpolation 1
+
+For Low Upstream DSL/ADSL/CABLE (*/64, */128)
+-----------------------------------------
+setmaxfps 100 or less.
+serverframerate 20 or less.
+enemyinterpolation 1
+
+For High Bandwidth DSL/ADSL/CABLE (512/256, 1024/256 or higher)
+-----------------------------------------------------------
+setmaxfps 100 or 125.
+serverframerate 30 or less.
+enemyinterpolation 1
+
+For LAN/T1/E1
+---------
+setmaxfps 125 or more.
+serverframerate 45 or more.
+enemyinterpolation 1
+
+NOTE: Additional information on the PAIN Engine v1.61 release and the
+contents of this secton can be found, along with other translations 
+online at:
+
+http://www.painkillergame.com
+
+
+====================================================================
+6. Version 1.61 Updated Information
+====================================================================
+
+1.61 Multiplayer and Singleplayer improvements and fixes:
+
+MULTIPLAYER:
+- NEW: Multiplayer maps: Battle Out of Hell maps included.
+- NEW: Multiplayer maps: Ritual CPL Dueling maps included.
+- NEW: Multiplayer map: DM_Exmortis included.
+- NEW: Multiplayer modes: Capture the Flag and Last Man Standing included.
+- NEW: Multiplayer weapons: SMG and Boltgun/Heater included.
+- NEW: Custom lscripts.pak (painkiller.exe -lscripts filename.pak).
+- NEW: 1.5+ networking core included.
+- NEW: 1.5+ graphics engine updated (includes Shader Model 3.0 support).
+- NEW: Enhanced server maintenance and configuration tool.
+- NEW: Cfg.StartupWeapon (1-7), 0 - start weapon disabled.
+- NEW: CPL console lockout option on dedicated servers.
+- CHANGE: No callvoting non CTF maps while in CTF.
+- CHANGE: Movement values tweaked to match 1.35.
+- CHANGE: Players joining Duel servers to make 3+ games adjusted.
+- FIX: Low level water in DM_Exmortis.
+- FIX: Respawning errors in CTF_Forbidden.
+- FIX: Stakegun shooting sound is now correct for all players.
+- FIX: DM_Exmortis: low-resolution graphics errors fixed.
+- FIX: Acid damage in DM_Exmortis works correctly.
+- FIX: SMG will continue to do the firing with no ammo is fixed.
+- FIX: DM_Fragenstien: Mirror Teleport with machine gun ammo works properly.
+- FIX: Minor problems with "CDKey in use" on LAN have been fixed.
+- FIX: Commando bright skins error in CTF is fixed.
+- FIX: Faulty rocket jump when playing on the Internet bug fixed.
+- FIX: Commando brightskins are fixed when on opposite CTF team.
+- FIX: Miscellaneous MP timer issues.
+- FIX: CTF flag issue
+- FIX: Timer bug
+
+SINGLEPLAYER:
+- CHANGE: Various Iron Will card issues adjusted.
+- CHANGE: Description for Armor Regeneration adjusted.
+- CHANGE: Shotgun and nun area trigger zone size increased in Orphanage.
+- FIX: Trauma unlocking after nine Tarot cards in Battle Out of Hell.
+- FIX: The canister from SMG's combo counts as a destroyed object.
+- FIX: Ammo count errors with the 666 ammo card equipped are fixed.
+- FIX: When you get the Rebirth card on Coliseum correct graphic now shows.
+- FIX: Five Demon Morphs error in The Coliseum (BOoH-07) now fixed.
+- FIX: Going LEFT in level Babel checkpoint and kill counter error fixed.
+- FIX: Removal of empty save directories and overwriting of quicksaves. 
+- FIX: Script error in City on the water (Skulls and Hellbikers).
+- FIX: If a certain path is taken you can't proceed (Docks) is fixed.
+
+DEMO RECORDING:
+- FIX: Items now disappear correctly.
+- FIX: Demon morph mode is recorded in demos.
+- FIX: Sometimes demos were playing with incorrect speed.
+
+NOTE: Version 1.61 includes all changes and enhancements from previous
+Painkiller updates.  Also note, installing this patch will break
+any previous savegames that are not autosaves.
+
+
+====================================================================
+7. Uninstalling Painkiller
+====================================================================
+
+To uninstall Painkiller or Battle Out of Hell:  Browse to the Painkiller 
+folder on your Start Menu, then select "Uninstall." 
+
+Alternatively, you can open your Control Panel, choose "Add/Remove 
+Programs,"  select Painkiller or Painkiller Battle Out of Hell then click 
+"Remove."
+
+
+====================================================================
+8. Technical Support & Contact
+====================================================================
+
+NORTH AMERICA
+-------------
+
+If you are experiencing technical problems with this software, and you have
+carefully followed the instructions in this readme, you may find further
+support in the following places:
+
+Please visit the Technical Support section of our Web site at:
+
+Online Support ­ http://www.dreamcatchergames.com/
+
+We have posted common problems and solutions that may help you. We also
+suggest that you complete the Technical Support form located at our Web site.
+Please provide a detailed description of the problem you are experiencing
+(i.e. error message, where in the game the problem occurs, etc.). This will
+help our Representatives find a solution much quicker.
+
+Phone Support - 416-638-6151*
+
+If you would like to speak with one of our Technical Support Representatives,
+our hours of operation are from 10am to 7pm EST, Monday through Friday.
+
+Please have the following ready:
+
+1)  Information about your computer's configuration (i.e. RAM, MHz, video
+    and sound cards). You may use the Technical Support form at our Web site
+    as a guide.
+
+2)  A detailed description of the problem (i.e. error message, where in the
+    game the problem occurs, etc.).
+
+3)  Immediate access to your computer so the Representative may walk you
+    through the steps.
+
+4)  Pen and paper to take any notes.
+
+* Phone support is located in Toronto, Canada.
+
+EUROPE
+------
+
+FRANCE
+Dreamcatcher Europe
+E-mail: techsupport@dcegames.com
+Site Web: http://www.dcegames.com
+Tech-Line (France uniquement): 08 25 15 33 84 (0.15€/mn).
+Du lundi au vendredi de 10h à 13h et de 14h à 18h.
+Solutions (France uniquement): 08 92 68 99 10 (0.34€/mn, 24h/24h).
+
+UNITED-KINGDOM
+Mindscape UK
+E-mail: uktechsupport@mindscape.com
+Website: http://www.mindscape.com
+Phone: 09 06 21 65 432 (25p/mn).
+9:30–13:00 / 14:00-16:30 - Monday to Friday excluding public holidays.
+
+BENELUX 
+Dreamcatcher Europe
+E-mail: techsupport@dcegames.com
+Site Web: http://www.dcegames.com
+
+DEUTSCHLAND
+E-mail: techsupport@dcegames.com (in English only).
+Website: http://www.dcegames.com
+Hotline Technik: 0190-84 60 48 (1.86€/mn).
+Montag bis Donnerstag von 9:00-19:00, Samstag und Sonntag von 13:00-19:00.
+Hotline Tipps & Tricks: 0190 – 84 6049 (1.86€/mn).
+Täglich 8:00–24:00.
+
+ESPAÑA
+Virgin Play
+Website: http://www.virginplay.es
+Tfno: 91 789 35 50
+10:00 a 14:00 - Lunes a Viernes.
+
+GREECE
+E-mail: techsupport@dcegames.com (in English only).
+Website: http://www.grupmulti.gr
+Tel: 30 210 94 80 00
+
+PORTUGAL
+PlayGames
+E-mail: suporte@playgames.pt
+Website: http://www.dcegames.com
+Tel: 22 608 83 33
+Monday to Friday 9:00-12:30 / 14:00-18:00
+
+ITALIA
+Supporto Tecnico
+ATARI
+E-mail: it.info@atari.com
+Website: http://www.atari.it
+
+MEXICO
+Technical Support
+E-mail: aocharan@edicionesb.com
+Tel. 0155-1101-0689
+Hotline: 01800-690-1103
+9:00 a 17:00 – lunes a viernes
+
+For other countries:
+Tech-Line : + 33 (0) 1 44 65 72 07
+Monday to Friday 9:00-13:00 / 14:00-18:00
+
+
+====================================================================
+9. Related Web Sites
+====================================================================
+
+Painkiller is brought to you by People Can Fly and DreamCatcher Games.  
+Please visit us online at:
+
+http://www.painkillergame.com
+The official Painkiller website and forums.
+
+http://www.dreamcatchergames.com/
+DreamCatcher's North American website.
+
+http://www.dcegames.com/
+DreamCatchers's European website.
+
+http://www.peoplecanfly.com
+The website of People Can Fly.
+
+http://www.thecpl.com/
+The Cyberathelete Professioanl League website.
+
+http://www.pkeuro.com/
+Popular Painkiller and Painkiller Battle Out of Hell news site.
+
+
+===================================================================
+10. Legal 
+===================================================================
+
+=Painkiller, Battle Out of Hell and PAIN Engine Build v1.61=
+
+© 2004 DreamCatcher Interactive Inc. DreamCatcher design and mark are 
+registered trademarks of DreamCatcher Interactive Inc. GameSpy and 
+the "Powered by GameSpy" design are trademarks of GameSpy Industries, Inc. 
+Alienware is a registered trademark of Alienware Corporation. NVIDIA, the 
+NVIDIA Logo, and other NVIDIA Marks are registered trademarks or trademarks 
+of NVIDIA Corporation in the United States and other countries.  Microsoft® 
+Windows® are registered trademarks of Microsoft Corporation. The ratings 
+icon is a trademark of the Interactive Digital Software Association. 
+Software platform logo (TM and ©) 2004 IEMA.  All other brands, product 
+names and logos are trademarks or registered trademarks of their 
+respective owners. 
+
+All rights reserved.
