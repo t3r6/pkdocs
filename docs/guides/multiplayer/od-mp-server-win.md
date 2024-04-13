@@ -16,9 +16,7 @@ There also were several versions in-between 75.3 and 84.4 from the local publish
 
 This unofficial version of the [**patch**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-patch-753-to-84) will upgrade your game to 84.4 from 75.3 and it already incorporates the Gamespy fix.
 
-It's also worth mentioning the competition multiplayer mod called [**PROverdose**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-03) made by OriOn and PrimeviL which was intended to be similar to PK++ for the original Painkiller.
-
-At the time of writing, PROverdose only supports Overdose 66.2 (Demo) and 75.3, thus if you have the game from GOG or Steam, you need to downgrade it to 75.3 with this [**patch**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-downgrade-patch-from-844-to-753) to be able to play Overdose multiplayer with the PROverdose mod (optional).
+It's also worth mentioning the competition multiplayer mod called [**PROverdose**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-04) made by OriOn and PrimeviL which was intended to be similar to PK++ for the original Painkiller.
 
 ## Windows Server Setup
 
@@ -140,25 +138,19 @@ The dedicated console server `OverdoseServer.exe` doesn't have any command line 
 
 PROverdose is a competitive mod. Its server is compatible with the original Overdose and PROverdose so the client doesn't need to have this mod installed but the client still needs to have the OpenSpy fix.
 
-At the time of writing, the latest version of PROverdose is 0.3 and it only supports Painkiller Overdose v75.3 and lower.
+1. Download the [**PROverdose v0.4**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-04) mod for Painkiller Overdose v84.4. If you use Painkiller Overdose v75.3 and lower, download the [**PROverdose v0.3**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-03) mod.
 
-So you need to downgrade your game to play it.
+2. Extract the archive's content to your `..\Painkiller Overdose\Data` directory.
 
-1. Downgrade the game with this [**patch**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-downgrade-patch-from-844-to-753) with the preconfigured OpenSpy.
+3. For your convenience, copy `C:\Users\%USERNAME%\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServerPro.ini`.
 
-2. Download the [**PROverdose**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-03) mod.
-
-3. Extract the archive's content to your `..\Painkiller Overdose\Data` directory.
-
-4. For your convenience, copy `C:\Users\%USERNAME%\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServerPro.ini`.
-
-5. Create a Windows shortcut or a BAT file in the `..\Overdose\Bin\` directory with this content `OverdoseDedicatedPro.bat`:
+4. Create a Windows shortcut or a BAT file in the `..\Overdose\Bin\` directory with this content `OverdoseDedicatedPro.bat`:
 
     ```
     Overdose -dedicated -lscripts PROverdose.pak -config OverdoseServerPro.ini
     ```
 
-6. Run the server via that file.
+5. Run the server via that file.
 
 ## Possible errors
 
