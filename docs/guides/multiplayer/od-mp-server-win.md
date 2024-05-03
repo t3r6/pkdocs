@@ -16,7 +16,7 @@ There also were several versions in-between 75.3 and 84.4 from the local publish
 
 This unofficial version of the [**patch**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-patch-753-to-84) will upgrade your game to 84.4 from 75.3 and it already incorporates the Gamespy fix.
 
-It's also worth mentioning the competition multiplayer mod called [**PROverdose**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-04) made by OriOn and PrimeviL which was intended to be similar to PK++ for the original Painkiller.
+It's also worth mentioning the competition multiplayer mod called [**PROverdose**](https://www.moddb.com/mods/proverdose-mod-for-painkiller-overdose) made by OriOn and PrimeviL which was intended to be similar to PK++ for the original Painkiller.
 
 ## Windows Server Setup
 
@@ -27,6 +27,7 @@ The server setup includes the following steps:
 * OpenSpy configuration
 * Server launching
 * PROverdose setup (optional)
+* Custom Mappack (optional)
 
 ### [Router configuration](router-config.md)
 
@@ -138,7 +139,7 @@ The dedicated console server `OverdoseServer.exe` doesn't have any command line 
 
 PROverdose is a competitive mod. Its server is compatible with the original Overdose and PROverdose so the client doesn't need to have this mod installed but the client still needs to have the OpenSpy fix.
 
-1. Download the [**PROverdose v0.4**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-04) mod for Painkiller Overdose v84.4. If you use Painkiller Overdose v75.3 and lower, download the [**PROverdose v0.3**](https://www.moddb.com/games/painkiller-overdose/downloads/proverdose-03) mod.
+1. Download the [**PROverdose**](https://www.moddb.com/mods/proverdose-mod-for-painkiller-overdose) mod. PROverdose 0.4 only supports the latest official Painkiller Overdose v84.4. Earlier versions of PROverdose support Painkiller Overdose v75.3 and lower.
 
 2. Extract the archive's content to your `..\Painkiller Overdose\Data` directory.
 
@@ -151,6 +152,12 @@ PROverdose is a competitive mod. Its server is compatible with the original Over
     ```
 
 5. Run the server via that file.
+
+## Install custom multiplayer mappack (optional)
+
+Recommended additional maps can be downloaded [**here**](https://www.moddb.com/games/painkiller-overdose/addons/classic-pk-multiplayer-maps-for-overdose)
+
+Copy the files to `C:/Painkiller Overdose/Data/`.
 
 ## Possible errors
 
