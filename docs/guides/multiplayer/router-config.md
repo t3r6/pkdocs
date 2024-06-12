@@ -45,7 +45,7 @@ In the following instruction, we will reserve the internal IP address and forwar
 
 5. Restart your router. Then if you go back to `DHCP` -> `DHCP Clients`, you'll see that the `Address lease time` is permanent for `192.168.0.104`.
 
-6. Now go to `Port Forwarding` -> `Virtual servers` -> `Add` and forward a port to the internal IP address of your PC server for TCP and UDP protocols:
+6. Now go to `Port Forwarding` -> `Virtual servers` -> `Add` and forward a port to the internal IP address of your PC server for TCP and UDP protocols (usually opening UPD protocol will be enough):
 
     | ID | Service port | Internal port | IP address    | Protocol | Status  |
     |----|--------------|---------------|---------------|----------|---------|

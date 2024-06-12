@@ -55,7 +55,7 @@ Quick turns are the tricks when you can change a movement directions key without
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/e8PDGBjxBWg?si=vmmIh4jhZqUaDELZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### Wall Bumping
+### Wall Bouncing
 
 You use your speed to push you off the wall without turning your mouse (quick turns). Only forward and backward keys are used, so when you are close to touching the wall, you quickly press the opposite key and get a small boost from the wall.
 
