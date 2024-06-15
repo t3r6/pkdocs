@@ -25,9 +25,10 @@ Your Linux OS should support 32-bit applications.
     dpkg --add-architecture i386
     ```
 
-3. Install additional 32-bit packages. You may need to run the command as a root with `sudo`:
+3. Install additional 32-bit packages. You may need to run the commands as a root with `sudo`:
 
     ```
+    apt-get update
     apt-get install -y zlib1g:i386 libncurses5:i386 libstdc++5:i386
     ```
 
@@ -136,7 +137,13 @@ Your Linux OS should support 32-bit applications.
         Under the hood, `pkserver` automatically uses `+dedicatedserver +map +port` parameters. You won't be able to override those.
         Moreover, this binary does not accept the "-" options, like `-config` or `-lscripts`. This is an oversight by the developers.
 
-12. To stop the server enter the command `/exit`:
+12. You can connect to your server either via the local IP (if there is a NAT configuration) or the public IP. The port can be omitted if it is default 3544:
+
+    ```
+    /connect 192.168.0.106:3544
+    ```
+
+13. To stop the server enter the command `/exit`:
 
     ```
     >

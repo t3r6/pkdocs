@@ -74,8 +74,13 @@ In the previous examples, I ran a server on `192.168.0.104` thus I need to pass 
     Additionally, for your convenience, copy `C:\Users\%USERNAME%\AppData\Local\Painkiller Overdose\Overdose.ini` to `..\Overdose\Bin\` and rename it to `OverdoseServer.ini`. Add the following parameters:
 
     ```
-    Overdose +interface 192.168.0.104 -config OverdoseServer.ini
+    Overdose +interface 192.168.0.104 -cfg OverdoseServer.ini
     ```
+
+    !!! Warning
+        Official Overdose versions have several bugs regarding the variable overriding with the `-cfg` parameter. If some modified parameters inside the .ini file do not work, run the server with the default `Overdose.ini` file:
+
+        `Overdose +interface 192.168.0.104`
 
 2. Run the game via that file and select `Multiplayer` -> `Start Game` -> Tick `Public Server`, make the necessary configurations, and `Start` the public server.
 
@@ -148,7 +153,7 @@ PROverdose is a competitive mod. Its server is compatible with the original Over
 4. Create a Windows shortcut or a BAT file in the `..\Overdose\Bin\` directory with this content `OverdoseDedicatedPro.bat`:
 
     ```
-    Overdose -dedicated -lscripts PROverdose.pak -config OverdoseServerPro.ini
+    Overdose -dedicated -lscripts PROverdose.pak -cfg OverdoseServerPro.ini
     ```
 
 5. Run the server via that file.
