@@ -35,7 +35,9 @@ The information was taken from [pkeuro](https://www.pkeuro.net/?p=249) and updat
 `+hwclass` is a hardware class. This parameter configures the quality of the game shaders. For example, `tnl` will load shaders of lower quality.<br>
 
 !!! Note
-    When launched, the official `pkserver` Linux binary automatically runs with the hardcoded `+dedicatedserver +map +port` parameters.
+    Most of the parameters only work with the Windows binary.
+
+    The official `pkserver` Linux binary automatically runs with the hardcoded `+dedicatedserver +map +port` parameters. It seems that it can only accept `+interface` and `+private` parameters. Everything else should be set in the `config.ini` file.
 
 ## Dash parameters
 
