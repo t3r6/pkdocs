@@ -114,7 +114,7 @@ Your Linux OS should support 32-bit applications.
 
     Also, make sure that your provider is not blocking certain IP ranges.
 
-11. Start `pkserver` with the `+interface` parameter. Enter the IP address of the network interface that has access to the Internet:
+11. Start `pkserver` with the `+interface` parameter (the corresponding parameter in the `config.ini` file is `Cfg.NetworkInterface`). Enter the IP address of the network interface that has access to the Internet:
 
     ```
     [login@shell Bin]$ ./pkserver +interface 192.168.0.106
@@ -137,10 +137,17 @@ Your Linux OS should support 32-bit applications.
         Under the hood, `pkserver` automatically uses `+dedicatedserver +map +port` parameters. You won't be able to override those.
         Moreover, this binary does not accept the "-" options, like `-config` or `-lscripts`. This is an oversight by the developers.
 
-12. You can connect to your server either via the local IP (if there is a NAT configuration) or the public IP. The port can be omitted if it is default 3544:
+    !!! Note
+        You can debug which interface the game runs on in a new terminal with the `netstat` command:
+        ```
+        $ netstat -ano | grep 3455
+        udp        0      0 192.168.0.106:3455      0.0.0.0:*                           off (0.00/0/0)
+        ```
+
+12. Connect to your server either via the local IP (if there is a NAT configuration) or the public IP. The port can be omitted if it is default 3455:
 
     ```
-    /connect 192.168.0.106:3544
+    /connect 192.168.0.106:3455
     ```
 
 13. To stop the server enter the command `/exit`:
