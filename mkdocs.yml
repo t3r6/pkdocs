@@ -62,6 +62,8 @@ nav:
   - Modding:
     - guides/modding/pk-unpack.md
     - guides/modding/mpk-specification.md
+  - Hacking:
+    - guides/hacking/hack-linux-bin.md
   - Multiplayer:
     - guides/multiplayer/pk-mp-client.md
     - guides/multiplayer/pk-mp-server-linux.md

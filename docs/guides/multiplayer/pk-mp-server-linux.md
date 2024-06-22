@@ -64,7 +64,7 @@ Your Linux OS should support 32-bit applications.
     [login@shell opt]$ rm pkserver_linux_1.64_openspy.tar.gz
     ```
 
-6. Examine the `pkserver`directory. Pay attention that Linux is case-sensitive, unlike Windows. `bin` is linked to `Bin` and `data` is linked to `Data`. It was done this way so you can easily navigate and feel it like in Windows:
+6. Examine the `pkserver` directory. Pay attention that Linux is case-sensitive, unlike Windows. `bin` is linked to `Bin` and `data` is linked to `Data`. It was done this way so you can easily navigate and feel it like in Windows:
 
     ```
     [login@shell opt]$ cd pkserver
