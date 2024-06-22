@@ -158,6 +158,8 @@ Your Linux OS should support 32-bit applications.
     [login@shell Bin]$
     ```
 
+14. To change the port your server runs on, go to `config.ini` and modify the `Cfg.ServerPort` line.
+
 ## Install PK++ (Painkiller competition mod)
 
 1. Download [**PK++**](https://www.moddb.com/mods/pk). You can either use PK++ 1.3 which has more features or PK++ 1.2.1.64 which is more stable and compatible with the original.
