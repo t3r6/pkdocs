@@ -10,9 +10,16 @@ Type in `/setmaxfps 125` in the game console to play with consistent physics.
 
 It is recommended to enable `/speedmeter 1` via the in-game console to track your speed.
 
+**Variant 1**:
+
 [**HUD.lua**](https://github.com/t3r6/painkiller-lscripts-mods/blob/david-movement-keys/LScripts/HUD/HUD.lua) for original Painkiller 1.64.
 
 [**HUD.lua**](https://github.com/t3r6/painkiller-plusplus-1.3-decompiled/blob/david-pressed-keys/LScripts/HUD/HUD.lua) for PK++ 1.3.
 
+**Variant 2**:
+
+[**HUD.lua**](https://github.com/t3r6/painkiller-lscripts-mods/blob/david-movement-keys-v2/LScripts/HUD/HUD.lua) for original Painkiller 1.64.
+
+[**HUD.lua**](https://github.com/t3r6/painkiller-plusplus-1.3-decompiled/blob/david-pressed-keys-v2/LScripts/HUD/HUD.lua) for PK++ 1.3.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/votl4fPb0kU?si=t7S5SoCQBF8mvmOz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
