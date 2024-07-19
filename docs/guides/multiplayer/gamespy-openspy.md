@@ -6,7 +6,7 @@ GameSpy (now OpenSpy) is required to advertise your game server online. This wil
 
 There are two ways to make the game understand the transition from GameSpy to OpenSpy:
 
-* Modify the `hosts` file.
+* Modify the `hosts` file (not recommended).
 * Modify game DLL files and Painkiller Linux `pkserver` binary.
 
 !!! Warning

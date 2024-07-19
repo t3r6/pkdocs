@@ -59,14 +59,33 @@ In the following instruction, we will reserve the internal IP address and forwar
 
         The default port for **Painkiller** is `3455` and for **Painkiller Overdose** it is `4974`.
 
-7. Check the connection. I will not go into the detail but the UDP connection can be checked with `nc` (change the IP address and the port accordingly):
+7. Check the connection. I will not go into the details but the UDP connection can be checked with `nc`/`ncat` and `nmap` (change the IP address and the port accordingly):
 
     ```
-    nc -vz -u 50.153.139.143 3455
+    ncat -vnzu 50.153.139.143 3455
     ```
 
     The result will look similar to this:
 
     ```
     Connection to 50.153.139.143 3455 port [udp/*] succeeded!
+    ```
+
+    or
+
+    ```
+    Ncat: UDP packet sent successfully
+    ```
+
+    Scan the port with `nmap`:
+
+    ```
+    nmap -sU -v -p 3455 50.153.139.143
+    ```
+
+    The port should be open in the response:
+
+    ```
+    PORT     STATE         SERVICE
+    3455/udp open|filtered prsvp
     ```

@@ -105,7 +105,7 @@ It is similar to the steps above but we'll run a server via a different program.
 2. Create a Windows shortcut or a BAT file in the `..\Overdose\Bin\` directory with this content `OverdoseDedicated.bat`:
 
     ```
-    Overdose -dedicated -config OverdoseServer.ini
+    Overdose -dedicated -cfg OverdoseServer.ini
     ```
 
 3. Open the server via that file and select the `Network interface` to which you forwarded traffic from your router (`192.168.0.104` in my example); select the `Public(GameSpy)` mode. Make the necessary configurations and click `Start`.
@@ -138,7 +138,7 @@ It is similar to the steps above but we'll run a server via a different program.
 
 #### Dedicated console server
 
-The dedicated console server `OverdoseServer.exe` doesn't have any command line options and can only be run with the default options, thus it is not recommended.
+The dedicated console server `OverdoseServer.exe` doesn't have any command line options and only uses `config.ini` parameters.
 
 ## PROverdose server (optional)
 

@@ -67,6 +67,7 @@ nav:
   - Multiplayer:
     - guides/multiplayer/pk-mp-client.md
     - guides/multiplayer/pk-mp-server-linux.md
+    - guides/multiplayer/pk-mp-server-linux-docker.md
     - guides/multiplayer/od-mp-server-win.md
     - guides/multiplayer/router-config.md
     - guides/multiplayer/od-firewall-config.md

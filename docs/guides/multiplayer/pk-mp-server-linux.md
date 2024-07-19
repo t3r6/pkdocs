@@ -1,7 +1,7 @@
 # Setup Painkiller Black Edition Linux Multiplayer Dedicated Server
 
 !!! Warning
-    This setup was tested on Ubuntu 22.04. Some 32-bit packages were removed from Ubuntu 24.04 repositories so you'll need to download and install them manually but it's not within the scope of this guide.
+    This setup was tested on Ubuntu 22.04 and Debian 12. Some 32-bit packages were removed from Ubuntu 24.04 repositories so you'll need to download and install them manually but it's not within the scope of this guide.
 
 *A short remark for a beginner*. A server is a computer (host) that provides information to other computers called clients. So when you create a game, your PC is a "server" and those who join it are the "clients".
 
@@ -193,13 +193,29 @@ Your Linux OS should support 32-bit applications.
 
     ```
 
-## Configure rcon
+## Configure RCON
 
-**RCON** is a tool to manage a game server.
+**RCON** (remote console) is a remote administration tool and a protocol to manage a game server.
 
-When you play Painkiller you can use it in the game.
+!!! Note
+    It is a feature of PK++. This command does not work with the original Painkiller. It'll only work if both the server and the client have the PK++ mod installed.
+
+With this tool, you can run all server commands as admin, with no voting required. All the commands can be either issued in the server console or directly in the client console.
 
 In the configuration file `config.ini` that's on the server and in `config.ini` that's on your PC, configure the same password in `Cfg.RconPass` to have admin privileges. Type in `/rcon` in the console to use it, examples:
+
+!!! Notes
+    You can also set the `rcon` client password directly in the game console with:
+
+    ```
+    /rconpass [password]
+    ```
+
+    It'll add a password to `Cfg.RconPass` in your local `config.ini`. The password should match the one set on the server.
+
+```
+/rcon [command] [parameters]
+```
 
 *change a map*
 ```
@@ -209,4 +225,9 @@ In the configuration file `config.ini` that's on the server and in `config.ini` 
 *restart a map*
 ```
 /rcon restartmap
+```
+
+*kick a player*
+```
+/rcon kick [playername] 
 ```
