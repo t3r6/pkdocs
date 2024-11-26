@@ -6,14 +6,59 @@ GameSpy (now OpenSpy) is required to advertise your game server online. This wil
 
 There are two ways to make the game understand the transition from GameSpy to OpenSpy:
 
-* Modify the `hosts` file (not recommended).
 * Modify game DLL files and Painkiller Linux `pkserver` binary.
+* Modify the `hosts` file (not recommended).
 
 !!! Warning
     Modifying DLL files is the recommended way since IP addresses are subject to change.
     This change should be done on both the server and the client side.
 
+## Modify DLL files and Painkiller Linux `pkserver` binary
+
+If you choose this method, you don't need to add anything to the `hosts` file.
+
+There is a prepared patch for [**Painkiller**](https://www.moddb.com/games/painkiller/downloads/painkiller-164-multiplayer-gamespy-fix) and [**Overdose**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-gamespy-fix). Just replace the DLL's in your game folder.
+
+Alternatively, you can use 4Gb RAM Memory patch by XDavidXtreme that already includes those changes. For [**Painkiller**](https://www.moddb.com/games/painkiller/downloads/painkiller-4gb-patch), for [**Overdose**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-4gb-patch). Replace all the files when installing the 4Gb RAM Memory patch.
+
+[Unnoficial Overdose patches](https://www.moddb.com/mods/painkiller-overdose-86u-patch) made by XDavidXtreme also contain OpenSpy fixes.
+
+If you want to modify the files manually, follow the steps below. Here is the [**guide**](http://beta.openspy.net/en/howto/generic/painkiller) but it is general and is not a perfect fit for Painkiller.
+
+GameSpy is mentioned in the following files:
+
+* Painkiller
+
+```
+..\Painkiller\Bin\Engine.dll
+..\Painkiller\Bin\Editor\Engine.dll
+```
+
+* Painkiller Linux Dedicated Server
+
+```
+../pkserver/Bin/pkserver
+```
+
+* Painkiller Overdose
+
+```
+..\Overdose\Bin\OverdoseEngine.dll
+..\Overdose\Bin\OverdoseEngineEditor.dll
+..\Overdose\Bin\OverdoseEngineServer.dll
+```
+
+!!! Note
+    You don't really need any Hex editor to modify those DLL files. Nonetheless, you need an editor that supports various encodings like Notepad++. Standard Windows Notepad is not suitable for this purpose. Use Hex editors otherwise.
+
+Open the DLL file or the `pkserver` Linux binary with Notepad++ and replace all instances of **gamespy.com** with **openspy.net**. Save the file.
+
+Make sure the size of DLL's should not have changed. If it's changed, it means that the encoding was not interpreted correctly by the editor. In this case, you can try using the `HEX-Editor` plugin for Notepad++ or another Hex editor program.
+
 ## Hosts file
+
+!!! Warning
+    This is an outdated and not recommended way of determining OpenSpy servers.
 
 The location of the `hosts` file:
 
@@ -94,41 +139,3 @@ We need to redirect GameSpy hostnames to OpenSpy IP addresses. Add the following
 134.122.16.249 painkillerod.natneg3.gamespy.com
 167.99.14.87 motd.gamespy.com
 ```
-
-## Modify DLL files and Painkiller Linux `pkserver` binary
-
-If you choose this method, you don't need to add anything to the `hosts` file.
-
-There is a prepared patch for [Painkiller](https://www.moddb.com/games/painkiller/downloads/painkiller-164-multiplayer-gamespy-fix) and [Overdose](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-gamespy-fix). Just replace the DLL's in your game folder.
-
-If you want to modify the files manually, follow the steps below. Here is the [**guide**](http://beta.openspy.net/en/howto/generic/painkiller) but it is general and is not a perfect fit for Painkiller.
-
-GameSpy is mentioned in the following files:
-
-* Painkiller
-
-```
-..\Painkiller\Bin\Engine.dll
-..\Painkiller\Bin\Editor\Engine.dll
-```
-
-* Painkiller Linux Dedicated Server
-
-```
-../pkserver/Bin/pkserver
-```
-
-* Painkiller Overdose
-
-```
-..\Overdose\Bin\OverdoseEngine.dll
-..\Overdose\Bin\OverdoseEngineEditor.dll
-..\Overdose\Bin\OverdoseEngineServer.dll
-```
-
-!!! Note
-    You don't really need any Hex editor to modify those DLL files. Nonetheless, you need an editor that supports various encodings like Notepad++. Standard Windows Notepad is not suitable for this purpose. Use Hex editors otherwise.
-
-Open the DLL file or the `pkserver` Linux binary with Notepad++ and replace all instances of **gamespy.com** with **openspy.net**. Save the file.
-
-Make sure the size of DLL's should not have changed. If it's changed, it means that the encoding was not interpreted correctly by the editor. In this case, you can try using the `HEX-Editor` plugin for Notepad++ or another Hex editor program.
