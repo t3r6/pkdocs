@@ -16,11 +16,9 @@ Painkiller singleplayer movement mechanics are different from multiplayer mechan
 
 ## Jump mod for multiplayer
 
-No official jump mod for Painkiller Black Edition multiplayer was released but there were a couple of good trickjump maps that could be played in a warmup session.
+No official jump mod for Painkiller Black Edition multiplayer was released but there were a couple of good trickjump maps that could be played in a [**warmup**](pk-tj-howto.md) session.
 
 There was an attempt to implement a *RACE* mod in PK++ 1.2; it is playable but was never finished. You can try it [**here**](https://www.moddb.com/games/painkiller/downloads/pk-12-revised-race-mode-by-thresher). The official GitHub [**repository**](https://github.com/threshersow/painkiller-plus-plus).
-
-You can enable speed meter by typing `/speedmeter 1` via the in-game console. Use additional HUD scripts to track the [movement keys](pk-hud-movement-compass.md).
 
 ## The list of the known Painkiller tricks:
 
