@@ -62,6 +62,9 @@ nav:
   - Modding:
     - guides/modding/pk-unpack.md
     - guides/modding/mpk-specification.md
+  - Mapping Blender:
+    - guides/mapping/blender-pk-importer.md
+    - guides/mapping/blender-pk-ase-exporter.md
   - Hacking:
     - guides/hacking/hack-linux-bin.md
   - Multiplayer:
