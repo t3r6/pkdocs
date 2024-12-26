@@ -65,6 +65,7 @@ nav:
   - Mapping Blender:
     - guides/mapping/blender-pk-importer.md
     - guides/mapping/blender-pk-ase-exporter.md
+    - guides/mapping/blender-move-bulk-objects.md
   - Hacking:
     - guides/hacking/hack-linux-bin.md
   - Multiplayer:
