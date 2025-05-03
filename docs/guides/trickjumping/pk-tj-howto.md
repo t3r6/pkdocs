@@ -3,7 +3,7 @@
 !!! Note
     This guide describes the steps for the original Painkiller and the official PK++ 1.2 and PK++ 1.3 mods.
 
-No trick jump mods for Painkiller Black Edition multiplayer were released as of now so you have to play using the default game modes. That's how the old custom Painkiller trick jump maps were designed.
+No trick jump mods for Painkiller Black Edition multiplayer were released as of now so you have to play using the default game modes. That's how the old custom Painkiller trick jump maps were designed. There was an attempt to add a Race gamemode to PK++ 1.2.5 but it was never finished.
 
 ## Maps
 
@@ -25,6 +25,9 @@ You need a game mode that supports DM maps and Warmup. Those are Team Deathmatch
 **Duel** only supports 2 players at a time and **Team Deathmatch** has a distracting Warmup HUD so **Last Man Standing** is preferable.
 
 ## Prerequisites
+
+!!! Note
+    Trick jump maps better work on clean servers without PK++. However, it's still possible to complete such maps on a PK++ server.
 
 A server should have the following settings:
 
@@ -63,7 +66,11 @@ A server should have the following settings:
 
     `/callvote rocketfix 0`
 
-8. *Optional*. You can enable an alternative way of doing rocket jumps with the **Forward Rocket Jump** standard Painkiller feature. This will allow you to use special button that performs a rocket jump in one click. Forward Rocket Jump is usually turned off on PK++ servers. Run the following command to enable it:
+8. *Optional*. You can disble PK++ feature ProPlus. This feature is enabled on PK++ servers by default and it reduces the jump height a little and how rockets work in general. Run the following command to disable it:
+
+    `/callvote proplus 0`
+
+9. *Optional*. You can enable an alternative way of doing rocket jumps with the **Forward Rocket Jump** standard Painkiller feature. This will allow you to use special button that performs a rocket jump in one click. Forward Rocket Jump is usually turned off on PK++ servers. Run the following command to enable it:
 
     `/callvote allowforwardrj 1`
 

@@ -14,7 +14,7 @@ These are the only recommended versions to host your server.
 
 There also were several versions in-between 75.3 and 84.4 from the local publishers but the additional singleplayer and multiplayer game content was only introduced in 84.4.
 
-This unofficial version of the [**patch**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-patch-753-to-84) will upgrade your game to 84.4 from 75.3 and it already incorporates the Gamespy fix.
+This unofficial version of the [**patch**](https://www.moddb.com/games/painkiller-overdose/downloads/painkiller-overdose-patch-753-to-844-extracted) will upgrade your game to 84.4 from 75.3 and it already incorporates the Gamespy fix.
 
 It's also worth mentioning the competition multiplayer mod called [**PROverdose**](https://www.moddb.com/mods/proverdose-mod-for-painkiller-overdose) made by OriOn and PrimeviL which was intended to be similar to PK++ for the original Painkiller.
 
@@ -86,7 +86,7 @@ In the previous examples, I ran a server on `192.168.0.104` thus I need to pass 
 
     !![OD Public Server](../../../img/multiplayer/od-public-server01.jpg "OD Public Server")
 
-    To check if the server is available publicly, minimize the game and after some time the server will be present on this [**page**](http://beta.openspy.net/en/server-list/painkillerod). It means that a client should be able to see it in his in-game server list provided they also made modifications regarding OpenSpy on their side.
+    To check if the server is available publicly, minimize the game and after some time the server will be present on this [**page**](https://openspy.net/server-list/painkillerod). It means that a client should be able to see it in his in-game server list provided they also made modifications regarding OpenSpy on their side.
 
 #### Dedicated server
 
@@ -108,11 +108,16 @@ It is similar to the steps above but we'll run a server via a different program.
     Overdose -dedicated -cfg OverdoseServer.ini
     ```
 
+    !!! Warning
+        Official Overdose versions have several bugs regarding the variable overriding with the `-cfg` parameter. If some modified parameters inside the .ini file do not work, run the server with the default `Overdose.ini` file:
+
+        `Overdose -dedicated`
+
 3. Open the server via that file and select the `Network interface` to which you forwarded traffic from your router (`192.168.0.104` in my example); select the `Public(GameSpy)` mode. Make the necessary configurations and click `Start`.
 
     !![OD Dedicated Server](../../../img/multiplayer/od-public-server02.jpg "OD Dedicated Server")
 
-    After some time, the server should be present on this [**page**](http://beta.openspy.net/en/server-list/painkillerod)
+    After some time, the server should be present on this [**page**](https://openspy.net/server-list/painkillerod)
 
     !![OD OpenSpy List](../../../img/multiplayer/od-public-server03.jpg "OD OpenSpy List")
 

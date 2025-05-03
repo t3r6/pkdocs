@@ -23,7 +23,7 @@ Alternatively, you can use 4Gb RAM Memory patch by XDavidXtreme that already inc
 
 [Unnoficial Overdose patches](https://www.moddb.com/mods/painkiller-overdose-86u-patch) made by XDavidXtreme also contain OpenSpy fixes.
 
-If you want to modify the files manually, follow the steps below. Here is the [**guide**](http://beta.openspy.net/en/howto/generic/painkiller) but it is general and is not a perfect fit for Painkiller.
+If you want to modify the files manually, follow the steps below. Here is the [**guide**](https://openspy.net/howto/generic/painkiller) but it is general and is not a perfect fit for Painkiller.
 
 GameSpy is mentioned in the following files:
 

@@ -170,7 +170,7 @@ By default, Docker uses the [bridge network](https://docs.docker.com/network/dri
     sudo ufw allow 3455:3457/udp
     ```
 
-5. Check if your game is advertised on [OpenSpy](http://beta.openspy.net/en/server-list/painkiller).
+5. Check if your game is advertised on [OpenSpy](https://openspy.net/server-list/painkiller).
 
 6. Open the Painkiller game client and join a server.
 

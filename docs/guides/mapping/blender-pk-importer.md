@@ -1,17 +1,21 @@
 # Blender Painkiller MPK geometry importer plugin
 
+!!! Warning
+    Blender constraints: the current max ID names size is 63 usable bytes (for example, a mesh name). This limit should be increated in [Blender 5](https://projects.blender.org/blender/blender/issues/137608).
+    It means that some Painkiller mesh names could be cut during the map import; it's the usual case with the maps from Painkiller Resurrection but can happen in any PainEngine/NecroEngine game. Since some mesh names might contain specific key words for the engine, like "barrier", you need to pay attention to those cut names and rename them accordingly after the import.
+
 Blender add-on that imports Painkiller (PC game 2004) MPK geometry files.
 
 PainEditor is not capable of editing geometry files for Painkiller. It's mostly designed to create gameplay and atmosphere.
 
-In order to edit an MPK geometry files for Painkiller, you need a 3D editor like Autodesk Maya, Autodesk 3ds Max, or Blender which Painkiller supports now. This guide is aimed at Blender.
+In order to edit an MPK geometry files for Painkiller, you need a 3D editor like Autodesk Maya, Autodesk 3ds Max, or Blender. This guide is aimed at Blender.
 
 > The plugin was created by dilettante. Tested on [**Blender 4.2 LTS**](https://www.blender.org/download/lts/4-2/).
 
 !!! Note
-    The guide was written on December 22, 2024 and is actual at the time of writing. Some information may be outdated by the time you read it.
+    The guide was edited on May 04, 2025 and is actual at the time of writing. Some information may be outdated by the time you read it.
 
-The main plugin [**repository**](https://github.com/max-ego/PK_tools). Check branches in the repository because they can have a more fresh code.
+The main plugin [**repository**](https://github.com/max-ego/PK_tools).
 
 Backup [**repository**](https://github.com/t3r6/PK_tools).
 
@@ -68,9 +72,12 @@ Once the addon has been installed, you will be able to import Painkiller MPK geo
 
 4. Make sure you deleted everytihng from the Blender default scene collection. Save the new defaults so that Blender default example objects won't interfere with your imported geometry. Because you always import on top of something, the workspace should be clean. Go to `File` > `Defaults` > `Save Startup File`.
 
-5. Import Painkiller MPK geometry file via `File` > `Import` > `Painkiller World Mesh (.mpk)`. If required, disable Lightmaps during import - not recommended.
+5. Import Painkiller MPK geometry file via `File` > `Import` > `Painkiller World Mesh (.mpk)`.
 
     !![Blender Plugin Options](../../../img/blender/blender-import-001.jpg "Blender Plugin Options")
+
+    !!! Notes
+        * Merge verticies is enabled by default and recommended. It will join all the closest separated geometry.
 
 6. Deselect all objects `Alt - A`.
 

@@ -9,7 +9,7 @@ Custom multiplayer maps are usually packed with the **.pkm** extension.
 !!! Notes
     Don't confuse **.pkm** archive format with the **.mpk** geometry binary file. 
 
-    The geometry **.mpk** file can be opened in Autodesk 3ds Max using this unofficial [plugin](https://www.moddb.com/games/painkiller/downloads/painkiller-3ds-max-plugins-upd270522).
+    The geometry **.mpk** file can be opened in 3D graphics software like Autodesk 3ds Max, Maya, and Blender using unofficial plugins.
 
 #### Tools to unpack Painkiller/Necrovision game resources
 
@@ -27,8 +27,8 @@ Custom multiplayer maps are usually packed with the **.pkm** extension.
 
 #### Tools to pack Painkiller/Necrovision game resources back
 
-* Built-in game tools using **FS.CreatePack** (recommended option for **.pak** archives)
-* Painkiller standard editor **PainEditor** (recommended option for maps **.pkm** files)
+* Built-in game tools using **FS.CreatePack** (recommended option for **.pak** archives and **.pkm** maps with custom resources)
+* Painkiller standard editor **PainEditor** (recommended option for maps **.pkm** files that do NOT contain custom resources, like additional scripts, textures in custom folders)
 * [PainFull Extractor](https://www.moddb.com/games/painkiller/downloads/painfull-extractor-v132) can add and replace files in a package (not recommended).
 * [QuickBMS](http://aluigi.altervista.org/quickbms.htm) can re-import files to a package (not recommended).
 
@@ -41,7 +41,7 @@ People Can Fly video game development studio provided tools for unpacking and pa
 
 ### Unpack
 
-Unpack files from .pak or .pkm archive via CLI:
+Unpack files from `.pak` or `.pkm` archive via CLI:
 
 **Powershell** (can accept relative path to the output file):
 
@@ -57,7 +57,10 @@ Unpack files from .pak or .pkm archive via CLI:
 
 ### Pack
 
-To pack files back to the .pak or .pkm archive via CLI:
+!!! Note
+    It is recommended to pack a map with the regenerated /Maps/MOPPCode. It regenerates automatically when you load a map in the game.
+
+To pack files back to the `.pak` or `.pkm` archive via CLI:
 
 `true` is for compression.
 
@@ -70,7 +73,7 @@ To pack files back to the .pak or .pkm archive via CLI:
 **Windows cmd** (need to indicate full path to the input file):
 
 ```cmd
-.\painkiller.exe -script FS.CreatePack('../data/MyPack.pkm','path/to/files/',true)
+.\painkiller.exe -script FS.CreatePack('../Data/MyPack.pkm','path/to/files/',true)
 ```
 
 ## PainEditor (default Painkiller Editor)

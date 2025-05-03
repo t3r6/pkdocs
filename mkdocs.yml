@@ -61,6 +61,7 @@ nav:
   - Home: index.md
   - Modding:
     - guides/modding/pk-unpack.md
+    - guides/modding/3d-editor-pk-plugins.md
     - guides/modding/mpk-specification.md
   - Mapping Blender:
     - guides/mapping/blender-pk-importer.md

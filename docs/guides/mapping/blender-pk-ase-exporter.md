@@ -1,4 +1,4 @@
-# Blender Painkiller ASE geometry exporter plugin
+# Blender Painkiller ASE geometry exporter plugin (Outdated)
 
 Blender add-on that exports Painkiller (PC game 2004) MPK geometry in ASE format.
 

@@ -3,14 +3,14 @@
 To join a Painkiller multiplayer server, some conditions should be met:
 
 * Painkiller game version is 1.64 (Black Edition).
-* [PK++ 1.3](https://www.moddb.com/mods/pk/downloads/pk-13-open-beta) mod is installed.
+* [PK++ 1.3](https://www.moddb.com/games/painkiller/downloads/pkplusplus13-unofficial-update) mod is installed.
 * A client connects to OpenSpy master server.
 * A client should have a unique CD key.
 * A client should have all the required multiplayer maps installed. Must-have custom maps are `DM_1v1_meatless` and `DM_Blink`.
 
 ## Game servers
 
-Most of the Painkiller gameservers are on OpenSpy now and can be tracked [**here**](http://beta.openspy.net/en/server-list/painkiller).
+Most of the Painkiller gameservers are on OpenSpy now and can be tracked [**here**](https://openspy.net/server-list/painkiller).
 
 ## Quick start
 
@@ -30,10 +30,7 @@ The quick start part of the guide describes the fastest way to get into the Pain
 This part of the guide describes the full game multiplayer configuration in case you have a complete Painkiller Black Edition game.
 
 1. Move from GameSpy to OpenSpy to be able to see servers on the in-game browser list. To use OpenSpy, you can either replace all instances of **gamespy.com** with **openspy.net** in `Bin/Engine.dll` and `Bin/Editor/Engine.dll` or modify the Windows `hosts` file. This [**guide**](gamespy-openspy.md) will give you more detailed information on how to do it.
-2. Most servers have `PK++ 1.2` mod installed; hovewer, some have `PK++ 1.3`. It is a competitive mod made for tournaments. Starting from the `1.3` version of this mod, it's incompatible with the vanilla Painkiller Black Edition 1.64. It means that you also need to install and run this mod as a client. You can download `PK++ 1.3 Open Beta` [**here**](https://www.moddb.com/mods/pk)
-
-    !!! Warning
-        If you installed the official PK++ 1.3 client, you'll need to fix GameSpy again like it is desribed in the first point of this paragraph because PK++ 1.3 client is shipped with its own outdated `Engine.dll` that adds transparency to pictures during map loading. PK++ 1.2 does not have additional `Engine.dll` so there will not be a problem with that version.
+2. Most servers have `PK++ 1.2` mod installed; hovewer, some have `PK++ 1.3`. It is a competitive mod made for tournaments. Starting from the `1.3` version of this mod, it's incompatible with the vanilla Painkiller Black Edition 1.64. It means that you also need to install and run this mod as a client. You can download `PK++ 1.3.1u Open Beta` [**here**](https://www.moddb.com/games/painkiller/downloads/pkplusplus13-unofficial-update)
 
 3. Once `PK++ 1.3` is installed and GameSpy is fixed, create a shortcut with the following property:
 
@@ -44,7 +41,7 @@ This part of the guide describes the full game multiplayer configuration in case
     Alternatively, you can create a BAT file in the game `Bin` directory with the following content:
 
     ```
-    PKPlus1.3 -lscripts pkplus.pak
+    Painkiller -lscripts pkplus.pak
     ```
 
     Run the game via the shortcut. You should see a black CPL menu logo if the `PK++ 1.3` mod was run successfully.
