@@ -92,3 +92,89 @@ Alternatively, the tools can be found on [ModDB](https://www.moddb.com/games/pai
 
     !!! Warning
         Painkiller only supports meshes that have 2 UV map channels. If a mesh have more channels, `PKBlend` will throw an error.
+
+## Blendmaps
+
+!!! Note
+    This information is outdated and was added for reference.
+
+!!! Warning
+    PKBlend v0.3b does not support blendmaps for meshes that have several materials each of which uses its own blendmap.
+    For example, terrain meshes with grass on C5L3_Monastery.
+
+Blendmaps are the mix of textures. The ASE exporter plugin does not export this information. Most often, such complex textures are used for terrain and lava, like on DM_Unseen, DM_Fallen1, C3L6_Forest, C5L4_Hell.
+
+To export such materials properly using the ASE exporter, you need the following prerequisites:
+
+1. A map should be imported with disabled blendmaps:
+
+    !![Blender Plugin Options](../../../img/blender/blender-import-old-001.jpg "Blender Plugin Import Options for ASE exporter")
+
+2. Use [**mpk2ase**](https://github.com/t3r6/pkscripts) on the original map to export the object and texture information. Just drag the map on `mpk2ase.exe`. It'll create several files and you will only need `Obj.txt`.
+
+3. When you complete a map, export by clicking `File` > `Export` > `ASCII Scene Exporter`.
+
+4. Now we need to export the lighmap information from the map using the Painkiller Lightmap MPK plugin which you installed earlier. Click `File` > `Export` > `Painkiller Blendlist (.txt)`.
+
+5. The next step is to transform our `.ase` geometry into the Painkiller `.mpk` format. Go to the original Painkiller directory or just copy the `ase2mpk.exe` to the directory where you have the `.ase` exported file. This is a command line tool so it should be run from Powershell or CMD:
+
+    ```
+    .\ase2mpk.exe -o untitled.ase
+    ```
+
+    Follow the command prompt. You should get a similar output:
+
+    ```
+    Copyright (c) 2003,2004 People Can Fly
+    ase2mpk converts 3ds max ASE files to Pain Engine mpk format
+    version 1.2
+
+    mesh data optimization ON, may take a while ...
+
+    Done!
+
+    press any key...
+    ```
+    
+    The conversion is pretty fast. This tool will create `untitled.mpk` in the same directory. If something goes wrong, the tool creates a log file in the same folder.
+
+6. Now it's time to fix lightmaps. This is where [**PKBlend**](https://github.com/t3r6/Lightmap-mpk-blender/releases) comes in handy. We need to combine the blendlist `untitled.txt` with the generated `untitled.mpk`. Run `PKBlend`.
+
+7. You will need to select matching `untitled.txt` and `untitled.mpk` at the same time using `Ctrl - left mouse click`. Then click `Blend`:
+
+    !![PKBlend](../../../img/blender/blender-pkblend-001.jpg "PKBlend")
+
+    As a result, the `PKBlend` tool will replace `untitled.mpk` with the updated version of `untitled.mpk`. The previous file version will be saved as `untitled.bak`.
+
+8. Now get the `Obj.txt` and combine it with the received `untitled.mpk` with `PKBlend` once again.
+
+Sometimes `Obj.txt` is not generated correctly, so you might need to fix it manually. The full list for two objects might look this way. Pay attention that plane01_trans and plane02_trans do not have gaps between them:
+
+```
+plane01_trans
+0.000000
+0.000000
+5.000000
+5.000000
+my_lightmap
+my_blendmap
+0.000000
+0.000000
+1.000000
+1.000000
+my_alphamask
+plane02_trans
+0.000000
+0.000000
+5.000000
+5.000000
+my_lightmap
+my_blendmap
+0.000000
+0.000000
+1.000000
+1.000000
+my_alphamask
+```
+
+If you see gaps and some fields are missing, it means whether the original mesh did not have them or these was an incomplete export and you need to fix the list manually.
