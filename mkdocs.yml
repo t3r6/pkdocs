@@ -60,11 +60,11 @@ extra_javascript:
 nav:
   - Home: index.md
   - Modding:
-    - guides/modding/pk-unpack.md
+    - guides/modding/pk-packages.md
     - guides/modding/3d-editor-pk-plugins.md
     - guides/modding/mpk-specification.md
   - Mapping Blender:
-    - guides/mapping/blender-pk-importer.md
+    - guides/mapping/blender-mpk-plugins.md
     - guides/mapping/blender-pk-ase-exporter.md
     - guides/mapping/blender-move-bulk-objects.md
   - Hacking:
