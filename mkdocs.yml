@@ -61,12 +61,13 @@ nav:
   - Home: index.md
   - Modding:
     - guides/modding/pk-packages.md
+    - guides/modding/q1-maps-to-pk.md
+  - Mapping:
     - guides/modding/3d-editor-pk-plugins.md
-    - guides/modding/mpk-specification.md
-  - Mapping Blender:
     - guides/mapping/blender-mpk-plugins.md
     - guides/mapping/blender-pk-ase-exporter.md
     - guides/mapping/blender-move-bulk-objects.md
+    - guides/modding/mpk-specification.md
   - Hacking:
     - guides/hacking/hack-linux-bin.md
   - Multiplayer:

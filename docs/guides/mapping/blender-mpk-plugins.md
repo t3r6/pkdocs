@@ -30,6 +30,7 @@ Backup [**repository**](https://github.com/t3r6/PK_tools).
 
     ```
     io_scene_mpk\__init__.py
+    io_scene_mpk\export_mpk.py
     io_scene_mpk\import_mpk.py
     ```
 
@@ -49,6 +50,7 @@ Backup [**repository**](https://github.com/t3r6/PK_tools).
 
     ```
     C:\Program Files\Blender Foundation\Blender 4.2\4.2\scripts\addons\io_scene_mpk\__init__.py
+    C:\Program Files\Blender Foundation\Blender 4.2\4.2\scripts\addons\io_scene_mpk\export_mpk.py
     C:\Program Files\Blender Foundation\Blender 4.2\4.2\scripts\addons\io_scene_mpk\import_mpk.py
     ```
 
@@ -166,6 +168,7 @@ Remove the following files from the Blender folder:
 
 ```
 C:\Program Files\Blender Foundation\Blender 4.2\4.2\scripts\addons\io_scene_mpk\__init__.py
+C:\Program Files\Blender Foundation\Blender 4.2\4.2\scripts\addons\io_scene_mpk\export_mpk.py
 C:\Program Files\Blender Foundation\Blender 4.2\4.2\scripts\addons\io_scene_mpk\import_mpk.py
 ```
 
