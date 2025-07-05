@@ -61,6 +61,7 @@ nav:
   - Home: index.md
   - Modding:
     - guides/modding/pk-packages.md
+    - guides/modding/cubemaps.md
     - guides/modding/q1-maps-to-pk.md
   - Mapping:
     - guides/modding/3d-editor-pk-plugins.md
