@@ -1,0 +1,1857 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../..">
+      
+      
+        <link rel="next" href="../cubemaps/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Unpack and Pack Painkiller/Necrovision game resources - Painkiller PC Game Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unpack-and-pack-painkillernecrovision-game-resources" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Painkiller PC Game Documentation" class="md-header__button md-logo" aria-label="Painkiller PC Game Documentation" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Painkiller PC Game Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Unpack and Pack Painkiller/Necrovision game resources
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/t3r6/pkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Painkiller PC Game Documentation" class="md-nav__button md-logo" aria-label="Painkiller PC Game Documentation" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Painkiller PC Game Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/t3r6/pkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Unpack and Pack Painkiller/Necrovision game resources
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unpack and Pack Painkiller/Necrovision game resources
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools-to-unpack-painkillernecrovision-game-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to unpack Painkiller/Necrovision game resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-to-unpack-painkiller-retail-demo-alpha-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to unpack Painkiller Retail Demo (Alpha) resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-to-pack-painkillernecrovision-game-resources-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to pack Painkiller/Necrovision game resources back
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-game-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in game tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in game tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unpack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paineditor-default-painkiller-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainEditor (default Painkiller Editor)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PainEditor (default Painkiller Editor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-all-game-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export all game data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-a-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export a map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack-a-map-to-pkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pack a map to .pkm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#painfull-extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainFull Extractor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PainFull Extractor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#painfull-extractor-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainFull Extractor Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#painkillerextractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainKillerExtractor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PainKillerExtractor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#painkillerextractor-and-pak2zip-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainKillerExtractor and pak2zip Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dragon-unpacker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dragon UnPACKer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickbms" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuickBMS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuickBMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-quickbms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with QuickBMS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack-game-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unpack game archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reimport-to-game-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reimport to game archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-with-files-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work with files via CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cubemaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cubemaps in Painkiller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../q1-maps-to-pk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Port Quake 1 maps to Painkiller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mapping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mapping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d-editor-pk-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D graphics software for Painkiller resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-mpk-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender Painkiller MPK geometry plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-pk-ase-exporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender Painkiller ASE geometry exporter plugin (Outdated)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-move-bulk-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move parts of objects in bulk in Blender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpk-specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller MPK map geometry format specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hacking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hacking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking/hack-linux-bin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack Painkiller 2004 Linux Game Server Binary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Multiplayer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Multiplayer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-mp-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Black Edition multiplayer client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-mp-server-linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Black Edition Linux Multiplayer Dedicated Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-mp-server-linux-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller 2004 Linux Game Server in Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/od-mp-server-win/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Overdose Windows server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/router-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Router Configuration for Painkiller Multiplayer Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/od-firewall-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firewall Configuration for Painkiller Overdose Multiplayer Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/gamespy-openspy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Replace GameSpy with OpenSpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/command-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller Command Line Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-plus-cmd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PK++ Command list
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trickjumping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trickjumping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-tj-howto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to play trick jump maps online
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-trickjumps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller trickjumps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-hud-movement-compass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller HUD movement compass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-autohop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller Autohop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs development guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools-to-unpack-painkillernecrovision-game-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to unpack Painkiller/Necrovision game resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-to-unpack-painkiller-retail-demo-alpha-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to unpack Painkiller Retail Demo (Alpha) resources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tools-to-pack-painkillernecrovision-game-resources-back" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tools to pack Painkiller/Necrovision game resources back
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-game-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in game tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in game tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unpack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unpack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pack
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paineditor-default-painkiller-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainEditor (default Painkiller Editor)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PainEditor (default Painkiller Editor)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#export-all-game-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export all game data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-a-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      Export a map
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pack-a-map-to-pkm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pack a map to .pkm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#painfull-extractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainFull Extractor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PainFull Extractor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#painfull-extractor-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainFull Extractor Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#painkillerextractor" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainKillerExtractor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PainKillerExtractor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#painkillerextractor-and-pak2zip-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      PainKillerExtractor and pak2zip Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dragon-unpacker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dragon UnPACKer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickbms" class="md-nav__link">
+    <span class="md-ellipsis">
+      QuickBMS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QuickBMS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-with-quickbms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Start with QuickBMS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unpack-game-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unpack game archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reimport-to-game-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reimport to game archive
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-with-files-via-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work with files via CLI
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unpack-and-pack-painkillernecrovision-game-resources">Unpack and Pack Painkiller/Necrovision game resources</h1>
+<blockquote>
+<p>Painkiller has two types of package formats: <strong>.pak</strong> and <strong>.pkm</strong>.</p>
+</blockquote>
+<p>These are basically the same types of archives with the difference that <strong>.pkm</strong> files are loaded by the game automatically during start and <strong>.pak</strong> must be registered for the game to load.</p>
+<p>Custom multiplayer maps are usually packed with the <strong>.pkm</strong> extension.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p>Don't confuse <strong>.pkm</strong> archive format with the <strong>.mpk</strong> geometry binary file. </p>
+<p>The geometry <strong>.mpk</strong> file can be opened in 3D graphics software like Autodesk 3ds Max, Maya, and Blender using unofficial plugins.</p>
+</div>
+<h4 id="tools-to-unpack-painkillernecrovision-game-resources">Tools to unpack Painkiller/Necrovision game resources</h4>
+<ul>
+<li>Built-in game tools using <strong>FS.ExtractPack</strong> (the most recommended option)</li>
+<li>Painkiller standard editor <strong>PainEditor</strong> (it can extract .pkm maps partially but is not recommended for this purpose)</li>
+<li><a href="https://www.moddb.com/games/painkiller/downloads/painfull-extractor-v132">PainFull Extractor</a> program (outdated; no source code)</li>
+<li><a href="https://github.com/t3r6/painkiller-extractor">PainKillerExtractor</a> program (outdated; source code available)</li>
+<li><a href="https://www.elberethzone.net/dragon-unpacker.html">Dragon UnPACKer</a> (open source)</li>
+<li><a href="http://aluigi.altervista.org/quickbms.htm">QuickBMS</a> (open source)</li>
+</ul>
+<h4 id="tools-to-unpack-painkiller-retail-demo-alpha-resources">Tools to unpack Painkiller Retail Demo (Alpha) resources</h4>
+<ul>
+<li><a href="https://github.com/t3r6/painkiller-extractor">pak2zip</a> program</li>
+<li><a href="http://aluigi.altervista.org/quickbms.htm">QuickBMS</a> (open source)</li>
+</ul>
+<h4 id="tools-to-pack-painkillernecrovision-game-resources-back">Tools to pack Painkiller/Necrovision game resources back</h4>
+<ul>
+<li>Built-in game tools using <strong>FS.CreatePack</strong> (recommended option for <strong>.pak</strong> archives and <strong>.pkm</strong> maps with custom resources)</li>
+<li>Painkiller standard editor <strong>PainEditor</strong> (recommended option for maps <strong>.pkm</strong> files that do NOT contain custom resources, like additional scripts, textures in custom folders)</li>
+<li><a href="https://www.moddb.com/games/painkiller/downloads/painfull-extractor-v132">PainFull Extractor</a> can add and replace files in a package (not recommended).</li>
+<li><a href="http://aluigi.altervista.org/quickbms.htm">QuickBMS</a> can re-import files to a package (not recommended).</li>
+</ul>
+<h2 id="built-in-game-tools">Built-in game tools</h2>
+<p>People Can Fly video game development studio provided tools for unpacking and packing resources.</p>
+<div class="admonition notes">
+<p class="admonition-title">Notes</p>
+<p>This is the most reliable and recommended way to pack and unpack Painkiller resources. I also recommend using <strong>PainEditor</strong> to package map <strong>.pkm</strong> archives.</p>
+</div>
+<h3 id="unpack">Unpack</h3>
+<p>Unpack files from <code>.pak</code> or <code>.pkm</code> archive via CLI:</p>
+<p><strong>Powershell</strong> (can accept relative path to the output file):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>.\painkiller.exe -script FS.ExtractPack&quot;(&#39;../Data/DM_Test.pkm&#39;,&#39;../../Test&#39;)&quot;
+</span></code></pre></div>
+<p><strong>Windows cmd</strong> (need to indicate full path to the output file):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>.\painkiller.exe -script FS.ExtractPack(&#39;../Data/DM_Test.pkm&#39;,&#39;C:/Users/%USERNAME%/FullPath/Games/Painkiller/Test&#39;)
+</span></code></pre></div>
+<h3 id="pack">Pack</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to pack a map with the regenerated /Maps/MOPPCode. It regenerates automatically when you load a map in the game.</p>
+</div>
+<p>To pack files back to the <code>.pak</code> or <code>.pkm</code> archive via CLI:</p>
+<p><code>true</code> is for compression.</p>
+<p><strong>Powershell</strong> (can accept relative path to the input file):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>.\painkiller.exe -script FS.CreatePack&quot;(&#39;../Data/DM_Test.pkm&#39;,&#39;../../Test&#39;,true)&quot;
+</span></code></pre></div>
+<p><strong>Windows cmd</strong> (need to indicate full path to the input file):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>.\painkiller.exe -script FS.CreatePack(&#39;../Data/MyPack.pkm&#39;,&#39;path/to/files/&#39;,true)
+</span></code></pre></div>
+<h2 id="paineditor-default-painkiller-editor">PainEditor (default Painkiller Editor)</h2>
+<p>PainEditor comes with the Painkiller game. It's located in <strong>..\Painkiller\Bin\Editor</strong>.</p>
+<h3 id="export-all-game-data">Export all game data</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This method will hang your PainEditor for several minutes and extract all files from all <strong>.pak</strong> archives to the current folders in the ..\Data directory.</p>
+</div>
+<p>To export all game data resources, click <strong>File</strong> -&gt; <strong>Extract Game Data</strong>.</p>
+<h3 id="export-a-map">Export a map</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>PainEditor does not extract some map resources and <strong>..\Data\Levels\MapEntities</strong> with this method. MapEntities usually include cubemaps for portals and water shaders. Moreover, PainEditor will not extract other map resources, like the geometry <strong>.mpk</strong> file, Textures, level scripts for Singleplayer maps, etc. It was a common mistake in the past that many mappers did not include portal textures on their maps because of that. Thus, be aware to copy those manually if needed or extract all map resources using a different method. So, generally, it is not recommended to extract maps and resources with PainEditor.</p>
+</div>
+<p>To export a map with the editor, follow these steps:</p>
+<ul>
+<li>Click on <strong>File</strong> -&gt; <strong>Load Level</strong> and choose the level you'd like to export.</li>
+<li>Once the level is opened, click <strong>File</strong> -&gt; <strong>Save Level and Objects</strong></li>
+</ul>
+<p>After that, the extracted map files will appear in the <strong>..\Data\Levels</strong> directory.</p>
+<p>
+<figure><a data-caption="PainEditor" data-fancybox="gallery" href="../../../img/unpackers/unpacker-paineditor1.jpg"><img alt="PainEditor" src="../../../img/unpackers/unpacker-paineditor1.jpg" title="PainEditor" width="600px" /></a><figcaption>PainEditor</figcaption>
+</figure>
+</p>
+<h3 id="pack-a-map-to-pkm">Pack a map to .pkm</h3>
+<ul>
+<li>Place all your map resources into the <b>..\Painkiller\Data\</b> directory.</li>
+<li>Open your map in the editor by clicking on <strong>File</strong> -&gt; <strong>Load Level</strong> so that the game generates sort of a cache <a href="https://www.gamedeveloper.com/pc/havok-1-6-includes-new-mopp-technology">MOPPCode (memory-optimized partial polytope)</a> in the <b>..\Painkiller\Data\Maps\MOPPCode\</b> directory.</li>
+<li>Then save the map by clicking on <strong>File</strong> -&gt; <strong>Load Level</strong>, click on the Level you want to pack and click <strong>Create PMK</strong>.</li>
+</ul>
+<p>It will create a <strong>.pkm</strong> file inside the <b>..\Painkiller\Data\</b> directory.</p>
+<p>
+<figure><a data-caption="PainEditor" data-fancybox="gallery" href="../../../img/unpackers/unpacker-paineditor2.jpg"><img alt="PainEditor" src="../../../img/unpackers/unpacker-paineditor2.jpg" title="PainEditor" width="600px" /></a><figcaption>PainEditor</figcaption>
+</figure>
+</p>
+<h2 id="painfull-extractor">PainFull Extractor</h2>
+<p>
+<figure><a data-caption="PainFull Extractor" data-fancybox="gallery" href="../../../img/unpackers/unpacker-painfull1.jpg"><img alt="PainFull Extractor" src="../../../img/unpackers/unpacker-painfull1.jpg" title="PainFull Extractor" width="600px" /></a><figcaption>PainFull Extractor</figcaption>
+</figure>
+</p>
+<p>PainFull Extractor was released in 2004 as a side project of MultiEx Commander by Mike Zuurman aka Mr.Mouse/XeNTaX. Latest Version 1.3.2.</p>
+<p>This unpacker supports <strong>.pak</strong> and <strong>.pkm</strong> archives but cannot unpack some archives with zero-byte files in <b>..\Painkiller\Data\Maps\MOPPCode\</b> which is common in Painkiller Resurrection. Also, it has several annoying bugs like errors during the folder navigation, instability. This program is considered outdated but it's still widely used.</p>
+<p>You can get the program <a href="https://www.moddb.com/games/painkiller/downloads/painfull-extractor-v132">here</a>.</p>
+<p>You need to run PainFull Extractor in a <a href="https://www.computerhope.com/issues/ch001894.htm">Windows XP compatibility mode</a> as administrator.</p>
+<h3 id="painfull-extractor-guide">PainFull Extractor Guide</h3>
+<p>Taken from the official <code>readme.txt</code> manual.</p>
+<p>Just browse to a PAK file of your choice at the left side of the tool, select it in the file list, and hit <strong>Open Painkiller PAK</strong>. You will notice the contents (entries) listed to the right.</p>
+<ul>
+<li>
+<p>Extraction</p>
+<p>Just select all files at once, clicking on the top file first followed by a click on the last while holding down the <code>shift</code> button. Alternatively just select the files you want, by holding <code>ctrl</code>.</p>
+<p>To extract, click the button below and in between the two lists, with <code>&lt;&lt;</code> on it. Voila. It will extract the files into the current path.</p>
+</li>
+<li>
+<p>Addition</p>
+</li>
+<li>
+<p>Replacement</p>
+<p>Select a file in the file list that you want to use to replace a file in the open archive. Second, select the file you wish to replace in the contents list. Click the <code>&gt;&gt;</code> button, and wait until it's finished. Done.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>PainFull will automatically import the new file, and will NOT create a backup. If you want to mess around with any PAK file, be sure to back it up first and store it somewhere safe!</p>
+</div>
+</li>
+</ul>
+<h2 id="painkillerextractor">PainKillerExtractor</h2>
+<p>PainKillerExtractor was released in 2004 by Andrew Frolov aka FAL.</p>
+<p>The tool and the source code itself are located in this <a href="https://github.com/t3r6/painkiller-extractor">repository</a>. This unpacker sometimes fails to extract correctly from an archive but it should be OK for modifying multiplayer maps. The tool basically consists of the <code>PainKillerExtractor.exe</code> file and everything else is a source code.</p>
+<h3 id="painkillerextractor-and-pak2zip-guide">PainKillerExtractor and pak2zip Guide</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Be sure to place <code>PainKillerExtractor.exe</code> with the file you want to extract in a separate folder so that the extraction will not mess the files in your current folder.</p>
+<p><code>pak2zip</code> is a similar tool but it's for Painkiller Exclusive Retail Demo <code>.pak</code> resources.</p>
+</div>
+<ul>
+<li>
+<p>Unpacking by drag-and-drop</p>
+<p>You can simply drag and drop the <strong>.pak</strong> or <strong>.pkm</strong> archive to this application (drag the .pak archive with the mouse cursor to the .exe file) and it will unpack the resources automatically.</p>
+<p>
+<figure><a data-caption="PainKillerExtractor" data-fancybox="gallery" href="../../../img/unpackers/unpacker-pkextractor1.jpg"><img alt="PainKillerExtractor" src="../../../img/unpackers/unpacker-pkextractor1.jpg" title="PainKillerExtractor" width="600px" /></a><figcaption>PainKillerExtractor</figcaption>
+</figure>
+</p>
+</li>
+<li>
+<p>Unpacking via CLI</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.\PainKillerExtractor.exe PKPlus.pak
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>.\pak2zip.exe Textures.pak
+</span></code></pre></div>
+</li>
+</ul>
+<h2 id="dragon-unpacker">Dragon UnPACKer</h2>
+<p><a href="https://www.elberethzone.net/dragon-unpacker.html">Dragon UnPACKer</a> is an open-source tool for unpacking game resources. Currently, it supports Painkiller <strong>.pak</strong> files but cannot unpack <strong>.pkm</strong> by default. To unpack <strong>.pkm</strong> files with Dragon UnPACKer you need to temporarily rename <strong>.pkm</strong> file to <strong>.pak</strong>. For example, rename <code>DM_Blink.pkm</code> to <code>DM_Blink.pak</code> and Dragon UnPACKer will allow you to extract <code>DM_Blink.pak</code> resource in this case. Sometimes this program can break files during extraction but it's a very good program to browse in-game packed resources.</p>
+<p>
+<figure><a data-caption="Dragon UnPACKer" data-fancybox="gallery" href="../../../img/unpackers/unpacker-dragonunpacker1.jpg"><img alt="Dragon UnPACKer" src="../../../img/unpackers/unpacker-dragonunpacker1.jpg" title="Dragon UnPACKer" width="600px" /></a><figcaption>Dragon UnPACKer</figcaption>
+</figure>
+</p>
+<h2 id="quickbms">QuickBMS</h2>
+<p><a href="http://aluigi.altervista.org/quickbms.htm">QuickBMS</a> is an open-source tool for unpacking game resources. QuickBMS is a complex tool with a lot of capabilities so I'll cover it briefly. If you want more details, read their manual in the <code>quickbms.txt</code> file.</p>
+<h3 id="start-with-quickbms">Start with QuickBMS</h3>
+<ul>
+<li>Download the program from the <a href="http://aluigi.altervista.org/papers/quickbms.zip">website</a>.</li>
+<li>Extract the QuickBMS archive.</li>
+<li>QuickBMS uses plugins to extract game resources and we'll need to download one. Go to <a href="http://aluigi.altervista.org/quickbms.htm#search">BMS Search</a> on their website and search using Necrovision or Painkiller keywords. Download the <code>bms/necrovision.bms</code> script and put it in the QuickBMS folder.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are going to extract the Painkiller Exclusive Retail Demo resources, you need a QuickBMS plugin called <code>bms/zip2.bms</code>.</p>
+</div>
+<p>
+<figure><a data-caption="QuickBMS plugin" data-fancybox="gallery" href="../../../img/unpackers/unpacker-quickbms1.jpg"><img alt="QuickBMS plugin" src="../../../img/unpackers/unpacker-quickbms1.jpg" title="QuickBMS plugin" width="600px" /></a><figcaption>QuickBMS plugin</figcaption>
+</figure>
+</p>
+<h3 id="unpack-game-archive">Unpack game archive</h3>
+<ul>
+<li>Run <code>quickbms.exe</code> as an administrator.</li>
+<li>Select the <code>necrovision.bms</code> plugin for Painkiller/Necrovision resources or <code>zip2.bms</code> for Painkiller Exclusive Retail Demo resources.</li>
+<li>Choose <strong>.pak</strong> or <strong>.pkm</strong> file to extract. You can also select all the archives in the folder to be unpacked by indicating asterisk (<code>*</code>) as a <strong>File name</strong> or use regex.</li>
+<li>Choose the folder where to extract</li>
+</ul>
+<h3 id="reimport-to-game-archive">Reimport to game archive</h3>
+<p>The idea consists of being able to reimport ("injecting back") the modified files in the original archives. Though, I don't recommend using this option.</p>
+<ul>
+<li>Make a backup copy of the original archive.</li>
+<li>Extract the files or only the ones that will be necessary for modification.</li>
+<li>Modify the extracted files leaving their size unchanged or smaller than before.</li>
+<li>Reimport the files in the archive via <code>reimport.bat</code> or <code>reimport2.bat</code> if the former gives errors. Administrator mode is not required.</li>
+<li>Open <code>reimport.bat</code> and select <code>necrovision.bms</code> plugin.</li>
+<li>Select the <strong>.pak</strong> or <strong>.pkm</strong> archive where you are going to import a modified file to.</li>
+<li>Select extracted modified files in a folder. You can use regex to select multiple files and folders and click <strong>Save</strong>.</li>
+</ul>
+<h3 id="work-with-files-via-cli">Work with files via CLI</h3>
+<p>Read the manual for more options.</p>
+<p>Help command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>.\quickbms.exe -h
+</span></code></pre></div>
+<p>List files in an archive without unpacking:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>.\quickbms.exe -l necrovision.bms .\DM_5quid01.pkm
+</span></code></pre></div>
+<p>Extract files. It will prompt you to create a folder if does not exist:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>.\quickbms.exe necrovision.bms .\DM_5quid01.pkm .\DM_5quid01
+</span></code></pre></div>
+<p>Reimport files from the output folder:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>.\quickbms.exe -w -r necrovision.bms .\DM_5quid01.pak .\DM_5quid01
+</span></code></pre></div>
+<p>Use advanced reimport if the usual one does not work:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>.\quickbms.exe -w -r -r necrovision.bms .\DM_5quid01.pak .\DM_5quid01
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      
+    
+  </body>
+</html>

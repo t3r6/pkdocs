@@ -1,0 +1,2446 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../pk-mp-server-linux/">
+      
+      
+        <link rel="next" href="../od-mp-server-win/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Painkiller 2004 Linux Game Server in Docker - Painkiller PC Game Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#painkiller-2004-linux-game-server-in-docker" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Painkiller PC Game Documentation" class="md-header__button md-logo" aria-label="Painkiller PC Game Documentation" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Painkiller PC Game Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Painkiller 2004 Linux Game Server in Docker
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/t3r6/pkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Painkiller PC Game Documentation" class="md-nav__button md-logo" aria-label="Painkiller PC Game Documentation" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Painkiller PC Game Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/t3r6/pkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/pk-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unpack and Pack Painkiller/Necrovision game resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/cubemaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cubemaps in Painkiller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/q1-maps-to-pk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Port Quake 1 maps to Painkiller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mapping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mapping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/3d-editor-pk-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D graphics software for Painkiller resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-mpk-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender Painkiller MPK geometry plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-pk-ase-exporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender Painkiller ASE geometry exporter plugin (Outdated)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-move-bulk-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move parts of objects in bulk in Blender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/mpk-specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller MPK map geometry format specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hacking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hacking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking/hack-linux-bin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack Painkiller 2004 Linux Game Server Binary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Multiplayer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Multiplayer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pk-mp-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Black Edition multiplayer client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pk-mp-server-linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Black Edition Linux Multiplayer Dedicated Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Painkiller 2004 Linux Game Server in Docker
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller 2004 Linux Game Server in Docker
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-architectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Architectures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-with-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start with Docker Compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start with Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start with Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-default-bridge-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker default bridge network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-host-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker host network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-on-a-different-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running on a different port
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running on a different port">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-ports-with-the-docker-default-bridge-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom ports with the Docker default bridge network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-ports-with-the-docker-host-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom ports with the Docker host network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-docker-image-from-a-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Docker image from a Dockerfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-after-the-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server after the build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-your-image-to-the-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push your image to the container registry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-containers-with-different-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run containers with different parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run containers with different parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-config-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using config variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-with-a-custom-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server with a custom config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run a server with a custom config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bind-a-custom-host-config-to-the-default-pkserver-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bind a custom host config to the default pkserver config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-a-custom-host-config-to-the-custom-pkserver-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bind a custom host config to the custom pkserver config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-with-custom-lscripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server with custom LScripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run a server with custom LScripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-pk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run PK++
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-custom-server-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a custom server mod
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-with-custom-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server with custom maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-multiple-containers-based-on-the-same-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run multiple containers based on the same image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-docker-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Docker volumes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-server-logs-and-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing server logs and stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-server-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing server resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing server resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mini Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-a-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug a container
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../od-mp-server-win/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Overdose Windows server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../router-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Router Configuration for Painkiller Multiplayer Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../od-firewall-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firewall Configuration for Painkiller Overdose Multiplayer Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamespy-openspy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Replace GameSpy with OpenSpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../command-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller Command Line Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pk-plus-cmd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PK++ Command list
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trickjumping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trickjumping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-tj-howto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to play trick jump maps online
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-trickjumps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller trickjumps
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-hud-movement-compass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller HUD movement compass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trickjumping/pk-autohop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller Autohop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs development guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-architectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Architectures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-with-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start with Docker Compose
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-start-with-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick start with Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quick start with Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-default-bridge-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker default bridge network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-host-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker host network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-on-a-different-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running on a different port
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running on a different port">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-ports-with-the-docker-default-bridge-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom ports with the Docker default bridge network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-ports-with-the-docker-host-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Custom ports with the Docker host network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build-docker-image-from-a-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Build Docker image from a Dockerfile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-after-the-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server after the build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-your-image-to-the-container-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push your image to the container registry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-containers-with-different-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run containers with different parameters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run containers with different parameters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-config-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using config variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-with-a-custom-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server with a custom config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run a server with a custom config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bind-a-custom-host-config-to-the-default-pkserver-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bind a custom host config to the default pkserver config
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bind-a-custom-host-config-to-the-custom-pkserver-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bind a custom host config to the custom pkserver config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-with-custom-lscripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server with custom LScripts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Run a server with custom LScripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-pk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run PK++
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-custom-server-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a custom server mod
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#run-a-server-with-custom-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run a server with custom maps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-multiple-containers-based-on-the-same-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run multiple containers based on the same image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-docker-volumes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Docker volumes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-server-logs-and-stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing server logs and stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-server-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Managing server resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Managing server resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resource limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restart policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mini-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mini Dockerfile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-a-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug a container
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="painkiller-2004-linux-game-server-in-docker">Painkiller 2004 Linux Game Server in Docker</h1>
+<blockquote>
+<p>You can find the code <a href="https://github.com/t3r6/pkserver-docker/">here</a>.</p>
+</blockquote>
+<p>The goal of the project was to make the 32-bit Painkiller Linux server work on most 64-bit Linux operating systems without any hassle.</p>
+<p>Docker fits this purpose because it isolates containers from the host system.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Before you start to launch a server, please note that in order to see servers advertised on OpenSpy directly in the game browser, you need a patched Painkiller client DLL. Please check the details <a href="../gamespy-openspy/"><strong>here</strong></a>.</p>
+</div>
+<h2 id="overview">Overview</h2>
+<ol>
+<li>
+<p>Binary Hacks. The original Linux <code>pkserver</code> binary from People Can Fly is very limited. It starts with the hardcoded <code>+dedicatedserver +map +port</code> parameters which cannot be overriden and only accepts the <code>+interface</code> and <code>+private</code> command line options. You are not able to pass custom <code>-lscripts</code> and <code>-cfg</code>. However, it's possible hack the <code>pkserver</code> binary to accept custom <code>LScripts.pak</code> and <code>config.ini</code>. The method is described <a href="../../hacking/hack-linux-bin/">here</a>.
+This Docker image contains that binary hack.</p>
+</li>
+<li>
+<p>Docker environment variables. The Docker image also has a script that allows to pass the <code>Cfg_</code> environment variables to the Docker container that will override parameters in the default <code>config.ini</code> with the similar names. For example, you can pass the <code>Cfg_ServerPort</code> variable and it will override the <code>Cfg.ServerPort</code> parameter in the <code>config.ini</code> file.</p>
+</li>
+<li>
+<p>Outdated <code>gamespy.com</code> was replaced with <code>openspy.net</code> in the binary as well.</p>
+</li>
+<li>
+<p>The Docker image contains LScripts for PK++ 1.2 and PK++ 1.3 competition <a href="https://www.moddb.com/mods/pk"><strong>mods</strong></a>.</p>
+<blockquote>
+<p>PK++ 1.2 is compatible with the original Painkiller while PK++ 1.3 server requires a client to have PK++ 1.3 mod installed.</p>
+</blockquote>
+</li>
+<li>
+<p>Added semi-official competitive maps Meatless and Blink.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Painkiller server listens on <code>3455</code> UDP port by default. The game also listens on the <code>3578</code> UDP port for LAN discovery. If you increment your multiplayer port by one, like in <code>3456</code>, the LAN port will also be incremented by the game automatically to <code>3579</code>.
+You only need to publish the LAN port in Docker if you run a clent and a server on the same machine which is unlikely.</p>
+</div>
+<h2 id="environment">Environment</h2>
+<blockquote>
+<p>A Docker container is a running instance of a Docker image. When you run a Docker image, it becomes a Docker container.</p>
+</blockquote>
+<p>This Docker image can be used on most 64-bit Linux distributions.</p>
+<p>I tested Docker containers on Ubuntu 22.04.4 LTS on Virtual Box 7.0.18 with Bridged Adapter and promiscuous mode. The containers were also launched on a production Ubuntu 24.04 LTS server.</p>
+<h2 id="supported-architectures">Supported Architectures</h2>
+<ul>
+<li>Linux AMD64 (x86-64)</li>
+<li>Linux ARM64</li>
+</ul>
+<p>The Docker image is based on Debian. Unlike Ubuntu, Debian still has a very good support for 32-bit applications on AMD64 and ARM64 OS.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><a href="https://docs.docker.com/engine/install/">Docker Engine with Docker Compose</a></li>
+<li>Optional: <a href="https://www.qemu.org/download/">QEMU</a> for multi-platform builds</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><a href="https://podman.io/docs/installation">Podman</a> and <a href="https://github.com/containers/podman-compose">Podman Compose</a> are not recommended due to potential issues with the default bridge network. Moreover, Podman doesn't directly manage restart policies and instead depends on systemd since Podman does not have its own deamon. However, Podman woks fine with the host network plugin. Pay attention that Docker cannot see Podman images and vice versa so better stick to one tool.</p>
+</div>
+<p>The Docker installation guides are a bit confusing. It's enough to install Docker Engine. Docker Desktop is only for systems with GUI and is optional.</p>
+<ol>
+<li>
+<p>Install Docker Engine. Here is the guide for <a href="https://docs.docker.com/engine/install/ubuntu/">Ubuntu</a>. The Docker Compose plugin is already included in the default Docker plugin list.</p>
+</li>
+<li>
+<p>Don't forget the <a href="https://docs.docker.com/engine/install/linux-postinstall/">Linux post-installation steps</a> to manage Docker as a non-root user.</p>
+</li>
+<li>
+<p>Check that the Docker daemon is running:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo systemctl status docker.service
+</span></code></pre></div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>QEMU emulation is only necessary if you want to build an ARM64 image on a AMD64 machine.</p>
+</div>
+<h2 id="quick-start-with-docker-compose">Quick start with Docker Compose</h2>
+<p>Docker Compose is a fast and convenient way to declaratively configure multiple containers. It uses <a href="https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html">YAML</a> configuration file that have strict indentations. You can run multiple servers with one command, no additional scripts are required.</p>
+<p>The <code>docker-compose.yml</code> is provided in the repository as a template. Most parameters are preconfigured.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pay attention to the <code>Cfg_ServerPort</code> variable or the <code>Cfg.ServerPort</code> parameter in the <code>config.ini</code> file. The port should be different for each server. If you, for example, run several servers on the same port, other containers will crash.</p>
+</div>
+<blockquote>
+<p><strong>Issue</strong>: Docker Compose mounts files as folders.<br>
+<strong>Solution</strong>: indicate the path to the custom file with dot/slash, for instance: <code>source: ./DM_K3Inzane.pkm</code>.</p>
+</blockquote>
+<ol>
+<li>
+<p>Copy the <code>docker-compose.yml</code> file from the <a href="https://github.com/t3r6/pkserver-docker">repository</a> to your host.</p>
+</li>
+<li>
+<p>Make necessary changes. For example, leave only one server.</p>
+</li>
+<li>
+<p>Open necessary ports on your system.</p>
+</li>
+<li>
+<p>Run the following command in the same directory:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker compose up -d
+</span></code></pre></div>
+<p>It will launch preconfigured server/servers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also rename and specify a custom file while running docker compose:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker compose -f painkiller-docker-compose.yml up -d
+</span></code></pre></div>
+</div>
+</li>
+<li>
+<p>Stop and remove the servers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker compose down
+</span></code></pre></div>
+<p>Or</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>docker compose -f painkiller-docker-compose.yml down
+</span></code></pre></div>
+</li>
+</ol>
+<blockquote>
+<p>That's the bare minimum you need to know to launch your servers. The below profound information is necessary to understand how Docker works, how to manage it, what solutions were implemented in the Docker image, and how to build your own Docker image.</p>
+</blockquote>
+<h2 id="quick-start-with-docker">Quick start with Docker</h2>
+<p>By default, Docker uses the <a href="https://docs.docker.com/network/drivers/bridge/">bridge network</a> wich has its own subnet range. This network requires you to publish ports. Alternatively, you can use the <a href="https://docs.docker.com/network/drivers/host/">host network</a> which uses the IP addresses of your host network. You don't need to publish ports in case of the host network. However, you may need to pass <code>+interface</code> or <code>Cfg_NetworkInterface</code> to the Docker container if you have multiple interfaces on your host. This will tell the <code>pkserver</code> binary to run on a particular IP address that has access to the internet.</p>
+<h3 id="docker-default-bridge-network">Docker default bridge network</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Podman may not work properly with the bridge network plugin. I recommend using Docker with this type of network.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Docker image is published to Docker Hub and to GitHub Container Registry.
+Use the one which is more convenient for you:</p>
+<p><code>ghcr.io/t3r6/pkserver:main</code><br>
+<code>docker.io/painkillergameclassic/pkserver:main</code></p>
+</div>
+<ol>
+<li>
+<p>Start a server with the <code>ffa</code> name. This command will automatically pull the Docker image from Docker Hub and start a Docker container on your machine. The LAN port <code>3578</code> is published as an example and is not required:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp -p 3578:3578/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>--rm</code> means that the container will be removed once you stop it.<br>
+<code>--name ffa</code> assignes the <code>ffa</code> name to the container.<br>
+<code>-it</code> improves the interaction with the container.<br>
+<code>-d</code> detaches your container to the background so it does not occupy your terminal session.<br>
+<code>-p</code> publishes the UDP port in our case. The host port is mapped to the container port.<br></p>
+</div>
+</li>
+<li>
+<p>Check that the container with the pkserver is running:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ docker container ls
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>CONTAINER ID   IMAGE                                 COMMAND           CREATED         STATUS         PORTS                                                 NAMES
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>e9191538423b   painkillergameclassic/pkserver:main   &quot;entrypoint.sh&quot;   8 seconds ago   Up 7 seconds   0.0.0.0:3455-&gt;3455/udp, :::3455-&gt;3455/udp, 3578/udp   ffa
+</span></code></pre></div>
+<p>Check the port the container is running on:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$ ss -tuln | grep 3455
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>udp   UNCONN 0      0            0.0.0.0:3455       0.0.0.0:*
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>udp   UNCONN 0      0               [::]:3455          [::]:*
+</span></code></pre></div>
+</li>
+<li>
+<p>Open and forward the default Painkiller 3455 port in your firewall if required. For example, if you run a server on a Virtual machine. Please check this <a href="../router-config/"><strong>guide</strong></a> on port forwarding. I suggest opening several ports beforehand in case of multiple servers: 3455, 3456, 3457.</p>
+</li>
+<li>
+<p>Modify your firewall, iptables, AppArmor, SeLinux if you amended them before and blocked traffic. For example, open a range of ports on Ubuntu:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo ufw allow 3455:3457/udp
+</span></code></pre></div>
+</li>
+<li>
+<p>Check if your game is advertised on <a href="https://openspy.net/server-list/painkiller">OpenSpy</a>.</p>
+</li>
+<li>
+<p>Open the Painkiller game client and join a server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's likely that you won't see your own server in the in-game browser if you run the server and the clinet on the same machine so join it via IP.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>/connect ip
+</span></code></pre></div></p>
+</div>
+</li>
+<li>
+<p>Stop the container named <code>ffa</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>docker container stop ffa
+</span></code></pre></div>
+</li>
+<li>
+<p>Remove the stopped container. Usually, this is not required since the <code>--rm</code> option removes the conatainer once you stop it. However, in some cases your container could get stuck so better double-check. Run the following command to check the failed containers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>docker container ls -a
+</span></code></pre></div>
+<p>Remove the failed containers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>docker container prune
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="docker-host-network">Docker host network</h3>
+<p>Docker and Podman work equally well on this type of network.</p>
+<p>In case you have any issues with the default Docker bridge network, like errors connected with <a href="https://github.com/openspy/openspy-core/issues/21">NATNEG</a>, try the Docker host network. In this case, you'll need to indicate the IP of your network adapter that has access to the internet if you have multiple devices (192.168.0.106 in my example). Run the following command to check the network interfaces:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>~$ ip --brief address show
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>lo               UNKNOWN        127.0.0.1/8 ::1/128 
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>enp0s3           UP             192.168.0.106/24 fe80::91ee:4f1b:1582:d667/64 
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>docker0          UP             172.17.0.1/16 fe80::42:78ff:fecd:b400/64 
+</span></code></pre></div>
+<p>It's the IP address of the <code>enp0s3</code> interface in my case.</p>
+<p>Launch a Docker container with the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>docker run --rm --name ffa -itd -e Cfg_NetworkInterface=&quot;192.168.0.106&quot; --net=host docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<p>Alternative command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>docker run --rm --name ffa -itd --net=host docker.io/painkillergameclassic/pkserver:main +interface 192.168.0.106
+</span></code></pre></div>
+<h3 id="running-on-a-different-port">Running on a different port</h3>
+<p>In case you need to run a game on a different port, use Docker port mapping and the <code>Cfg_ServerPort</code> variable.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that Painkiller GameSpy backend is outdated which can cause issues with the <a href="https://wiki.tockdom.com/wiki/Network_Protocol/Server/mariokartwii.natneg.gs.nintendowifi.net">NATNEG</a> protocol. Thus, we must map the same Docker ports on the container and the host and also change the port in the Painkiller config.ini.
+For instance, with this command the client will get errors when connecting to your server via the in-game browser:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>docker run --rm --name ctf -itd -p 3456:3455/udp  docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+Pay attention that we map the <code>3456</code> port on the host to the <code>3455</code> Docker container port. The clinet will get the following error:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>NAT Negotiation error: Partnet did not register with the NAT Negotiation Server
+</span></code></pre></div>
+Nevertheless, a clinet should be able to connect to your server by running manually the <code>/connect ip:port</code> command in the game console.</p>
+<p>It seems that the game tells OpenSpy that it is up on port <code>3455</code>, while <code>3456</code> port is mapped from the docker engine to the host system, but this is not an address translation, but simply a port mapping. Apparently, NATNEG is trying to negotiate through port <code>3455</code> when the negotiation should be through <code>3456</code>.</p>
+</div>
+<p>The below commands work and do not produce connection errors.</p>
+<h4 id="custom-ports-with-the-docker-default-bridge-network">Custom ports with the Docker default bridge network</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>docker run --rm --name ffa -itd -p 3456:3456/udp -e Cfg_ServerPort=&quot;3456&quot; docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<h4 id="custom-ports-with-the-docker-host-network">Custom ports with the Docker host network</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>docker run --rm --name ffa -itd -e Cfg_ServerPort=&quot;3456&quot; -e Cfg_NetworkInterface=&quot;192.168.0.106&quot; --net=host docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<h2 id="building">Building</h2>
+<h3 id="build-docker-image-from-a-dockerfile">Build Docker image from a Dockerfile</h3>
+<ol>
+<li>
+<p>Clone or download the github <a href="https://github.com/t3r6/pkserver-docker">repository</a>.</p>
+</li>
+<li>
+<p>Modify files if required. You can put additional maps, modify <code>config.ini</code>, hack <code>pkserver</code> binary beforehand, add your own scripts, make amendments to the Dockerfile.</p>
+</li>
+<li>
+<p>Run the following command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>docker build . --no-cache -t pkserver:v1
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>dot</code> is an indication that you build the Docker image from the Dockerfile in this directory.<br>
+<code>-t/--tag</code> is the name of your future local Docker image.<br>
+<code>--no-cache</code> does not use cache.<br></p>
+</div>
+<p>To build from a Dockerfile with a custom name:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>docker build -f custom.Dockerfile . --no-cache -t pkserver:v1
+</span></code></pre></div>
+</li>
+<li>
+<p>Check the built Docker images:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>docker image ls
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="run-a-server-after-the-build">Run a server after the build</h3>
+<ol>
+<li>
+<p>Start a server with the <code>ffa</code> name:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp pkserver:v1
+</span></code></pre></div>
+</li>
+<li>
+<p>Check that the container with the server is running:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>docker container ls
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you don't see a container with this command, try to run:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>docker container ls -a
+</span></code></pre></div>
+<p>It's high likey that your container exited with an error. You'll need to investigate the error, make fixes and re-build the image again.</p>
+</div>
+</li>
+<li>
+<p>Stop the <code>ffa</code> container:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>docker container stop ffa
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="push-your-image-to-the-container-registry">Push your image to the container registry</h3>
+<p>You should be registered to either <a href="https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry">GitHub</a> or <a href="https://hub.docker.com/">Docker Hub</a>.</p>
+<ol>
+<li>
+<p>Register in any of the mentioned services.</p>
+</li>
+<li>
+<p>Re-tag your Docker image with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>docker image tag pkserver:v1 yourregistryname/pkserver:v1
+</span></code></pre></div>
+</li>
+<li>
+<p>Log in to the registry:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>docker login
+</span></code></pre></div>
+</li>
+<li>
+<p>Push your image to the registry:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>docker push yourregistryname/pkserver:v1
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="run-containers-with-different-parameters">Run containers with different parameters</h2>
+<h3 id="using-config-variables">Using config variables</h3>
+<p>You can pass variables to the container instead of modifying the <code>config.ini</code> file. Each variable corresponds to the <code>Cfg</code> parameter in <code>config.ini</code> and should start with <code>Cfg_</code>. The letter case does not matter, except for special <code>PKS_</code> variables.
+For example, <code>Cfg.ServerPort</code> corresponds to <code>CFG_SERVERPORT</code> or <code>Cfg_ServerPort</code>, <code>Cfg.NetworkInterface</code> to <code>CFG_NETWORKINTERFACE</code> or <code>Cfg_NetworkInterface</code>. However, <code>PKS_LSCRIPTS</code> should be passed with capital letters only. Let's start a <code>PK++ 1.3</code> server on a <code>3456</code> port:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>docker run --rm --name ffa -itd -p 3456:3456/udp -e Cfg_ServerPort=&quot;3456&quot; -e PKS_LSCRIPTS=&#39;PKPlus13.pak&#39; docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<h3 id="run-a-server-with-a-custom-config">Run a server with a custom config</h3>
+<h4 id="bind-a-custom-host-config-to-the-default-pkserver-config">Bind a custom host config to the default pkserver config</h4>
+<p>Docker containers are ephemeral. It means that when you restart a container, all the information will be lost and you start from scratch. If you are NOT going to use the <code>Cfg_</code> variables with a container, you need to bind a <code>config.ini</code> file from the outside to the Docker container. The simplest way would be to use the <a href="https://docs.docker.com/storage/bind-mounts/">bind mounts</a> Docker feature. As an alternative, you can use the Docker volumes but I found this method inconvenient for the Painkiller server management since you cannot insert data directly into a volume without copying it to a container.</p>
+<ol>
+<li>
+<p>Copy <code>./pkserver/Bin/config.ini</code> from the repository to your host, for example, to <code>${HOME}/my_pkserver/config.ini</code>.</p>
+</li>
+<li>
+<p>Make sure the file has the right permissions:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>chmod 664 config.ini
+</span></code></pre></div>
+</li>
+<li>
+<p>You can leave the file as is or rename it whatever you like. Let's rename it to <code>config_ffa.ini</code>.</p>
+</li>
+<li>
+<p>Run the server with the following commands. You bind <code>config_ffa.ini</code> on your host machine to <code>config.ini</code> in the Docker container:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>export PKS_CFG_SOURCE=&quot;${HOME}/my_pkserver/config_ffa.ini&quot;
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>docker run --rm --name ffa -itd --mount type=bind,source=${PKS_CFG_SOURCE},target=/opt/pkserver/Bin/config.ini -p 3455:3455/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+</li>
+</ol>
+<h4 id="bind-a-custom-host-config-to-the-custom-pkserver-config">Bind a custom host config to the custom pkserver config</h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This hack is outdated.</p>
+</div>
+<ol>
+<li>
+<p>Modify <code>${HOME}/my_pkserver/config.ini</code> to your needs and rename this file to something like <code>conctf.ini</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When the <code>PKS_CFG</code> variable is used, you can only give a custom name to <code>config.ini</code> with the exact 6 letter size because scripts in this image hacks the binary, for example, you can rename it to <code>conffa.ini</code>, <code>conctf.ini</code> but you cannot name it <code>myconfig.ini</code>.</p>
+</div>
+</li>
+<li>
+<p>Run the server with the following commands:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>export PKS_CFG_SOURCE=&quot;${HOME}/my_pkserver/conctf.ini&quot;
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>docker run --rm --name ffa -itd -e PKS_CFG=&quot;conctf.ini&quot; --mount type=bind,source=${PKS_CFG_SOURCE},target=/opt/pkserver/Bin/conctf.ini -p 3455:3455/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<p>If you connect to the Docker container, there will be <code>conctf.ini</code> inside the <code>/opt/pkserver/Bin</code> directory. The <code>pkserver</code> binary will use <code>conctf.ini</code> instead of the default <code>config.ini</code> file:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>painkiller@2d2e79d33500:/opt/pkserver$ ls Bin/
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>conctf.ini  config.ini  id.bin  pkserver
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="run-a-server-with-custom-lscripts">Run a server with custom LScripts</h3>
+<h4 id="run-pk">Run PK++</h4>
+<p>The Docker image has 2 custom packages: <code>./pkserver/Data/PKPlus12.pak</code> for <code>PK++ 1.2</code> and <code>./pkserver/Data/PKPlus13.pak</code> for <code>PK++ 1.3</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that unlike PK++ 1.2, PK++ 1.3 is not backward compatible with the original Painkiller.
+A client should run PK++ 1.3 to connect to the PK++ 1.3 server.</p>
+</div>
+<p>In order to run a specific version of the mod, pass the package name to the CLI via the <code>PKS_LSCRIPTS</code> Docker variable:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp -e PKS_LSCRIPTS=&#39;PKPlus13.pak&#39; docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<h4 id="run-a-custom-server-mod">Run a custom server mod</h4>
+<p>It is possible to use LScripts packs with custom names; however, you'll need to either bind them using bind mounts, copy to volumes, or add them to <code>./pkserver/Data/</code> and rebuild the Docker image.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You can only give a custom name to <code>LScripts.pak</code> with the exact 8 letter size because it's a hack, for example, you can rename it to <code>LScript3.pak</code> but you cannot name it <code>MyLScripts.pak</code>.</p>
+</div>
+<ol>
+<li>
+<p>Make sure the file has the right permissions:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>chmod 664 LScript3.pak
+</span></code></pre></div>
+</li>
+<li>
+<p>Run the custom pak with this command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>export PKS_LSCRIPTS_SOURCE=&quot;${HOME}/my_pkserver/LScript3.pak&quot;
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>docker run --rm --name ffa -itd -p 3455:3455/udp -e PKS_LSCRIPTS=&quot;LScript3.pak&quot; --mount type=bind,source=${PKS_LSCRIPTS_SOURCE},target=/opt/pkserver/Data/LScript3.pak docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="run-a-server-with-custom-maps">Run a server with custom maps</h3>
+<p>Let's say you put a custom map to <code>${HOME}/my_pkserver/DM_K3Inzane.pkm</code> on your host machine:</p>
+<ol>
+<li>
+<p>Make sure the file has the right permissions:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>chmod 664 DM_K3Inzane.pkm
+</span></code></pre></div>
+</li>
+<li>
+<p>Bind a map from the host to the Docker container with this command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>export MAP1_SOURCE=&quot;${HOME}/my_pkserver/DM_K3Inzane.pkm&quot;
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>docker run --rm --name ffa -itd -p 3455:3455/udp --mount type=bind,source=${MAP1_SOURCE},target=/opt/pkserver/Data/DM_K3Inzane.pkm docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can't bind multiple maps with one command as Docker does not support wildcards with bind mounts. Each map should be bound one by one. It can be simplified with Docker Compose.</p>
+</div>
+</li>
+</ol>
+<h2 id="run-multiple-containers-based-on-the-same-image">Run multiple containers based on the same image</h2>
+<p>You can run multiple server instances based on the same image by giving them different names and passing different ports. Setting the <code>Cfg_ServerPort</code> variable is the most convenient way.</p>
+<p>Let's say I want to launch 3 servers (FFA, DUEL, CTF) on different ports using the same Docker image. The examples are simplified since I don't pass any additional configuration variables and don't use any bind mounts:.</p>
+<ol>
+<li>
+<p>Run the containers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>docker run --rm --name duel -itd -e Cfg_ServerPort=&quot;3456&quot; -p 3456:3456/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>docker run --rm --name ctf -itd -e Cfg_ServerPort=&quot;3457&quot; -p 3457:3457/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+</li>
+<li>
+<p>Check the containers are running:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>docker container ls
+</span></code></pre></div>
+<p>Check if there are failed containers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>docker container ls -a
+</span></code></pre></div>
+</li>
+<li>
+<p>Stop and delete all containers:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>docker stop $(docker ps -a -q)
+</span><span id="__span-45-2"><a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>docker rm $(docker ps -a -q)
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="using-docker-volumes">Using Docker volumes</h2>
+<p>This is an alternative to bind mounts. I find this way of managing the Painkiller server redundant since it will take additional space of your hard drive and prevents your configs from being "clean".</p>
+<p>If you need your files to be persisted independently of the container state and bind mounts are not the option, you need to use the <a href="https://docs.docker.com/storage/volumes/">Docker volumes</a>.</p>
+<p>The default Docker anonymous volumes get deleted automatically when you remove the Docker container. That's not what you want.</p>
+<p>Named Volumes allow you to save your server data independently of the container state and mount them to other containers.</p>
+<ol>
+<li>
+<p>Create a named volume:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>docker volume create pk-data-ffa
+</span></code></pre></div>
+</li>
+<li>
+<p>Start a container with a volume:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp --mount source=pk-data-ffa,target=/opt/pkserver docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+</li>
+<li>
+<p>Remove the resources:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>docker container stop ffa
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
+</span><span id="__span-48-3"><a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>docker volume rm pk-data-ffa
+</span></code></pre></div>
+</li>
+</ol>
+<p>It is not advised to copy and delete files directly from Docker volumes. In order to add files, you need to use the <a href="https://docs.docker.com/reference/cli/docker/container/cp/">docker cp</a> command. If you want to delete them, you'll need to log in to the container and remove the files from there.</p>
+<h2 id="managing-server-logs-and-stats">Managing server logs and stats</h2>
+<p>This step is useful if you need to keep logs and you don't use Docker volumes.</p>
+<p>To manage <code>pkserver</code> logs and stats, you need to create a cron job that periodically copies LOG and TXT files from a container to your host.</p>
+<p><code>pkserver</code> keeps them in the <code>/opt/pkserver/Bin/</code> directory. In this example, we copy LOG and TXT files from the container with the <code>ffa</code> name to the <code>HOME</code> directory on the host:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>docker exec ffa bash -c &#39;tar -cf - /opt/pkserver/Bin/*.log /opt/pkserver/Bin/*.txt&#39; | tar --strip-components 3 -C ${HOME} -xvf -
+</span></code></pre></div>
+<h2 id="managing-server-resources">Managing server resources</h2>
+<h3 id="resource-limits">Resource limits</h3>
+<p><code>pkserver</code> has memory leaks. It is advised to set <a href="https://docs.docker.com/config/containers/resource_constraints/">RAM limits</a> on a container (250 MB for Duels and not more than 400 MB for FFA):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp --memory=&quot;400m&quot; docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<p>Check the container stats:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>docker stats
+</span></code></pre></div>
+<p>Exit stats with <code>Ctrl + C</code>.</p>
+<h3 id="restart-policy">Restart policy</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Restart policy option only works with <code>docker</code> by default. If you want to use restart policies with <code>podman</code>, you need to run <code>podman generate systemd --restart-policy container_id</code> or find another workaround.</p>
+</div>
+<p>A restart policy is useful to keep your Docker containers up even after the system reboot.</p>
+<p>Set the container <a href="https://docs.docker.com/config/containers/start-containers-automatically/">restart policy</a>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>docker run --name ffa -itd -p 3455:3455/udp --memory=&quot;400m&quot; --restart always docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+<p>If you container got stuck in a loop of restarts, run this command to turn off the restart policy:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>docker update --restart=no ffa
+</span></code></pre></div>
+<h2 id="mini-dockerfile">Mini Dockerfile</h2>
+<p>This image is for rare cases. It is a solution when you want to run a "classic" server but you have issues with installing 32-bit packages on your system.</p>
+<p>This is merely a wrapper around the <code>pkserver</code> package. It is implied that you have the full <a href="https://www.moddb.com/games/painkiller/downloads/painkiller-linux-server-164-full-openspy">pkserver</a> package on your host and use Docker bind mounts to mount every folder to the Docker container.</p>
+<ol>
+<li>
+<p>Building:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>docker build -f mini.Dockerfile . --no-cache -t pkserver-mini:v1
+</span></code></pre></div>
+</li>
+<li>
+<p>Launching. Since the Linux Painkiller server has soft links, you need to bind them to the Docker container as well. Let's assume you installed <code>pkserver</code> to the <code>${HOME}/pkserver/</code> directory:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-55-1"><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a>docker run --rm -it --name mini -p 3455:3455/udp --mount type=bind,source=&quot;${HOME}&quot;/pkserver/Bin,target=/opt/pkserver/Bin --mount type=bind,source=&quot;${HOME}&quot;/pkserver/bin,target=/opt/pkserver/bin --mount type=bind,source=&quot;${HOME}&quot;/pkserver/Data,target=/opt/pkserver/Data --mount type=bind,source=&quot;${HOME}&quot;/pkserver/data,target=/opt/pkserver/data pkserver-mini:v1
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="debug-a-container">Debug a container</h2>
+<ol>
+<li>
+<p>Pass the <code>+private</code> parameter to test Docker containers without exposing them to OpenSpy:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-56-1"><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a>docker run --rm --name ffa -itd -p 3455:3455/udp docker.io/painkillergameclassic/pkserver:main +private
+</span></code></pre></div>
+</li>
+<li>
+<p>To gracefully stop your server so that it won't dangle on OpenSpy, you need to attach to your container and run the <code>/quit</code> command:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-57-1"><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>docker container attach ${container_name}
+</span></code></pre></div>
+<p>To detach again, press <code>CTRL + P</code> followed by <code>CTRL + Q</code>.</p>
+</li>
+<li>
+<p>You can enter your container with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-58-1"><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>docker exec -it ${container_name} bash
+</span></code></pre></div>
+<p>To exit a container, type:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-59-1"><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>exit
+</span></code></pre></div>
+</li>
+<li>
+<p>Enter a failed container by changing Docker entrypoint:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-60-1"><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a>docker run -it --entrypoint=bash ${container_name}
+</span></code></pre></div>
+</li>
+<li>
+<p>Log in to a container as a root:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-61-1"><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>docker exec -it -u 0 ffa bash
+</span></code></pre></div>
+<p>You can then install all the required tools in the container with:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-62-1"><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a>apt-get update &amp;&amp; apt-get install
+</span></code></pre></div>
+</li>
+<li>
+<p>To ping from a container, you need to enable some <a href="https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities">container capabilities</a>. Add <code>--cap-add=IPC_LOCK --cap-add=NET_RAW</code> as a command line options when starting a new container:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-63-1"><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>docker run --rm --name ffa -itd --cap-add=IPC_LOCK --cap-add=NET_RAW -p 3455:3455/udp docker.io/painkillergameclassic/pkserver:main
+</span></code></pre></div>
+</li>
+<li>
+<p>To copy inside/outside containers use <a href="https://docs.docker.com/reference/cli/docker/container/cp/">docker cp</a>.</p>
+</li>
+<li>
+<p>Clean your system from all Docker user packages:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-64-1"><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>docker system prune -a
+</span></code></pre></div>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      
+    
+  </body>
+</html>

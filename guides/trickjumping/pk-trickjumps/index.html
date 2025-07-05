@@ -1,0 +1,2085 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../pk-tj-howto/">
+      
+      
+        <link rel="next" href="../pk-hud-movement-compass/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Painkiller trickjumps - Painkiller PC Game Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#painkiller-trickjumps" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Painkiller PC Game Documentation" class="md-header__button md-logo" aria-label="Painkiller PC Game Documentation" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Painkiller PC Game Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Painkiller trickjumps
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/t3r6/pkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Painkiller PC Game Documentation" class="md-nav__button md-logo" aria-label="Painkiller PC Game Documentation" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Painkiller PC Game Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/t3r6/pkdocs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Modding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Modding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/pk-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Unpack and Pack Painkiller/Necrovision game resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/cubemaps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cubemaps in Painkiller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/q1-maps-to-pk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Port Quake 1 maps to Painkiller
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mapping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Mapping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/3d-editor-pk-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3D graphics software for Painkiller resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-mpk-plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender Painkiller MPK geometry plugins
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-pk-ase-exporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blender Painkiller ASE geometry exporter plugin (Outdated)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping/blender-move-bulk-objects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Move parts of objects in bulk in Blender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modding/mpk-specification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller MPK map geometry format specification
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Hacking
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Hacking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../hacking/hack-linux-bin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Hack Painkiller 2004 Linux Game Server Binary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Multiplayer
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Multiplayer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-mp-client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Black Edition multiplayer client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-mp-server-linux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Black Edition Linux Multiplayer Dedicated Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-mp-server-linux-docker/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller 2004 Linux Game Server in Docker
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/od-mp-server-win/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup Painkiller Overdose Windows server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/router-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Router Configuration for Painkiller Multiplayer Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/od-firewall-config/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firewall Configuration for Painkiller Overdose Multiplayer Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/gamespy-openspy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Replace GameSpy with OpenSpy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/command-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller Command Line Options
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../multiplayer/pk-plus-cmd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PK++ Command list
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trickjumping
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Trickjumping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pk-tj-howto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to play trick jump maps online
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Painkiller trickjumps
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller trickjumps
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jump-mod-for-multiplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump mod for multiplayer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-list-of-the-known-painkiller-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The list of the known Painkiller tricks:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The list of the known Painkiller tricks:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bunny-hopping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bunny Hopping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Directions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-turns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Turns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall-bouncing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wall Bouncing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump-climbing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump Climbing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall-sliding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wall Sliding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squeezing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squeezing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-object-speed-preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Object Speed Preservation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-jumppads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Jumppads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pk-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      PK Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shotgun-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shotgun Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-gun-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bolt Gun Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrodriver-jump-on-fireworks-barrels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrodriver Jump on fireworks barrels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrodriver-jump-with-weapon-modifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrodriver Jump with Weapon Modifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grenade-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grenade Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grenade-jump-on-a-barrel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grenade Jump on a barrel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocket-boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocket Boost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcf-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCF Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forward-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forward Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tele-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tele Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grenade-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grenade + Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jumppad-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jumppad + Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jumppad-grenade-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jumppad + Grenade + Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team tricks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-rocket-jump-bug-nrj" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Rocket Jump Bug (NRJ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-wall-rebounce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Wall (Rebounce)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stake-combo-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stake Combo Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#painkiller-grapple-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painkiller Grapple Hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wall Running
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-video-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended video channels
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pk-hud-movement-compass/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller HUD movement compass
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pk-autohop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Painkiller Autohop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../mkdocs-dev/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MkDocs development guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jump-mod-for-multiplayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump mod for multiplayer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-list-of-the-known-painkiller-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      The list of the known Painkiller tricks:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The list of the known Painkiller tricks:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bunny-hopping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bunny Hopping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pre-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changing-directions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changing Directions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-turns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Turns
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall-bouncing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wall Bouncing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jump-climbing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jump Climbing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall-sliding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wall Sliding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squeezing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Squeezing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#moving-object-speed-preservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moving Object Speed Preservation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-jumppads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Jumppads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pk-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      PK Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shotgun-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shotgun Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bolt-gun-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bolt Gun Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrodriver-jump-on-fireworks-barrels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrodriver Jump on fireworks barrels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#electrodriver-jump-with-weapon-modifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Electrodriver Jump with Weapon Modifier
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grenade-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grenade Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grenade-jump-on-a-barrel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grenade Jump on a barrel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocket-boost" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocket Boost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcf-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      PCF Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forward-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forward Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tele-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tele Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grenade-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grenade + Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jumppad-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jumppad + Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jumppad-grenade-rocket-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jumppad + Grenade + Rocket Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Team tricks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-rocket-jump-bug-nrj" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Rocket Jump Bug (NRJ)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sticky-wall-rebounce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sticky Wall (Rebounce)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#double-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Double Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stake-combo-jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stake Combo Jump
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#painkiller-grapple-hook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painkiller Grapple Hook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wall-running" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wall Running
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-video-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended video channels
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="painkiller-trickjumps">Painkiller trickjumps</h1>
+<p>This guide contains a description of movement tricks used in the Painkiller game series based on PainEngine.</p>
+<p>Painkiller singleplayer movement mechanics are different from multiplayer mechanics but they both have air control.</p>
+<ul>
+<li>Singleplayer movement is based on Havok 2.0 physics. It is much slower than multiplayer movement but it allows jump climbing. You can combine movement tricks with Taro Cards like Speed, Dexterity, Weapon Modifier, etc. Rocket jumps and any other explosive jumps are disabled in Painkiller singleplayer, except for the Ruins (C3L4) map.</li>
+<li>Multiplayer movement was based on Havok 2.0 physics up to Painkiller v1.3 yet it was still different from singleplayer mechanics. Starting from v1.5, it was replaced by the code partially based on QuakeWorld and independent of Havok. The multiplayer movement is much faster than in singleplayer but the ability to climb was heavily reduced. Rocket jumps and other explosive jumps are allowed.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Painkiller movement is dependent on FPS. The recommended MaxFPS in multiplayer is 125. This limit is set on all current multiplayer servers.</p>
+<p>Speedrunners use somewhere between 60-125 FPS in singleplayer depending on tricks.</p>
+<p>Type in <code>/setmaxfps 125</code> in the game console to set MaxFPS in the game for a local game.</p>
+</div>
+<h2 id="jump-mod-for-multiplayer">Jump mod for multiplayer</h2>
+<p>No official jump mod for Painkiller Black Edition multiplayer was released but there were a couple of good trickjump maps that could be played in a <a href="../pk-tj-howto/"><strong>warmup</strong></a> session.</p>
+<p>There was an attempt to implement a <em>RACE</em> mod in PK++ 1.2; it is playable but was never finished. You can try it <a href="https://www.moddb.com/games/painkiller/downloads/pk-12-revised-race-mode-by-thresher"><strong>here</strong></a>. The official GitHub <a href="https://github.com/threshersow/painkiller-plus-plus"><strong>repository</strong></a>.</p>
+<h2 id="the-list-of-the-known-painkiller-tricks">The list of the known Painkiller tricks:</h2>
+<h3 id="bunny-hopping">Bunny Hopping</h3>
+<p>This is a well-known mechanic where you gain speed by rapidly jumping in one direction. Ascending ramps and stairs will slow the bunny hopping down.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bunny Hopping can be disabled on a multiplayer server.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/63rpyVdGNI8?si=QLGd3EHTeG_FKYj9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="pre-jump">Pre-Jump</h3>
+<p>When there is no room to make a jump to another platform, make a jump without using any directional keys and jump in the required direction right after that. This pre-jump will give you a bit of a boost.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4JIGg8McPg0?si=Py0w1Qh32fEHx8lV&amp;start=682" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="changing-directions">Changing Directions</h3>
+<p>Bunny hop in one direction and move the mouse quickly from side to side to watch over an important item.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yIqF_wtv15k?si=hLm9pkaHCkgTwC9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="quick-turns">Quick Turns</h3>
+<p>Quick turns are the tricks when you can change a movement directions key without losing speed. This is one of the most important tricks in multiplayer. There are 180 and 90-degree turns. Quick turns can be done with or without rocket boost but you need some speed to make those tricks.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Jkhi4Aljxio?si=z-_N70-02oyk5YVX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/votl4fPb0kU?si=t7S5SoCQBF8mvmOz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/e8PDGBjxBWg?si=vmmIh4jhZqUaDELZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="wall-bouncing">Wall Bouncing</h3>
+<p>You use your speed to push you off the wall without turning your mouse (quick turns). Only forward and backward keys are used, so when you are close to touching the wall, you quickly press the opposite key and get a small boost from the wall.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FRdt7Fa7fyE?si=xPm7VONY6I9PKTT7&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/BF_FILscSFM?si=n227jUKfIE5XOEVr&amp;start=18" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="jump-climbing">Jump Climbing</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jump climbing is FPS dependent. The minimum FPS should be 120, it can be done on lower like 60 - 120, but it is very hard and you are very likely to just fall off. Recommended would be 200+ even more if possible. Jump climbing with 30-60 FPS is almost impossible, you will fall off all the time. With 0 - 30, you can't do jump wall climbing at all.</p>
+</div>
+<p>This technique is mostly used when you need to reach secret places in singleplayer or for speedruns. It sort of works in multiplayer too but it is very reduced there. You basically need to rapidly press the jump button when you face a steep or curved surface.</p>
+<p>A good example is the secrets on the <code>C9L1 Cathedral</code> level from Painkiller Resurrection, especially the fifth one.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0r5jQknKs4E?si=tBLye84q-REg1I9h&amp;start=93" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="wall-sliding">Wall Sliding</h3>
+<p>Singleplayer only. You bunnyhop into surfaces that have a ramp shape and hold the forward key (<code>W</code>) while you keep your view at about 45 degrees from it. The bigger or smaller it is, the less speed you have.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WtqBllmSz5Y?si=tJuClNqeMdzE-v_L&amp;start=20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/leXbqBAN3zU?si=j5WDCiHgl1KmYnxV&amp;start=14" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="squeezing">Squeezing</h3>
+<p>You can squeeze your hitbox between objects. This trick is FPS dependent and only works at 60 FPS and lower.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZVveQkPIQmI?si=gVyXHN_FYUXMUBII&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>If you have more than 120 FPS, you won't be able to get out of that secret in C6L2 Loony Park.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gaZ3ICRWWeY?si=F01TOIwcp-4SiieM&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="moving-object-speed-preservation">Moving Object Speed Preservation</h3>
+<p>Singleplayer only. When you leave a moving object without jumping off of it (walking off the edge or something), you preserve all the speed the object underneath you had.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6SWuDRf9V78?si=TPV1j1YbYA2HYaSs&amp;start=106" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="using-jumppads">Using Jumppads</h3>
+<p>Jumppads will transfer all your input speed to the jump speed. The faster you be before landing on a jumppad, the longer distance it will push you out.</p>
+<p>Jumppad physics is FPS-dependent. The more FPS you have, the smaller jump you get. If you create a multiplayer map, make sure to type in <code>/setmaxfps 125</code> in the game console to set MaxFPS to test the map locally with the recommended physics setting.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is worth mentioning that there is air control in Painkiller if you are launched in the air with some horizontal speed. However, if you are launched with zero horizontal speed, the air control does not work. This is the reason for a problem when you can be locked up jumping on a jumppad and can do nothing about it and, unlike in Quake, jumppads in Painkiller do not absorb the fall damage.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xRNX5zgOoPY?si=BfPHcsyaTgG1EYvR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="pk-jump">PK Jump</h3>
+<p>PK Jump only works in singleplayer thanks to the Havok 2.0 physics. Kill an enemy, jump on its ragdoll and use the secondary fire (Killer) of a Painkiller weapon and jump. You can also use different moving objects for this purpose. It is somewhat similar to the Half-Life 2 Prop Flying technique.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TD7Y6VbuzTE?si=DOfeknkP2ZX0hqhu&amp;start=33" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/plSu8Q1JUyY?si=cdK3RgACQbqiqoQP&amp;start=416" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Another usage example:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IDW1Rt8wxz4?si=Omxrcfabg9JIZiYt&amp;start=204" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="shotgun-jump">Shotgun Jump</h3>
+<p>Singleplayer only. Jump on a ragdoll or a moving object, shoot using primary fire (Shotgun), and jump.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GL9Xm-bQWyg?si=U1lvDYNnCuBz8nyD&amp;start=48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="bolt-gun-jump">Bolt Gun Jump</h3>
+<p>Singleplayer only. This trick is similar to PK Jump and Shotgun Jump. Jump on a ragdoll or a moving object, shoot using primary fire (Bolts), and jump. You can actually boost yourself up that way with any weapon but Bolt Gun gives you the most height.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/f2XyMyMEpO8?si=N2VOY3RXuNY3B-Fn&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="electrodriver-jump-on-fireworks-barrels">Electrodriver Jump on fireworks barrels</h3>
+<p>Singleplayer only. Jump on a fireworks barrel, shoot shurikens into it and jump.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/u7g9FuJzp8Y?si=LlB8B5Ye4HYGXvhU&amp;start=128" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iD9e7eVqO5Y?si=BOlEubbcEnQyY0va&amp;start=52" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h3 id="electrodriver-jump-with-weapon-modifier">Electrodriver Jump with Weapon Modifier</h3>
+<p>You can perform an Electrodriver Jump in multiplayer using shurikens. 'Weapon Modifier' powerup is required for this trick. When the modifier is picked up, Electrodriver shurikens will start to explode with some delay so you can shoot 2-3 shurikens below yourself and have a little height boost. This trick is not effective in multiplayer and powerups are usually turned off on servers.</p>
+<h3 id="grenade-jump">Grenade Jump</h3>
+<p>Multiplayer only. Your grenade can hit you immediately if it bounced off a surface once so you don't need to wait for the grenade timer to make this trick.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DDQTiXVe6z8?si=6RsRzAjo7kh1mO_G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Another variant of this trick when the nade timer is up:</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MmZg_krO0pg?si=g0KbI8-JYoQy4EGl&amp;start=106" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="grenade-jump-on-a-barrel">Grenade Jump on a barrel</h3>
+<p>Multiplayer only. A grenade explodes immediately when hitting a barrel but the default barrel remains intact after the first shot. It means that you can do a grenade jump directly on a barrel. Can be tested on DM_Unseen, DM_Gloomy, DM_Swamp.</p>
+<h3 id="rocket-boost">Rocket Boost</h3>
+<p>Multiplayer only. Shoot a rocket into a wall and jump backward. The video shows the combination of rocket boosts and quick turns.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZViekWrsK70?si=6AFvtGZ0t_KXBenb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="rocket-jump">Rocket Jump</h3>
+<p>Multiplayer only. A well-known technique that gives you acceleration and height when you jump and shoot a rocket below your position. There is also a <code>Rocket Jump</code> key in the Painkiller game <code>Controls</code> settings that can be assigned which is basically a script that combines a jump and shooting a rocket at the same time.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can gain forward speed by even shooting a rocket in front of you but this was fixed in the PK++ multiplayer mod.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/9teboSTAWWY?si=hE1LP94a6_dWZ-pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="pcf-rocket-jump">PCF Rocket Jump</h3>
+<p>Multiplayer only. A standard rocket jump but in the PCF multiplayer game mode which makes those jumps much higher.</p>
+<h3 id="forward-rocket-jump">Forward Rocket Jump</h3>
+<p>Multiplayer only. The <code>Forward Rocket Jump</code> key can be assigned in the Painkiller <code>Controls</code> settings. It should also be enabled on the server side. If you press this button, it sends a rocket behind your back and you can do a quick forward rocket jump. It is usually useful for gaining more forward speed than height and you can also hit an enemy right behind your back. This option is mostly used on trickjump maps like DM_Mandra_RUN and DM_JumpMap_01 to gain some forward speed.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Forward Rocket Jump is disabled on most multiplayer servers.</p>
+</div>
+<h3 id="tele-rocket-jump">Tele Rocket Jump</h3>
+<p>Multiplayer only. If you do a rocket jump before entering a teleport, the momentum of your jump will be saved after exiting the teleport.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EQbSd310zcg?si=tSv_rcOoO4NxVfNP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="grenade-rocket-jump">Grenade + Rocket Jump</h3>
+<p>Combine a grenade with a rocket jump to increase the jump height.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8poOHleC-T0?si=Ycypn8nHjrx_KNNx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="jumppad-rocket-jump">Jumppad + Rocket Jump</h3>
+<p>You can jump very high by using a rocket jump right on a jumppad.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Wz24nUapWoU?si=zBQ4cmfJ6Ws0ftG6&amp;start=25" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="jumppad-grenade-rocket-jump">Jumppad + Grenade + Rocket Jump</h3>
+<p>An advanced trick to combine Grenade + Rocket Jump on a jumppad.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Qb3hOop3V5w?si=9YF3YF2sL3G89byO&amp;start=160" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="team-tricks">Team tricks</h3>
+<p>There are several team tricks like boosting a teammate in the air with a nade or rocket and keeping them in the air with bullets or
+pulling your teammate with the Painkiller weapon.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Wz24nUapWoU?si=lHQAVnM7owwip-5R&amp;start=145" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="multiple-rocket-jump-bug-nrj">Multiple Rocket Jump Bug (NRJ)</h3>
+<p>This bug can only be reproduced on weak PC's with bad internet connection. When the game freezes, you can shoot multiple rockets but they will be released at once when the game is unfrozen. This game lag can be caused by pressing the <code>Screenshot</code> button (F12 by default). It's hard to reproduce on a modern PC with a good internet connection. You can see on the video that this bug was used on custom DMPCF maps to make those rocket jumps even higher.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6j6DmdisLXw?si=LWX3om-ZNVFg73qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="sticky-wall-rebounce">Sticky Wall (Rebounce)</h3>
+<p>This trick is somewhat similar to the one in Quake 3 Defrag. In Painkiller, you can get stuck inside some corners while rapidly pressing the "jump" key and you'll be able to accumulate speed this way and when you unstuck, the speed will be preserved. It should be noted that Painkiller has a very high fall damage so this trick may crush you on the ground when you are unstuck.</p>
+<h3 id="double-jump">Double Jump</h3>
+<p>The code with double jumps was present in the alpha release of Painkiller and presumably should have worked similarly to double jumps on ramps and stairs in Quake 2. This feature was bugged and not polished. The developers removed it completely after the game's release.</p>
+<h3 id="stake-combo-jump">Stake Combo Jump</h3>
+<p>This trick is currently only present in the Painkiller Multiplayer remake based on Unreal Engine 4  by dilettante.</p>
+<p>In the original Painkiller, you can only do a stake combo with a grenade when a grenade does not bounce off a surface. In the Painkiller Multiplayer remake, you can do those combos even if a grenade bounces off a surface so it allows you to do a stake combo jump trick from the ground.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xCp7tg72glU?si=DKHNpwibAqNrE2Jg&amp;start=83" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="painkiller-grapple-hook">Painkiller Grapple Hook</h3>
+<p>Some custom mods use the Painkiller secondary fire (Killer) as a grapple hook. In the original game, the Painkiller secondary fire can only pull moving objects toward you but it is unable to pull your character.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8t-LdDgLeAs?si=DOcN1_aLBF0Kr4hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h3 id="wall-running">Wall Running</h3>
+<p>It was either a multiplayer bug or a not-removed tested feature from the first release of Painkiller Resurrection. Wall running worked similarly to jump climbing. It was removed later on.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ea7qTUvs4Qs?si=6wbNL7A4ZPDKW5Js&amp;start=10" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="additions">Additions</h2>
+<p>You can see in some Painkiller videos that the first Painkiller weapon (the primary fire) is used in reaching heights during jump climbing. In reality, the primary Painkiller fire (Pain) in the default Painkiller Black Edition setup does not give you any boost.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4JIGg8McPg0?si=E7A0AFWqpnmSoy63&amp;start=865" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="recommended-video-channels">Recommended video channels</h2>
+<p><a href="https://www.youtube.com/@pkmorfofficial">pkmorfofficial</a></p>
+<p><a href="https://www.youtube.com/@painkillerzone">painkillerzone</a></p>
+<p><a href="https://www.youtube.com/@XDavidXtreme">XDavidXtreme</a></p>
+<p><a href="https://www.youtube.com/@Sp1eler">Sp1eler</a></p>
+<p><a href="https://www.youtube.com/@AndySYS">AndySYS</a></p>
+<p><a href="https://www.youtube.com/@pooolpain">pooolpain</a></p>
+<p><a href="https://www.youtube.com/@Artas1984">Artas1984</a></p>
+<p><a href="https://www.youtube.com/@mudzah">mudzah</a></p>
+<p><a href="https://www.youtube.com/@cyody">cyody</a></p>
+<p><a href="https://www.youtube.com/@3dimon3">3dimon3</a></p>
+<p><a href="https://archive.org/details/pkzone.org-files">Pk Zone archive</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+      
+    
+  </body>
+</html>
