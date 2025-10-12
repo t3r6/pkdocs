@@ -34,10 +34,33 @@ Your Linux OS should support 32-bit applications.
 
 ## Installation
 
-1. Download the Painkiller Linux server package [here](https://www.moddb.com/games/painkiller/downloads/painkiller-linux-server-164-full-openspy). This pack already has a modified `pkserver` binary that advertises its servers to OpenSpy.
+1. Download the Painkiller Linux server package [here](https://www.moddb.com/games/painkiller/downloads/painkiller-linux-server-164-full-openspy). This pack already has a modified `pkserver` binary by XDavidXtreme with the following features:
+
+    - gamespy.com was replaced with openspy.net.
+    - Fixed the "%s" symbols vulnerability that could crash the server.
+    - "+map" (sets the initial map) and "+port" options now correcly override config.ini parameters.
+    - Added "-cfg" option like in the "Painkiller.exe" Windows binary to indicate a custom config.ini file.
+    - Added "-lscripts" option like in the "Painkiller.exe" Windows binary to indicate a custom LScripts.pak.
+    - Cfg.ServerMaps now update properly during the server initiation (Cfg:Load and Tweak:Load were removed from the binary). You no longer need to indicate a maplist in both Cfg.ServerMaps{Gamemode} (for example, Cfg.ServerMapsCTF) and Cfg.ServerMaps. Only indicating maplist in Cfg.ServerMaps{Gamemode} will be enough.
 
     !!! Note
-        If you want to use clean official packages, they can be downloaded [here](https://www.patches-scrolls.com/painkiller.php). In this case, you'll need an extra step of replacing all the GameSpy instances in a binary or modifying an `/etc/hosts` file which is described in the [GameSpy to OpenSpy](gamespy-openspy.md) guide.
+
+        The binary accepts the "+" plus and the "-" minus options. The order of options is important.
+
+        The "+" plus options can be in any order but before the "-" minus options.
+
+        The "-" minus options depend on the order which Linux server reads them and they have to be in specific order.
+
+        "-lscripts" is the first one read, so it is always at the end.
+
+        Example:
+
+        ```
+        pkserver +interface 192.168.0.106 +private +port 3456 +map DM_Sacred -cfg conf12.ini -lscripts PKPlus12.pak
+        ```
+
+    !!! Note
+        If you want to use clean official packages (not recommended), they can be downloaded [here](https://www.patches-scrolls.com/painkiller.php). In this case, you'll need an extra step of replacing all the GameSpy instances in a binary or modifying an `/etc/hosts` file which is described in the [GameSpy to OpenSpy](gamespy-openspy.md) guide.
 
 2. Connect to your server and upload the archive with an FTP program like Total Commander or `scp` to a Linux directory, for example, `/opt`.
 
@@ -134,10 +157,6 @@ Your Linux OS should support 32-bit applications.
         ```
 
     !!! Note
-        Under the hood, `pkserver` automatically uses `+dedicatedserver +map +port` parameters. You won't be able to override those.
-        Moreover, this binary does not accept the "-" options, like `-config` or `-lscripts`. This is an oversight by the developers.
-
-    !!! Note
         You can debug which interface the game runs on in a new terminal with the `netstat` command:
         ```
         $ netstat -ano | grep 3455
@@ -149,6 +168,9 @@ Your Linux OS should support 32-bit applications.
     ```
     /connect 192.168.0.106:3455
     ```
+
+    !!! Note
+        The connect port:ip console command does not accept port in the original Painkiller v1.64. It's a bug and was fixed in PK Extra Plus. If you use the original Painkiller and you run on a custom port, join your server via `Multiplayer` -> `Join Game` -> `Enter IP`.
 
 13. To stop the server enter the command `/exit`:
 
@@ -162,20 +184,27 @@ Your Linux OS should support 32-bit applications.
 
 ## Install PK++ (Painkiller competition mod)
 
-1. Download [**PK++**](https://www.moddb.com/mods/pk). You can either use PK++ 1.3 which has more features or PK++ 1.2.1.64 which is more stable and compatible with the original.
+1. Download the latest [**PK++**](https://www.moddb.com/mods/painkiller-pk-archive/downloads/pk-extra-plus).
 
-    !!! Warning
-        if you want your server to be compatible with the original 1.64 client as well as PK++ 1.3 client, you need a PK++ 1.2 server.
+2. You can run `pkserver` binary using the `-lscripts` parameter or you can replace `LScripts.pak` with the renamed `PKPlus.pak` from PK Extra Plus.
 
-        PK++ 1.3 server requires a PK++ 1.3 client and is not compatible with the default 1.64 or PK++ 1.2 client.
+    === "Updated `pkserver` binary"
 
-2. Since `pkserver` binary does not accept the `-lscripts` parameter, you have to replace `LScripts.pak` with the renamed `PKPlus.pak` from PK++. Hacking `pkserver` binary is also possible but it's out of the scope of this guide. 
+        ```bash
+        pkserver +interface 192.168.0.106 +private +port 3456 +map DM_Sacred -cfg conf12.ini -lscripts PKPlus12.pak
+        ```
 
-    Download the PK++ `PKPlus.pak`, rename it and replace the original `LScripts.pak` with it in the `pkserver/Data` directory. It can be done with one command in Linux:
+    === "Original `pkserver` binary"
 
-    ```
-    mv PKPlus.pak /opt/pkserver/Data/LScripts.pak
-    ```
+        ``` markdown
+        Since `pkserver` binary does not accept the `-lscripts` parameter, 
+        you have to replace `LScripts.pak` with the renamed `PKPlus.pak` from PK++. 
+        Hacking `pkserver` binary is also possible but it's out of the scope of this guide.
+        Download the PK++ `PKPlus.pak`, 
+        rename it and replace the original `LScripts.pak` with it in the `pkserver/Data` directory. 
+        It can be done with one command in Linux:
+        `mv PKPlus.pak /opt/pkserver/Data/LScripts.pak`
+        ```
 
 3. Start the server and you'll see bots:
 
