@@ -1,6 +1,6 @@
 # Painkiller Autohop
 
-> This script is made by XDavidXtreme.
+> This script is made by XDavidXtreme and was integrated into PK Extra Plus.
 
 You can use this code to enable the autohop (auto bhop / auto bunny hop / auto jump) feature in Painkiller. It works the same as in Xonotic, Warsow, Warfork.
 

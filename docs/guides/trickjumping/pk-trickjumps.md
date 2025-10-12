@@ -216,7 +216,7 @@ pulling your teammate with the Painkiller weapon.
 
 ### Multiple Rocket Jump Bug (NRJ)
 
-This bug can only be reproduced on weak PC's with bad internet connection. When the game freezes, you can shoot multiple rockets but they will be released at once when the game is unfrozen. This game lag can be caused by pressing the `Screenshot` button (F12 by default). It's hard to reproduce on a modern PC with a good internet connection. You can see on the video that this bug was used on custom DMPCF maps to make those rocket jumps even higher.
+This bug can only be reproduced on weak PC's with bad internet connection, supposedly at about 1 FPS. When the game freezes, you can shoot multiple rockets but they will be released at once when the game is unfrozen. This game lag can be caused by pressing the `Screenshot` button (F12 by default). It's hard to reproduce on a modern PC with a good internet connection. You can see on the video that this bug was used on custom DMPCF maps to make those rocket jumps even higher.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/6j6DmdisLXw?si=LWX3om-ZNVFg73qs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -226,19 +226,19 @@ This trick is somewhat similar to the one in Quake 3 Defrag. In Painkiller, you 
 
 ### Double Jump
 
-The code with double jumps was present in the alpha release of Painkiller and presumably should have worked similarly to double jumps on ramps and stairs in Quake 2. This feature was bugged and not polished. The developers removed it completely after the game's release.
+The code with double jumps was present in the alpha release of Painkiller and works similar to the double-jump from Unreal Tournament 2004. This feature was bugged and not polished. The developers removed it completely after the game's release.
 
 ### Stake Combo Jump
 
-This trick is currently only present in the Painkiller Multiplayer remake based on Unreal Engine 4  by dilettante.
+This trick is currently only present in the Painkiller Multiplayer remake based on Unreal Engine 4  by dilettante and was also added as an optional feature to PK Extra Plus.
 
-In the original Painkiller, you can only do a stake combo with a grenade when a grenade does not bounce off a surface. In the Painkiller Multiplayer remake, you can do those combos even if a grenade bounces off a surface so it allows you to do a stake combo jump trick from the ground.
+In the original Painkiller, you can only do a stake combo with a grenade when a grenade does not bounce off a surface. In the Painkiller Multiplayer remake and PK Extra Plus, you can do those combos even if a grenade bounces off a surface so it allows you to do a stake combo jump trick from the ground.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/xCp7tg72glU?si=DKHNpwibAqNrE2Jg&amp;start=83" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Painkiller Grapple Hook
 
-Some custom mods use the Painkiller secondary fire (Killer) as a grapple hook. In the original game, the Painkiller secondary fire can only pull moving objects toward you but it is unable to pull your character.
+Some custom mods use the Painkiller secondary fire (Killer) as a grapple hook. In the original game, the Painkiller secondary fire can only pull moving objects toward you but it is unable to pull your character. This optional feature was added to PK Extra Plus.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8t-LdDgLeAs?si=DOcN1_aLBF0Kr4hY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
