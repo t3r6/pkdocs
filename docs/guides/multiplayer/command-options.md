@@ -26,7 +26,7 @@ The information was taken from [pkeuro](https://www.pkeuro.net/?p=249) and updat
 `+dedicatedserver` launches a dedicated server. It is the same as `-dedicated`. The Linux `pkserver` binary already has the `+dedicatedserver` parameter enabled by default when you launch it.<br>
 `+private` makes the server not be seen on GameSpy/OpenSpy.<br>
 `+name` sets the player's name when you connect to the server.<br>
-`+map` sets a server map as you launch the game. This parameter is absent in the `pkserver` binary.<br>
+`+map` sets a server map as you launch the game.<br>
 `+interface` is a very important parameter. You indicate an IP of the interface which has access to the Internet.<br>
 `+speed` is your connection speed: 0=modem, 1=ISDN, 2=Cable/ADSL, 3=LAN/T1.<br>
 `+port` runs a multiplayer game on a specific port (default 3455).<br>
@@ -35,13 +35,13 @@ The information was taken from [pkeuro](https://www.pkeuro.net/?p=249) and updat
 `+hwclass` is a hardware class. This parameter configures the quality of the game shaders. For example, `tnl` will load shaders of lower quality.<br>
 
 !!! Note
-    Most of the parameters only work with the Windows binary.
+    Most of the parameters only work with the Windows binary and the linux binary fixed by XDavidXtreme.
 
-    The official `pkserver` Linux binary automatically runs with the hardcoded `+dedicatedserver +map +port` parameters. It seems that it can only accept `+interface` and `+private` parameters. Everything else should be set in the `config.ini` file.
+    The official `pkserver` Linux binary automatically runs with the hardcoded `+dedicatedserver +map +port` parameters and can only accept `+interface` and `+private` parameters. Everything else should be set in the `config.ini` file.
 
 ## Dash parameters
 
-Additional commands for the Windows binary. These commands do not work with the official Linux `pkserver` binary:
+Additional commands for the Windows binary and the linux binary fixed by XDavidXtreme. These commands do not work with the official Linux `pkserver` binary:
 
 ```
 -start
@@ -62,3 +62,9 @@ Additional commands for the Windows binary. These commands do not work with the 
 `-lscripts` sets the path to custom game scripts.<br>
 `-profile` is the Windows user profile.<br>
 `-game editorgame` is leftover from the alpha version of Painkiller. It does nothing.<br>
+
+## Additional links
+
+[Updated `pkserver` Linux binary](https://www.moddb.com/games/painkiller/downloads/painkiller-linux-server-164-full-openspy)
+
+[Updated Windows binary](https://www.moddb.com/games/painkiller/downloads/painkiller-4gb-patch)
