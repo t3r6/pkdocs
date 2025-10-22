@@ -1,11 +1,13 @@
 # How to play trick jump maps online
 
 !!! Note
-    This guide describes the steps for the original Painkiller and the official PK++ mods.
+    This guide describes the steps for the original Painkiller and PK++ mods.
 
-No trick jump mods for Painkiller Black Edition multiplayer were released as of now so you have to play using the default game modes. That's how the old custom Painkiller trick jump maps were designed. There was an attempt to add a Race gamemode to PK++ 1.2.5 but it was never finished.
+Originally Painkiller trick jump maps were designed to be played in the FFA Warmup.
 
-Now we have an alternative - `DM_RACE` maps.
+There was an attempt to add a Race gamemode to PK++ 1.2.5 by Thresher. Now this Race mode is ported to PK Extra Plus and it's still in the alpha stage.
+
+There is also an alternative - `DM_RACE` maps.
 
 ## Maps
 
@@ -24,7 +26,7 @@ I created `DM_RACE` maps with custom scripts that can be played in the usual FFA
 
 Just run the `DM_RACE` map the usual way in the FFA mode.
 
-The only thing that you may need to change when playing those is disabling `RocketFix`:
+The only thing that you may need to change when playing those is disabling `RocketFix` on the PK++ servers:
 
 ```
 /callvote rocketfix 0
@@ -95,18 +97,15 @@ A server should have the following settings:
 
     `/callvote allowforwardrj 1`
 
-## Race maps in the Race mode (outdated)
+## Race maps in the Race mode
 
-Currently, those `RACE` maps can only be played in [PK++ by Thresher](https://www.moddb.com/mods/painkiller-pk-archive/downloads/pk-12-revised-race-mode-by-thresher).
+Currently, those `RACE` maps can be played in PK++ by Thresher and [PK Extra Plus](https://www.moddb.com/mods/painkiller-pk-archive/downloads/pk-extra-plus).
 
-1. Install the usual PK++ 1.2.1.64 first.
+1. Install PK Extra Plus.
 
-2. Copy .pak files from the Builds folder of this archive to `..\Painkiller\Data`
+2. Copy trickjump [maps](https://www.moddb.com/games/painkiller/addons/trickjump-and-race-maps-for-painkiller) to `..\Painkiller\Data`
 
-3. Copy maps from the Maps directory to `..\Painkiller\Data`
-
-4. Create a game shortcut with the following parameter: `..\Painkiller\Bin\Painkiller.exe -lscripts PKplusplus_1.2_004.pak`
-where you can use a different `.pak` version as well.
+3. Create a game shortcut with the following parameter: `..\Painkiller\Bin\Painkiller.exe -lscripts PKPlus.pak`.
 
 5. Run map `RACE_Psycho` in the RACE mode.
 
@@ -131,4 +130,4 @@ You can enable speed meter by typing `/speedmeter 1` via the in-game console to 
 
 [Trickjump **maps**](https://www.moddb.com/games/painkiller/addons/trickjump-and-race-maps-for-painkiller)
 
-[PK++ RACE](https://www.moddb.com/mods/painkiller-pk-archive/downloads/pk-12-revised-race-mode-by-thresher)
+[PK Extra Plus](https://www.moddb.com/mods/painkiller-pk-archive/downloads/pk-extra-plus)

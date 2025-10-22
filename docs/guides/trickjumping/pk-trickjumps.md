@@ -8,7 +8,7 @@ Painkiller singleplayer movement mechanics are different from multiplayer mechan
 * Multiplayer movement was based on Havok 2.0 physics up to Painkiller v1.3 yet it was still different from singleplayer mechanics. Starting from v1.5, it was replaced by the code partially based on QuakeWorld and independent of Havok. The multiplayer movement is much faster than in singleplayer but the ability to climb was heavily reduced. Rocket jumps and other explosive jumps are allowed.
 
 !!! Note
-    Painkiller movement is dependent on FPS. The recommended MaxFPS in multiplayer is 125. This limit is set on all current multiplayer servers.
+    Painkiller movement is dependent on FPS. The recommended MaxFPS in multiplayer is 125.
 
     Speedrunners use somewhere between 60-125 FPS in singleplayer depending on tricks.
 
@@ -16,11 +16,11 @@ Painkiller singleplayer movement mechanics are different from multiplayer mechan
 
 ## Jump mod for multiplayer
 
-No official jump mod for Painkiller Black Edition multiplayer was released but there were a couple of good trickjump maps that could be played in a [**warmup**](pk-tj-howto.md) session.
+Initially, the trickjump maps for Painkiller Black Edition multiplayer were released for the FFA mode and could be played in a [**warmup**](pk-tj-howto.md) session.
 
-There was an attempt to implement a *RACE* mod in PK++ 1.2; it is playable but was never finished. You can try it [**here**](https://www.moddb.com/games/painkiller/downloads/pk-12-revised-race-mode-by-thresher). The official GitHub [**repository**](https://github.com/threshersow/painkiller-plus-plus).
+There was an attempt to implement a *RACE* mod in PK++ 1.2 by Thresher and later on ported to PK Extra Plus; it is playable but was never finished. You can try it [**here**](https://www.moddb.com/mods/painkiller-pk-archive/downloads/pk-extra-plus).
 
-## The list of the known Painkiller tricks:
+## The list of the known Painkiller tricks
 
 ### Bunny Hopping
 
@@ -155,7 +155,7 @@ Another variant of this trick when the nade timer is up:
 
 ### Grenade Jump on a barrel
 
-Multiplayer only. A grenade explodes immediately when hitting a barrel but the default barrel remains intact after the first shot. It means that you can do a grenade jump directly on a barrel. Can be tested on DM_Unseen, DM_Gloomy, DM_Swamp.
+Multiplayer only. A grenade explodes immediately when hitting a barrel but the default barrel remains intact after the first shot. It means that you can do a grenade jump directly on a barrel. Can be tested on DM_Unseen, DM_Gloomy.
 
 ### Rocket Boost
 
@@ -226,7 +226,7 @@ This trick is somewhat similar to the one in Quake 3 Defrag. In Painkiller, you 
 
 ### Double Jump
 
-The code with double jumps was present in the alpha release of Painkiller and works similar to the double-jump from Unreal Tournament 2004. This feature was bugged and not polished. The developers removed it completely after the game's release.
+The code with double jumps was present in the alpha release of [Painkiller Exclusive Retail Demo](https://www.moddb.com/downloads/painkiller-exclusive-retail-demo-usa) and works similar to the double-jump from Unreal Tournament 2004. This feature was bugged and not polished. The developers removed it completely after the game's release.
 
 ### Stake Combo Jump
 
