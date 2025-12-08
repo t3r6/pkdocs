@@ -25,6 +25,9 @@ The quick start part of the guide describes the fastest way to get into the Pain
 5. Go to `Multiplayer` -> `Join Game` and click on the `Internet` tab, find a server and `Join` the game.
 6. For further questions, join the Painkiller Discord community [**here**](https://discord.gg/wWTv9YA).
 
+!!! Note
+    `PK Extra Plus` which is included in `Painkiller 1.64 Lite`, supports the windowed mode by default and is already precofigured with the windowed binaries by XDavidXtreme. However, if you want to use your old `config.ini`, you need to modify or add the following line to the `config.ini` file: `Cfg.Windowed = true`.
+
 ## Full setup
 
 This part of the guide describes the full game multiplayer configuration in case you have a complete Painkiller Black Edition game.
