@@ -15,6 +15,7 @@ Custom multiplayer maps are usually packed with the **.pkm** extension.
 
 * Built-in game tools using **FS.ExtractPack** (the most recommended option)
 * Painkiller standard editor **PainEditor** (it can extract .pkm maps partially but is not recommended for this purpose)
+* [PainTools](https://www.moddb.com/games/painkiller/downloads/paintools) - **recommended**
 * [PainFull Extractor](https://www.moddb.com/games/painkiller/downloads/painfull-extractor-v132) program (outdated; no source code)
 * [PainKillerExtractor](https://github.com/t3r6/painkiller-extractor) program (outdated; source code available)
 * [Dragon UnPACKer](https://www.elberethzone.net/dragon-unpacker.html) (open source)
@@ -22,6 +23,7 @@ Custom multiplayer maps are usually packed with the **.pkm** extension.
 
 #### Tools to unpack Painkiller Retail Demo (Alpha) resources
 
+* [PainTools](https://www.moddb.com/games/painkiller/downloads/paintools) - **recommended**
 * [pak2zip](https://github.com/t3r6/painkiller-extractor) program
 * [QuickBMS](http://aluigi.altervista.org/quickbms.htm) (open source)
 
@@ -29,6 +31,7 @@ Custom multiplayer maps are usually packed with the **.pkm** extension.
 
 * Built-in game tools using **FS.CreatePack** (recommended option for **.pak** archives and **.pkm** maps with custom resources)
 * Painkiller standard editor **PainEditor** (recommended option for maps **.pkm** files that do NOT contain custom resources, like additional scripts, textures in custom folders)
+* [PainTools](https://www.moddb.com/games/painkiller/downloads/paintools) - **recommended**
 * [PainFull Extractor](https://www.moddb.com/games/painkiller/downloads/painfull-extractor-v132) can add and replace files in a package (not recommended).
 * [QuickBMS](http://aluigi.altervista.org/quickbms.htm) can re-import files to a package (not recommended).
 
@@ -110,6 +113,20 @@ After that, the extracted map files will appear in the **..\Data\Levels** direct
 It will create a **.pkm** file inside the <b>..\Painkiller\Data\</b> directory.
 
 !![PainEditor](../../../img/unpackers/unpacker-paineditor2.jpg "PainEditor")
+
+## PainTools
+
+[PainTools](https://www.moddb.com/games/painkiller/downloads/paintools) is a modern powerful program for Windows and Linux released by XDavidXtreme which is capable of unpacking/packing resources of various Painkiller versions.
+
+Simply drag-and-drop the file/folder you want to process and the application will automatically pick the right tool for it. Open the application without any parameters to see its help page.
+
+The program packs archives to PAK. If you need PKM, just rename PAK extension to PKM afterwards (make sure file extensions are not hidden on Windows).
+
+Check readme included inside the PainTools archive for more details.
+
+!!! Notice
+    Dragon UnPACKer is not capable of reading the files packed by PainTools because it is based on the old version of zlib.
+
 
 ## PainFull Extractor
 
