@@ -27,6 +27,8 @@ It's not mandatory to have a full Quake 1 game to work with its maps. However, I
 
 Alternatively, you can download [**nQuake**](https://nquake.com/) which is based on the shareware Quake 1 and only focused on multiplayer. That version does not have map sounds and does not support music.
 
+There is also [**fteqw**](https://www.fteqw.org/) engine with advanced features. FTE is probably the only engine that can show boxes which is useful for scaling.
+
 Custom maps are installed in `..\Quake 1\ID1\maps`. Custom [**skybox textures**](https://www.slipseer.com/index.php?resources/makkon-skyboxes.139/) (mosly Makkon skyboxes are required) are intalled into `..\Quake 1\ID1\gfx\env`.
 
 ## Introduction
@@ -108,7 +110,7 @@ The textures are already packed within BSP so you don't need to use additional f
 
     !![Quake 1 map import](../../../img/blender/blender-import-quake1-002.jpg "Quake 1 object separation")
 
-5. Go back to the object mode and select all the meshes that were separated by material. Enter the Edit mode again, select all `A`, click `M` -> `By Distance` (Merge distance 0.0001 m) to merge the verticies, then `X` -> `Limited Dissolve` to clean the meshes from the unnecessary verticies and edges. This is recommended for the engine and it also improves texturing and object shading. This should be done after the separation by material and vertex merge. It requires you to have experience with Blender because features as vertex merge, limited dissolve, snap utility can be very destructive and requires high attention. Always enable statistics to see how the result was improved. Examine thoroughly all the meshes in the edit mode after such operations, delete manually remained unnecessary verticies and edges. Check the difference on the examples below, the geometry before and after the cleaning; I removed about 75% of redundant verticies on such a small map:
+5. Go back to the object mode and select all the meshes that were separated by material. Enter the Edit mode again, select all `A`, click `M` -> `By Distance` (Merge distance 0.0001 m) to merge the verticies, then `Alt-J` to merge triangles to quads or `X` -> `Limited Dissolve` to clean the meshes from the unnecessary verticies and edges. This is recommended for the engine and it also improves texturing and object shading. This should be done after the separation by material and vertex merge. It requires you to have experience with Blender because features as vertex merge, triangles to quads, limited dissolve, snap utility can be very destructive and requires high attention. Always enable statistics to see how the result was improved. Examine thoroughly all the meshes in the edit mode after such operations, delete manually remained unnecessary verticies and edges. Check the difference on the examples below, the geometry before and after the cleaning; I removed about 75% of redundant verticies on such a small map:
 
     !![Quake 1 map import](../../../img/blender/blender-import-quake1-003.jpg "Quake 1 geometry before cleaning")
 
@@ -143,6 +145,73 @@ The textures are already packed within BSP so you don't need to use additional f
 14. Export the MPK file with the Blender Painkiller plugins and check the map in PainEditor. It's high likely, you will need to scale the map with `o.Scale` in CLevel (`o.Scale = 0.3` is default in Painkiller). Thoroughly check if there are any map holes, amend them with the Blender snap tool.
 
 15. When the map is ready, generate lightmaps with the Blender [**Lightmapper addon**](https://github.com/Naxela/The_Lightmapper).
+
+## Scaling
+
+Scaling is not that an easy task as it seems. Not only you need to scale the map the similar size like in the original, you also need to make the map tricks work like in the original game. For this, you need to understand the Quake movement mechanics pretty well as well as Painkiller movement mechanics (tricks should be tested with 125 maxfps only).
+
+First of all, you need to check the scaling visually.
+
+### Scaling in Quake 1
+
+The best solution would be to check scaling with the [**fteqw**](https://www.fteqw.org/) engine.
+
+1. Install this engine in the Quake 1 directory
+
+2. Run the engine and go to console by clicking "ESC" or pressing "~".
+
+3. Callvote the map in console
+
+    ```
+    map mapname
+    ```
+
+4. When you are on the map open console "~" and type:
+
+    ```
+    sv_cheats 1
+    restart
+    ```
+
+5. Once the map is restarted, open console and type:
+
+    ```
+    chase_active 1
+    chase_back 100
+    r_showbboxes 1
+    ```
+
+    !![Quake 1 scaling](../../../img/other/scaling_quake1_fte01.jpg "How to check object scaling in Quake 1")
+
+### Scaling in Painkiller
+
+#### Any map
+
+1. Open PainEditor
+
+2. `File` -> `Load Level`
+
+3. When the level is loaded, press the `F` button
+
+4. Open console "~"
+
+5. Type `\tpp 1`
+
+    !![Painkiller scaling](../../../img/other/scaling_paineditor_01.jpg "How to check object scaling in Painkiller")
+
+#### Multiplayer maps only
+
+1. Open PainEditor
+
+2. `File` -> `Load Level`
+
+3. Press `ECS` and start a multiplayer game via PainEditor
+
+4. When the level is loaded, open console "~"
+
+5. Type `\tpp 1`
+
+    !![Painkiller scaling](../../../img/other/scaling_paineditor_02.jpg "How to check object scaling in Painkiller")
 
 ## Map format import and export
 
