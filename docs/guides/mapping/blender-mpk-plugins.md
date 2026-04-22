@@ -125,10 +125,12 @@ Another example:
 │   └── CTF_Ruins
 ├── Maps
 │   ├── MOPPCode
-│   └── ruins_mini.mpk
+│   └── ctf_ruins.mpk
 └── Textures
     ├── Levels
-    └── Skies
+    │   └── ctf_ruins
+    ├── Skies
+    └── Special
 ```
 
 You need to create those folders manually when you prepare a map.
@@ -148,11 +150,22 @@ You need to create those folders manually when you prepare a map.
     o.Map = "untitled.mpk"
     ```
 
-4. The folder with the textures should match the name of the MPK file: `Painkiller/Data/Textures/Levels/untitled`. If it does not match, you won't see textures on your map.
+4. The folder with the textures should match the name of the MPK file: `Painkiller/Data/Textures/Levels/untitled`. If it does not match, you won't see textures on your map unless you used custom texture paths within MPK.
 
 5. Run your map in PainEditor to check if the map configuration was correct. Put all the items, gameplay, effects via the PainEditor.
 
 6. [**Pack**](../modding/pk-packages.md) your map properly to distribute it.
+
+    !!! Note
+        Additional tips:
+
+        Make sure `o.Scalse` is not set in your CLevel file. Default Painkiller `o.Scalse = 0.3`. You can modify map scalling not only in Blender but also inside Painkiller by playing with `o.Scalse` and regenerating the MOPPCode. It's for rare cases and I'd stick to the Blender map scale only.
+
+        `o.Overbright = true` is only for maps with dark lightmaps.
+
+        `o.DirLight.Intensity = 0` will turn off dynamic sun in Painkiller.
+
+        `o.FarClipDist` should be high on big maps so as not to cut objects in the distance.
 
 ## Uninstall plugins via GUI
 
