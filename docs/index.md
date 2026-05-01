@@ -30,6 +30,9 @@ Some history on the Painkiller development was told by the former People Can Fly
 ## Unreal Engine 3 game remake
 * Painkiller Hell & Damnation 2012 (PS3 and Xbox 360)
 
+## Unreal Engine 4 game
+* Painkiller 2025
+
 ## Ripp3D Engine mobile games
 * Painkiller: Purgatory 2010
 * Painkiller: Purgatory HD 2010

@@ -159,7 +159,7 @@ You need to create those folders manually when you prepare a map.
     !!! Note
         Additional tips:
 
-        Make sure `o.Scalse` is not set in your CLevel file. Default Painkiller `o.Scalse = 0.3`. You can modify map scalling not only in Blender but also inside Painkiller by playing with `o.Scalse` and regenerating the MOPPCode. It's for rare cases and I'd stick to the Blender map scale only.
+        Make sure `o.Scale` is not set in your CLevel file. Default Painkiller `o.Scale = 0.3`. You can modify map scalling not only in Blender but also inside Painkiller by playing with `o.Scale` and regenerating the MOPPCode. It's for rare cases and I'd stick to the Blender map scale only.
 
         `o.Overbright = true` is only for maps with dark lightmaps.
 
