@@ -14,6 +14,17 @@ Docker fits this purpose because it isolates containers from the host system.
 1. Binary Hacks. The original Linux `pkserver` binary from People Can Fly is very limited. It starts with the hardcoded `+dedicatedserver +map +port` parameters which cannot be overriden and only accepts the `+interface` and `+private` command line options. You are not able to pass custom `-lscripts` and `-cfg`. However, it's possible hack the `pkserver` binary to accept custom `LScripts.pak` and `config.ini`. The method is described [here](../hacking/hack-linux-bin.md).
 This Docker image contains that binary hack.
 
+    !!! Note
+        The new updated [**Linux binary**](https://www.moddb.com/games/painkiller/downloads/painkiller-linux-server-164-full-openspy) by XDavidXtreme addressed all of those issues and you can pass parameters to the docker container. It has been integrated into this docker package.
+
+        - gamespy.com was replaced with openspy.net
+        - Fixed the "%s" symbols vulnerability that could crash the server
+        - "+map" (sets the initial map) and "+port" options now correcly override config.ini parameters
+        - Added "-cfg" option like in the "Painkiller.exe" Windows binary to indicate a custom config.ini file
+        - Added "-lscripts" option like in the "Painkiller.exe" Windows binary to indicate a custom LScripts.pak
+        - Cfg.ServerMaps now update properly during the server initiation (Cfg:Load and Tweak:Load were removed from the binary) so you no longer need to indicate a maplist in both Cfg.ServerMaps{Gamemode} (for example, Cfg.ServerMapsCTF) and Cfg.ServerMaps. Only indicating maplist in Cfg.ServerMaps{Gamemode} will be enough.
+        - Disabled server CD check
+
 2. Docker environment variables. The Docker image also has a script that allows to pass the `Cfg_` environment variables to the Docker container that will override parameters in the default `config.ini` with the similar names. For example, you can pass the `Cfg_ServerPort` variable and it will override the `Cfg.ServerPort` parameter in the `config.ini` file.
 
 3. Outdated `gamespy.com` was replaced with `openspy.net` in the binary as well.
@@ -234,7 +245,7 @@ In case you need to run a game on a different port, use Docker port mapping and 
     Note that Painkiller GameSpy backend is outdated which can cause issues with the [NATNEG](https://wiki.tockdom.com/wiki/Network_Protocol/Server/mariokartwii.natneg.gs.nintendowifi.net) protocol. Thus, we must map the same Docker ports on the container and the host and also change the port in the Painkiller config.ini.
     For instance, with this command the client will get errors when connecting to your server via the in-game browser:
     ```
-    docker run --rm --name ctf -itd -p 3456:3455/udp  docker.io/painkillergameclassic/pkserver:main
+    docker run --rm --name ffa -itd -p 3456:3455/udp  docker.io/painkillergameclassic/pkserver:main
     ```
     Pay attention that we map the `3456` port on the host to the `3455` Docker container port. The clinet will get the following error:
     ```
@@ -470,11 +481,11 @@ Let's say I want to launch 3 servers (FFA, DUEL, CTF) on different ports using t
     ```
 
     ```
-    docker run --rm --name duel -itd -e Cfg_ServerPort="3456" -p 3456:3456/udp docker.io/painkillergameclassic/pkserver:main
+    docker run --rm --name duel -itd -e Cfg_GameMode="Duel" -e Cfg_ServerPort="3456" -p 3456:3456/udp docker.io/painkillergameclassic/pkserver:main
     ```
 
     ```
-    docker run --rm --name ctf -itd -e Cfg_ServerPort="3457" -p 3457:3457/udp docker.io/painkillergameclassic/pkserver:main
+    docker run --rm --name ctf -itd -e Cfg_GameMode="Capture The Flag" -e Cfg_ServerPort="3457" -p 3457:3457/udp docker.io/painkillergameclassic/pkserver:main
     ```
 
 2. Check the containers are running:
